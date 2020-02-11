@@ -4,7 +4,7 @@
 
 `Markdown` - The language of docs like this
 
-`Git` - Version control I am using
+`Git` - Version control system I am using
 
 `GitLab` - Service for my git repos
 
