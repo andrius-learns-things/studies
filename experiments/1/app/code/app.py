@@ -1,13 +1,15 @@
 from flask import Flask
 from providers.redis import RedisProvider
 from providers.mongo import MongoProvider
+from providers.in_memory import InMemoryProvider
 from experiment import run_the_experiment
 
 
 app = Flask(__name__)
 providers = [
     RedisProvider(),
-    MongoProvider()
+    MongoProvider(),
+    InMemoryProvider()
 ]
 
 
