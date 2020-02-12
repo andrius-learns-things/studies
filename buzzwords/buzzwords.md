@@ -13,3 +13,10 @@
 `Docker compose`
 
 `Redis`
+
+`Python`
+
+`Flask`
+
+`Alpine Linux`
+
