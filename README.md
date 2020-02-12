@@ -6,9 +6,13 @@ It has:
 
 # Buzzword index
 
+[Link](/buzzwords/buzzwords.md)
+
 # Experiments:
 
 ## 1. Python script, experimenting with queries of three DBs: Redis, MongoDB and PostgreSQL
+
+[Link](/experiments/1/)
 
 Status: In progress...
 
