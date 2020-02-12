@@ -28,5 +28,7 @@ Todo:
 - PostgreSQL POC
 
 Ideas:
+- Pdb
+- Cheatsheet
 - Flake8 complexity enforcement?
 - Full test coverage enforcement?
