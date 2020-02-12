@@ -21,3 +21,9 @@
 `Alpine Linux`
 
 `Mongo`
+
+`Abstract class in python`
+
+`Volumes mounted in Docker`
+
+`.gitignore`

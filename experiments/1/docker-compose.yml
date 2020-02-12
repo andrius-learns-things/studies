@@ -3,6 +3,8 @@ services:
   web:
     build:
       context: ./app
+    volumes:
+      - ./app/code:/code
     ports:
       - "8051:5000"
     depends_on:

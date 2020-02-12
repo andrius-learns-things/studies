@@ -19,7 +19,7 @@ def overview():
     for provider in providers:
         results = run_the_experiment(provider)
 
-        all_results.append(" --- ")
+        all_results.append(" ")
         all_results.extend(results)
 
     return '<br />'.join(all_results)
