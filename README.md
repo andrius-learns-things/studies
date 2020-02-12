@@ -6,7 +6,11 @@ It has:
 
 # Buzzword index
 
-[Link](/buzzwords/buzzwords.md)
+[Link](/notes/buzzwords.md)
+
+# Bookmarked useful links
+
+[Link](/notes/bookmarks.md)
 
 # Experiments:
 
