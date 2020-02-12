@@ -1,10 +1,17 @@
 from pymongo import MongoClient
+from .base import Provider
 
 
-client = MongoClient("mongo", 27017)
-mongodb = client.hits_db
+class MongoProvider(Provider):
 
+    def __init__(self):
+        client = MongoClient("mongo", 27017)
+        self.mongodb = client.hits_db
 
-def get_hit_count():
-    mongodb.hits_db.insert_one({'hit': 'yes?'})
-    return len([item for item in mongodb.hits_db.find()])
+    @property
+    def name(self):
+        return "Mongo"
+
+    def get_hit_count(self):
+        self.mongodb.hits_db.insert_one({'hit': 'yes?'})
+        return len([item for item in self.mongodb.hits_db.find()])

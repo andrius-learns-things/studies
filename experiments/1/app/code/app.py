@@ -1,21 +1,28 @@
 from flask import Flask
-from providers.redis import (
-    get_hit_count as get_redis_hit_count
-)
-from providers.mongo import (
-    get_hit_count as get_mongo_hit_count
-)
+from providers.redis import RedisProvider
+from providers.mongo import MongoProvider
+from experiment import run_the_experiment
 
 
 app = Flask(__name__)
+providers = [
+    RedisProvider(),
+    MongoProvider()
+]
 
 
 @app.route('/')
 def overview():
-    return ' | '.join([
-        "Redis hit count: {}".format(get_redis_hit_count()),
-        "Mongo hit count: {}".format(get_mongo_hit_count())
-    ])
+
+    all_results = []
+
+    for provider in providers:
+        results = run_the_experiment(provider)
+
+        all_results.append(" --- ")
+        all_results.extend(results)
+
+    return '<br />'.join(all_results)
 
 
 if __name__ == '__main__':
