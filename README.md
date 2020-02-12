@@ -22,10 +22,10 @@ Status: In progress...
 
 Done:
 - Redis POC
+- Mongo POC
 
 Todo:
 - PostgreSQL POC
-- Mongo POC
 
 Ideas:
 - Flake8 complexity enforcement?
