@@ -10,3 +10,6 @@
 
 `SSH` - Protocol I chose for GIT to use, created SSH keys
 
+`Docker compose`
+
+`Redis`
