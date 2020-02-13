@@ -33,3 +33,11 @@
 `psycopg2` - Python adapter of PostgreSQL
 
 `apk` - Package manager for alpine linux
+
+`Black` - Python formatter
+
+`Flake8` - Python linter
+
+`pre-commit` - Python tool for Git pre-commit hooks
+
+`Bash scripts`

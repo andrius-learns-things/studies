@@ -12,6 +12,12 @@ It has:
 
 [Link](/notes/bookmarks.md)
 
+# Tools
+
+## 1. Pre-commit setup - python black formatter and flake8 checker
+
+[Link](/tools/pre-commits)
+
 # Experiments:
 
 ## 1. Python script, experimenting with queries of three DBs: Redis, MongoDB and PostgreSQL
@@ -26,9 +32,10 @@ Done:
 - Redis POC
 - Mongo POC
 - Mounted source files
+- PostgreSQL POC
 
 Todo:
-- PostgreSQL POC
+- Pre-commits with black & flake8
 
 Ideas:
 - PostgresAdmin? Other kind of admins?
