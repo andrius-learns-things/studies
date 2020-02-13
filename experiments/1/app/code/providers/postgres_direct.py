@@ -2,7 +2,7 @@ import psycopg2
 from .base import Provider
 
 
-class PostgresProvider(Provider):
+class PostgresDirectProvider(Provider):
 
     def __init__(self):
         self.connection = psycopg2.connect(
@@ -15,7 +15,7 @@ class PostgresProvider(Provider):
 
     @property
     def name(self):
-        return "Postgres"
+        return "Postgres direct"
 
     def get_hit_count(self):
 

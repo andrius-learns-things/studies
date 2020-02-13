@@ -2,7 +2,7 @@ from flask import Flask
 from providers.redis import RedisProvider
 from providers.mongo import MongoProvider
 from providers.in_memory import InMemoryProvider
-from providers.postgres import PostgresProvider
+from providers.postgres_direct import PostgresDirectProvider
 from experiment import run_the_experiment
 
 
@@ -11,7 +11,7 @@ providers = [
     RedisProvider(),
     MongoProvider(),
     InMemoryProvider(),
-    PostgresProvider()
+    PostgresDirectProvider()
 ]
 
 
