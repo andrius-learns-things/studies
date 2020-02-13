@@ -27,3 +27,9 @@
 `Volumes mounted in Docker`
 
 `.gitignore`
+
+`PostgreSQL`
+
+`psycopg2` - Python adapter of PostgreSQL
+
+`apk` - Package manager for alpine linux

@@ -18,6 +18,8 @@ It has:
 
 [Link](/experiments/1/)
 
+To run, execute `docker-compose up`
+
 Status: In progress...
 
 Done:
@@ -29,6 +31,7 @@ Todo:
 - PostgreSQL POC
 
 Ideas:
+- PostgresAdmin? Other kind of admins?
 - Pdb
 - Cheatsheet
 - Flake8 complexity enforcement?
