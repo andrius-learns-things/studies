@@ -34,35 +34,38 @@ class PostgresProvider(Provider):
             "VALUES ('ANOTHER HIT');"
         ).format(schema, table)
 
-        self._exec(insert_query)
+        self._sql_command(insert_query)
 
         select_query = (
             "SELECT COUNT(*) FROM {}.{};"
         ).format(schema, table)
 
-        return self._exec(select_query)
+        return self._sql_select_scalar(select_query)
 
     def _ensure_table_exists(self, schema, table, definition):
 
         check_table_query = (
-            "SELECT EXISTS ( "
-            "SELECT FROM information_schema.tables "
+            "SELECT COUNT(*) FROM information_schema.tables "
             "WHERE table_schema = '{}' "
-            "AND table_name = '{}' "
-            ");"
+            "AND table_name = '{}';"
         ).format(schema, table)
 
-        exists = self._exec(check_table_query)
+        count = self._sql_select_scalar(check_table_query)
 
-        if not exists:
+        if count == 0:
 
             create_table_query = (
                 "CREATE TABLE {}.{} {};"
             ).format(schema, table, definition)
 
-            self._exec(create_table_query)
+            self._sql_command(create_table_query)
 
-    def _exec(self, command):
+    def _sql_select_scalar(self, command):
         cursor = self.connection.cursor()
         cursor.execute(command)
-        return cursor.fetchone()
+        return cursor.fetchone()[0]
+
+    def _sql_command(self, command):
+        cursor = self.connection.cursor()
+        cursor.execute(command)
+        self.connection.commit()
