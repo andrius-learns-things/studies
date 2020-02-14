@@ -41,3 +41,5 @@
 `pre-commit` - Python tool for Git pre-commit hooks
 
 `Bash scripts`
+
+`Cyclomatic complexity` - Metric of how much softare is complex. Helps to enforce clean code.
