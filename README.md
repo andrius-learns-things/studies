@@ -18,9 +18,10 @@ It has:
 
 Done:
 - Pre-commits with black & flake8
+- Flake8 complexity enforcement?
 
 Ideas:
-- Flake8 complexity enforcement?
+- run.sh script, solved docker sudo problems
 - Full test coverage enforcement?
 
 [Link](/tools/pre-commits)
