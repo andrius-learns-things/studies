@@ -14,7 +14,14 @@ It has:
 
 # Tools
 
-## 1. Pre-commit setup - python black formatter and flake8 checker
+## 1. Pre-commit setup
+
+Done:
+- Pre-commits with black & flake8
+
+Ideas:
+- Flake8 complexity enforcement?
+- Full test coverage enforcement?
 
 [Link](/tools/pre-commits)
 
@@ -35,11 +42,9 @@ Done:
 - PostgreSQL POC
 
 Todo:
-- Pre-commits with black & flake8
+
 
 Ideas:
 - PostgresAdmin? Other kind of admins?
 - Pdb
 - Cheatsheet
-- Flake8 complexity enforcement?
-- Full test coverage enforcement?
