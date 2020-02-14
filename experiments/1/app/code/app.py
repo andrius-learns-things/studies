@@ -11,11 +11,11 @@ providers = [
     RedisProvider(),
     MongoProvider(),
     InMemoryProvider(),
-    PostgresDirectProvider()
+    PostgresDirectProvider(),
 ]
 
 
-@app.route('/')
+@app.route("/")
 def overview():
 
     all_results = []
@@ -26,8 +26,8 @@ def overview():
         all_results.append(" ")
         all_results.extend(results)
 
-    return '<br />'.join(all_results)
+    return "<br />".join(all_results)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)

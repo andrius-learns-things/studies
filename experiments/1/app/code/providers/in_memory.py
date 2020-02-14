@@ -4,7 +4,6 @@ hits = 0
 
 
 class InMemoryProvider(Provider):
-
     @property
     def name(self):
         return "In memory"

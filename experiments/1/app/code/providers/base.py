@@ -2,7 +2,6 @@ from abc import ABC, abstractmethod
 
 
 class Provider(ABC):
-
     @property
     @abstractmethod
     def name(self):

@@ -3,7 +3,6 @@ from .base import Provider
 
 
 class RedisProvider(Provider):
-
     def __init__(self):
         self.redis = Redis(host="redis", port=6379)
 
@@ -12,5 +11,5 @@ class RedisProvider(Provider):
         return "Redis"
 
     def get_hit_count(self):
-        self.redis.incr('hits')
-        return int(self.redis.get('hits'))
+        self.redis.incr("hits")
+        return int(self.redis.get("hits"))

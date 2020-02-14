@@ -3,14 +3,13 @@ from .base import Provider
 
 
 class PostgresDirectProvider(Provider):
-
     def __init__(self):
         self.connection = psycopg2.connect(
             user="postgres",
             password="notverysecret",
             host="postgres",
             port="5432",
-            database="postgres"
+            database="postgres",
         )
 
     @property
@@ -22,23 +21,16 @@ class PostgresDirectProvider(Provider):
         schema = "public"
         table = "hits"
 
-        definition = (
-            "(ID SERIAL PRIMARY KEY, "
-            "MSG TEXT NOT NULL)"
-        )
+        definition = "(ID SERIAL PRIMARY KEY, " "MSG TEXT NOT NULL)"
 
         self._ensure_table_exists(schema, table, definition)
 
-        insert_query = (
-            "INSERT INTO {}.{}(MSG) "
-            "VALUES ('ANOTHER HIT');"
-        ).format(schema, table)
+        insert_query = "INSERT INTO {}.{}(MSG) VALUES ('ANOTHER HIT');"
+        insert_query = insert_query.format(schema, table)
 
         self._sql_command(insert_query)
 
-        select_query = (
-            "SELECT COUNT(*) FROM {}.{};"
-        ).format(schema, table)
+        select_query = ("SELECT COUNT(*) FROM {}.{};").format(schema, table)
 
         return self._sql_select_scalar(select_query)
 
@@ -54,9 +46,9 @@ class PostgresDirectProvider(Provider):
 
         if count == 0:
 
-            create_table_query = (
-                "CREATE TABLE {}.{} {};"
-            ).format(schema, table, definition)
+            create_table_query = ("CREATE TABLE {}.{} {};").format(
+                schema, table, definition
+            )
 
             self._sql_command(create_table_query)
 
