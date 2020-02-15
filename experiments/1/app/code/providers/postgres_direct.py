@@ -62,6 +62,9 @@ class PostgresDirectProvider(Provider):
         cursor.execute(command)
         self.connection.commit()
 
+    def clear_persons(self):
+        pass
+
     def register_person(self, person):
         pass
 

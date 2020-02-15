@@ -1,5 +1,6 @@
 from redis import Redis
 from .base import Provider
+from json import loads, dumps
 
 
 class RedisProvider(Provider):
@@ -14,8 +15,19 @@ class RedisProvider(Provider):
         self.redis.incr("hits")
         return int(self.redis.get("hits"))
 
-    def register_person(self, person):
+    def clear_persons(self):
         pass
 
+    def register_person(self, person):
+        self.redis.set(person["person_id"], dumps(person))
+
     def search_persons(self, field, value):
-        return []
+
+        results = []
+
+        for key in self.redis.keys():
+            p = loads(self.redis.get(key))
+            if p[field] == value:
+                results.append(p)
+
+        return results

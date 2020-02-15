@@ -12,6 +12,10 @@ class Provider(ABC):
         pass
 
     @abstractmethod
+    def clear_persons(self):
+        pass
+
+    @abstractmethod
     def register_person(self, person):
         pass
 

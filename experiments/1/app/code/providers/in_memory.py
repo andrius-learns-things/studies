@@ -2,6 +2,8 @@ from .base import Provider
 
 hits = 0
 
+persons = []
+
 
 class InMemoryProvider(Provider):
     @property
@@ -13,8 +15,19 @@ class InMemoryProvider(Provider):
         hits = hits + 1
         return hits
 
+    def clear_persons(self):
+        global persons
+        persons = []
+
     def register_person(self, person):
-        pass
+        persons.append(person)
 
     def search_persons(self, field, value):
-        return []
+
+        results = []
+
+        for p in persons:
+            if p[field] == value:
+                results.append(p)
+
+        return results

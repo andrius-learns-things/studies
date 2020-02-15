@@ -15,6 +15,9 @@ class MongoProvider(Provider):
         self.mongodb.hits_db.insert_one({"hit": "yes?"})
         return len([item for item in self.mongodb.hits_db.find()])
 
+    def clear_persons(self):
+        pass
+
     def register_person(self, person):
         pass
 

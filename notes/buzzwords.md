@@ -43,3 +43,5 @@
 `Bash scripts`
 
 `Cyclomatic complexity` - Metric of how much softare is complex. Helps to enforce clean code.
+
+`Redis hmset` - Sets multiple keys, but not full dict...
