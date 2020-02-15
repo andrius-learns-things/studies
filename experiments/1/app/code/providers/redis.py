@@ -13,3 +13,9 @@ class RedisProvider(Provider):
     def get_hit_count(self):
         self.redis.incr("hits")
         return int(self.redis.get("hits"))
+
+    def register_person(self, person):
+        pass
+
+    def search_persons(self, field, value):
+        return []

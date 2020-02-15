@@ -61,3 +61,9 @@ class PostgresDirectProvider(Provider):
         cursor = self.connection.cursor()
         cursor.execute(command)
         self.connection.commit()
+
+    def register_person(self, person):
+        pass
+
+    def search_persons(self, field, value):
+        return []

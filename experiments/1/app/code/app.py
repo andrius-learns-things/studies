@@ -27,9 +27,12 @@ def overview():
     for provider in providers:
 
         all_results.append(" ")
+        all_results.append(" ")
+
         all_results.append("TESTING {}".format(provider.name))
 
         for experiment in experiments:
+            all_results.append("---")
             all_results.append("Experiment: {}".format(experiment.name))
 
             exp_results = experiment.run_the_experiment(provider)

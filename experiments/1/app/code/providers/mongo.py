@@ -14,3 +14,9 @@ class MongoProvider(Provider):
     def get_hit_count(self):
         self.mongodb.hits_db.insert_one({"hit": "yes?"})
         return len([item for item in self.mongodb.hits_db.find()])
+
+    def register_person(self, person):
+        pass
+
+    def search_persons(self, field, value):
+        return []
