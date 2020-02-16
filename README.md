@@ -41,9 +41,10 @@ Done:
 - Mongo POC
 - Mounted source files
 - PostgreSQL POC
+- One entity experiment with all providers
 
 Todo:
-- One entity experiment with all providers
+- Add time measurements
 - Index
 
 Ideas:
