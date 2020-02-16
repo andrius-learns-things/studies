@@ -45,6 +45,7 @@ Done:
 
 Todo:
 - Add time measurements
+- Scale up
 - Index
 
 Ideas:
