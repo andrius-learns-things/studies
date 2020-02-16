@@ -6,14 +6,21 @@ persons = []
 
 
 class InMemoryProvider(Provider):
+
+    # Provider meta props
+
     @property
     def name(self):
         return "In memory"
+
+    # Hit count experiment
 
     def get_hit_count(self):
         global hits
         hits = hits + 1
         return hits
+
+    # Single entity experiment
 
     def ensure_empty_person_structure(self):
         global persons

@@ -3,17 +3,26 @@ from .base import Provider
 
 
 class MongoProvider(Provider):
+
+    # Constructor
+
     def __init__(self):
         client = MongoClient("mongo", 27017)
         self.mongodb = client.main_db
+
+    # Provider meta props
 
     @property
     def name(self):
         return "Mongo"
 
+    # Hit count experiment
+
     def get_hit_count(self):
         self.mongodb.hits.insert_one({"hit": "yes?"})
         return len([item for item in self.mongodb.hits.find()])
+
+    # Single entity experiment
 
     def ensure_empty_person_structure(self):
         self.mongodb.persons.drop()

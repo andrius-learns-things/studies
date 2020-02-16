@@ -3,6 +3,9 @@ from .base import Provider
 
 
 class PostgresDirectProvider(Provider):
+
+    # Constructor
+
     def __init__(self):
         self.connection = psycopg2.connect(
             user="postgres",
@@ -11,6 +14,8 @@ class PostgresDirectProvider(Provider):
             port="5432",
             database="postgres",
         )
+
+    # Provider meta props
 
     @property
     def name(self):
@@ -47,7 +52,7 @@ class PostgresDirectProvider(Provider):
     def search_persons(self, field, value):
         return []
 
-    # Helpers
+    # Single entity experiment - helpers
 
     def _ensure_table_exists(self, schema, table, definition):
 

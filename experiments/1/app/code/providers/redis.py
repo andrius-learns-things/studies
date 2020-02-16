@@ -4,25 +4,25 @@ from json import loads, dumps
 
 
 class RedisProvider(Provider):
+
+    # Constructor
+
     def __init__(self):
         self.redis = Redis(host="redis", port=6379)
+
+    # Provider meta props
 
     @property
     def name(self):
         return "Redis"
 
+    # Hit count experiment
+
     def get_hit_count(self):
         self.redis.incr("hits")
         return int(self.redis.get("hits"))
 
-    @property
-    def all_person_ids(self):
-        ids = self.redis.get("all_person_ids")
-        return loads(ids) if ids else []
-
-    @all_person_ids.setter
-    def all_person_ids(self, ids):
-        self.redis.set("all_person_ids", dumps(ids))
+    # Single entity experiment
 
     def ensure_empty_person_structure(self):
         self.all_person_ids = []
@@ -42,3 +42,14 @@ class RedisProvider(Provider):
                 results.append(p)
 
         return results
+
+    # Single entity experiment - helpers
+
+    @property
+    def all_person_ids(self):
+        ids = self.redis.get("all_person_ids")
+        return loads(ids) if ids else []
+
+    @all_person_ids.setter
+    def all_person_ids(self, ids):
+        self.redis.set("all_person_ids", dumps(ids))
