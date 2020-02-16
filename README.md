@@ -43,9 +43,18 @@ Done:
 - PostgreSQL POC
 
 Todo:
-
+- One entity experiment with all providers
+- Index
 
 Ideas:
 - PostgresAdmin? Other kind of admins?
+
+## 2. PDB debugging with docker and flask
+
+Todo:
 - Pdb
 - Cheatsheet
+
+Follow:
+- https://www.agiratech.com/debugging-python-flask-app-in-docker-container/
+- https://medium.com/@trstringer/debugging-a-python-flask-application-in-a-container-with-docker-compose-fa5be981ec9a
