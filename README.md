@@ -12,6 +12,10 @@ It has:
 
 [Link](/notes/bookmarks.md)
 
+# CheatSheet
+
+[Link](/notes/cheatsheet.md)
+
 # Tools
 
 ## 1. Pre-commit setup
