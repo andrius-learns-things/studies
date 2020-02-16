@@ -12,7 +12,7 @@ class Provider(ABC):
         pass
 
     @abstractmethod
-    def clear_persons(self):
+    def ensure_empty_person_structure(self):
         pass
 
     @abstractmethod

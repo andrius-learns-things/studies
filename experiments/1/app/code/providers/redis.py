@@ -24,7 +24,7 @@ class RedisProvider(Provider):
     def all_person_ids(self, ids):
         self.redis.set("all_person_ids", dumps(ids))
 
-    def clear_persons(self):
+    def ensure_empty_person_structure(self):
         self.all_person_ids = []
 
     def register_person(self, person):

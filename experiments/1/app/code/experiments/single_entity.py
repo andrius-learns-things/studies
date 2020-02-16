@@ -10,7 +10,7 @@ class SingleEntityExperiment(Experiment):
 
         persons = [{"person_id": "1", "first_name": "A", "last_name": "B"}]
 
-        provider.clear_persons()
+        provider.ensure_empty_person_structure()
 
         for person in persons:
             provider.register_person(person)

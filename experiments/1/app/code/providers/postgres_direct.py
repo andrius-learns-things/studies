@@ -16,6 +16,8 @@ class PostgresDirectProvider(Provider):
     def name(self):
         return "Postgres direct"
 
+    # Hit count experiment
+
     def get_hit_count(self):
 
         schema = "public"
@@ -33,6 +35,19 @@ class PostgresDirectProvider(Provider):
         select_query = ("SELECT COUNT(*) FROM {}.{};").format(schema, table)
 
         return self._sql_select_scalar(select_query)
+
+    # Single entity experiment
+
+    def ensure_empty_person_structure(self):
+        pass
+
+    def register_person(self, person):
+        pass
+
+    def search_persons(self, field, value):
+        return []
+
+    # Helpers
 
     def _ensure_table_exists(self, schema, table, definition):
 
@@ -61,12 +76,3 @@ class PostgresDirectProvider(Provider):
         cursor = self.connection.cursor()
         cursor.execute(command)
         self.connection.commit()
-
-    def clear_persons(self):
-        pass
-
-    def register_person(self, person):
-        pass
-
-    def search_persons(self, field, value):
-        return []
