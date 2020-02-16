@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   web:
     build:
@@ -11,6 +11,8 @@ services:
       - redis
       - mongo
       - postgres
+    stdin_open: true
+    tty: true
   redis:
     image: redis
   mongo:
