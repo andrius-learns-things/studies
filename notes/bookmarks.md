@@ -17,3 +17,5 @@ https://docs.python.org/3/library/pdb.html#debugger-commands - **Pdb commands**
 https://api.mongodb.com/python/current/tutorial.html **Mongo commands**
 
 https://www.psycopg.org/docs/cursor.html **Plain PSQL commands in python**
+
+https://github.com/engineer-man/youtube/blob/master/060/outline.txt **YT Engineer man's summary of linux dirs**
