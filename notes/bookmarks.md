@@ -15,3 +15,5 @@ https://www.agiratech.com/debugging-python-flask-app-in-docker-container/
 https://docs.python.org/3/library/pdb.html#debugger-commands - **Pdb commands**
 
 https://api.mongodb.com/python/current/tutorial.html **Mongo commands**
+
+https://www.psycopg.org/docs/cursor.html **Plain PSQL commands in python**
