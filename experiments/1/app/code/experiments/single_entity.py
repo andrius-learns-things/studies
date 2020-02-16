@@ -1,6 +1,9 @@
 from .base import Experiment
 
 
+NUM = 100
+
+
 class SingleEntityExperiment(Experiment):
     @property
     def name(self):
@@ -8,7 +11,7 @@ class SingleEntityExperiment(Experiment):
 
     def run_the_experiment(self, provider):
 
-        persons = [{"person_id": "1", "first_name": "A", "last_name": "B"}]
+        persons = self._generate_persons(NUM)
 
         provider.ensure_empty_person_structure()
 
@@ -16,8 +19,9 @@ class SingleEntityExperiment(Experiment):
             provider.register_person(person)
 
         searches = [
-            {"field": "first_name", "value": "B", "expected_result_count": 0},
+            {"field": "first_name", "value": "_", "expected_result_count": 0},
             {"field": "first_name", "value": "A", "expected_result_count": 1},
+            {"field": "first_name", "value": "BB", "expected_result_count": 1},
         ]
 
         output = []
@@ -42,3 +46,32 @@ class SingleEntityExperiment(Experiment):
             )
 
         return output
+
+    def _generate_persons(self, num):
+
+        results = []
+        for i in range(num):
+            results.append(
+                {
+                    "person_id": "PID_{}".format(i),
+                    "first_name": self._get_name_from_num(i),
+                    "last_name": self._get_name_from_num(i),
+                }
+            )
+
+        return results
+
+    def _get_name_from_num(self, num):
+
+        if num == 0:
+            return "A"
+
+        txt = ""
+        num_to_divide = num
+
+        while num_to_divide > 0:
+            digit = num_to_divide % 10
+            num_to_divide = num_to_divide // 10
+            txt = chr(65 + digit) + txt
+
+        return txt
