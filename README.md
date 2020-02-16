@@ -51,10 +51,6 @@ Ideas:
 
 ## 2. PDB debugging with docker and flask
 
-Todo:
-- Pdb
-- Cheatsheet
+DONE.
 
-Follow:
-- https://www.agiratech.com/debugging-python-flask-app-in-docker-container/
-- https://medium.com/@trstringer/debugging-a-python-flask-application-in-a-container-with-docker-compose-fa5be981ec9a
+See [Link](/experiments/2/Readme.md)

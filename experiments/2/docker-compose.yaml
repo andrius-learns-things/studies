@@ -1,0 +1,13 @@
+version: "3"
+services:
+  dockerapp:
+    build:
+      context: .
+      dockerfile: dockerapp/Dockerfile
+    ports:
+      - "8052:8000"
+    command: /usr/local/bin/gunicorn -w 2 -t 3600 -b :8000 app:app --reload
+    volumes:
+      - ./dockerapp:/usr/src/app
+    stdin_open: true
+    tty: true
