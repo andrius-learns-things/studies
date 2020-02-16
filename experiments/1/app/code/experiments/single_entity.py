@@ -1,7 +1,7 @@
 from .base import Experiment
+from time import time
 
-
-NUM = 100
+NUM = 1000
 
 
 class SingleEntityExperiment(Experiment):
@@ -26,26 +26,29 @@ class SingleEntityExperiment(Experiment):
 
         output = []
 
+        start_time = time()
+
         for search in searches:
+            output.append(self._do_search(provider, search))
 
-            results = provider.search_persons(
-                field=search["field"], value=search["value"]
-            )
+        end_time = time()
 
-            result = (
-                "PASS" if len(results) == search["expected_result_count"] else "FAIL"
-            )
+        elapsed_time = round(
+            (end_time - start_time) * 1000
+        )  # x1000 to get ms from secs
 
-            output.append(
-                "Search by {} returned {}, expected {} | {}".format(
-                    search["field"],
-                    len(results),
-                    search["expected_result_count"],
-                    result,
-                )
-            )
+        output.append("All search took: {}ms".format(elapsed_time))
 
         return output
+
+    def _do_search(self, provider, search):
+        results = provider.search_persons(field=search["field"], value=search["value"])
+
+        result = "PASS" if len(results) == search["expected_result_count"] else "FAIL"
+
+        return "Search by {} returned {}, expected {} | {}".format(
+            search["field"], len(results), search["expected_result_count"], result
+        )
 
     def _generate_persons(self, num):
 
