@@ -2,6 +2,9 @@ import psycopg2
 from .base import Provider
 
 
+SCHEMA = "public"
+
+
 class PostgresDirectProvider(Provider):
 
     # Constructor
@@ -25,32 +28,72 @@ class PostgresDirectProvider(Provider):
 
     def get_hit_count(self):
 
-        schema = "public"
         table = "hits"
 
         definition = "(ID SERIAL PRIMARY KEY, " "MSG TEXT NOT NULL)"
 
-        self._ensure_table_exists(schema, table, definition)
+        self._ensure_table_exists(SCHEMA, table, definition)
 
         insert_query = "INSERT INTO {}.{}(MSG) VALUES ('ANOTHER HIT');"
-        insert_query = insert_query.format(schema, table)
+        insert_query = insert_query.format(SCHEMA, table)
 
         self._sql_command(insert_query)
 
-        select_query = ("SELECT COUNT(*) FROM {}.{};").format(schema, table)
+        select_query = ("SELECT COUNT(*) FROM {}.{};").format(SCHEMA, table)
 
         return self._sql_select_scalar(select_query)
 
     # Single entity experiment
 
     def ensure_empty_person_structure(self):
-        pass
+
+        definition = (
+            "(ID SERIAL PRIMARY KEY, "
+            "PERSON_ID TEXT NOT NULL, "
+            "FNAME TEXT NOT NULL, "
+            "LNAME TEXT NOT NULL)"
+        )
+
+        self._ensure_table_exists(SCHEMA, "persons", definition)
+
+        create_table_query = "DELETE FROM {}.{};".format(SCHEMA, "persons")
+        self._sql_command(create_table_query)
 
     def register_person(self, person):
-        pass
+        insert_query = (
+            "INSERT INTO {}.{}(PERSON_ID, FNAME, LNAME) " "VALUES ('{}', '{}', '{}');"
+        )
+        insert_query = insert_query.format(
+            SCHEMA,
+            "persons",
+            person["person_id"],
+            person["first_name"],
+            person["last_name"],
+        )
+
+        self._sql_command(insert_query)
 
     def search_persons(self, field, value):
-        return []
+
+        fields_in_db = {
+            "person_id": "PERSON_ID",
+            "first_name": "FNAME",
+            "last_name": "LNAME",
+        }
+
+        field_in_db = fields_in_db[field]
+
+        select_query = ("SELECT * FROM {}.{} " "WHERE {}='{}';").format(
+            SCHEMA, "persons", field_in_db, value
+        )
+
+        db_results = self._sql_select(select_query)
+
+        results = [
+            {"person_id": r[0], "first_name": r[1], "last_name": r[2]}
+            for r in db_results
+        ]
+        return results
 
     # Single entity experiment - helpers
 
@@ -71,6 +114,11 @@ class PostgresDirectProvider(Provider):
             )
 
             self._sql_command(create_table_query)
+
+    def _sql_select(self, command):
+        cursor = self.connection.cursor()
+        cursor.execute(command)
+        return cursor.fetchmany()
 
     def _sql_select_scalar(self, command):
         cursor = self.connection.cursor()
