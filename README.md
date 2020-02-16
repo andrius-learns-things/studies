@@ -42,11 +42,11 @@ Done:
 - Mounted source files
 - PostgreSQL POC
 - One entity experiment with all providers
-
-Todo:
 - Add time measurements
 - Scale up
-- Index
+
+Todo:
+- Indexes
 
 Ideas:
 - PostgresAdmin? Other kind of admins?
