@@ -11,35 +11,54 @@ class SingleEntityExperiment(Experiment):
 
     def run_the_experiment(self, provider):
 
-        persons = self._generate_persons(NUM)
-
-        provider.ensure_empty_person_structure()
-
-        for person in persons:
-            provider.register_person(person)
-
-        searches = [
-            {"field": "first_name", "value": "_", "expected_result_count": 0},
-            {"field": "first_name", "value": "A", "expected_result_count": 1},
-            {"field": "first_name", "value": "BB", "expected_result_count": 1},
-        ]
-
         output = []
 
+        self._experiment_init(provider, output)
+        self._experiment_register(provider, output)
+        self._experiment_search(provider, output)
+
+        return output
+
+    def _experiment_init(self, provider, output):
+        def func():
+            provider.ensure_empty_person_structure()
+
+        self._measure(output, "Init", func)
+
+    def _experiment_register(self, provider, output):
+        def func():
+            persons = self._generate_persons(NUM)
+            for person in persons:
+                provider.register_person(person)
+
+        self._measure(output, "Register", func)
+
+    def _experiment_search(self, provider, output):
+        def func():
+            searches = [
+                {"field": "first_name", "value": "_", "expected_result_count": 0},
+                {"field": "first_name", "value": "A", "expected_result_count": 1},
+                {"field": "first_name", "value": "BB", "expected_result_count": 1},
+            ]
+            for search in searches:
+                output.append(self._do_search(provider, search))
+
+        self._measure(output, "Search", func)
+
+    def _measure(self, output, title, function):
+
+        output.append("-")
+        output.append("Measuring {}".format(title))
+
         start_time = time()
-
-        for search in searches:
-            output.append(self._do_search(provider, search))
-
+        function()
         end_time = time()
 
         elapsed_time = round(
             (end_time - start_time) * 1000
         )  # x1000 to get ms from secs
 
-        output.append("All search took: {}ms".format(elapsed_time))
-
-        return output
+        output.append("Time: {}ms".format(elapsed_time))
 
     def _do_search(self, provider, search):
         results = provider.search_persons(field=search["field"], value=search["value"])
