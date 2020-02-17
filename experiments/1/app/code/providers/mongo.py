@@ -1,4 +1,4 @@
-from pymongo import MongoClient
+from pymongo import MongoClient, DESCENDING
 from .base import Provider
 
 
@@ -34,4 +34,4 @@ class MongoProvider(Provider):
         return [p for p in self.mongodb.persons.find({field: value})]
 
     def add_person_indexes(self):
-        pass
+        self.mongodb.persons.create_index([("first_name", DESCENDING)])
