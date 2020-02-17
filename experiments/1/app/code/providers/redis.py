@@ -41,6 +41,11 @@ class RedisProvider(Provider):
 
         results = []
 
+        if field == "first_name" and self.fn_index_exists:
+            index_key = PERSON_FN_INDEX_KEY_FORMAT.format(value)
+            index_val = self.redis.get(index_key)
+            return loads(index_val) if index_val else []
+
         for p_id in self.all_person_ids:
             key = PERSON_VALUES_KEY_FORMAT.format(p_id)
             p = loads(self.redis.get(key))
@@ -65,6 +70,8 @@ class RedisProvider(Provider):
 
             self.redis.set(index_key, dumps(index_val))
 
+        self.fn_index_exists = True
+
     # Single entity experiment - helpers
 
     @property
@@ -75,3 +82,12 @@ class RedisProvider(Provider):
     @all_person_ids.setter
     def all_person_ids(self, ids):
         self.redis.set("all_person_ids", dumps(ids))
+
+    @property
+    def fn_index_exists(self):
+        val = self.redis.get("fn_index_exists")
+        return loads(val) if val else False
+
+    @fn_index_exists.setter
+    def fn_index_exists(self, value):
+        self.redis.set("fn_index_exists", dumps(value))
