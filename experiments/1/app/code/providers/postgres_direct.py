@@ -95,6 +95,9 @@ class PostgresDirectProvider(Provider):
         ]
         return results
 
+    def add_person_indexes(self):
+        pass
+
     # Single entity experiment - helpers
 
     def _ensure_table_exists(self, schema, table, definition):

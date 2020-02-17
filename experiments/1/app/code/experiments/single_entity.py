@@ -16,6 +16,8 @@ class SingleEntityExperiment(Experiment):
         self._experiment_init(provider, output)
         self._experiment_register(provider, output)
         self._experiment_search(provider, output)
+        self._experiment_add_index(provider, output)
+        self._experiment_search(provider, output)
 
         return output
 
@@ -44,6 +46,12 @@ class SingleEntityExperiment(Experiment):
                 output.append(self._do_search(provider, search))
 
         self._measure(output, "Search", func)
+
+    def _experiment_add_index(self, provider, output):
+        def func():
+            provider.add_person_indexes()
+
+        self._measure(output, "Add indexes", func)
 
     def _measure(self, output, title, function):
 

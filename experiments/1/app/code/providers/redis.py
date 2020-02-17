@@ -43,6 +43,9 @@ class RedisProvider(Provider):
 
         return results
 
+    def add_person_indexes(self):
+        pass
+
     # Single entity experiment - helpers
 
     @property

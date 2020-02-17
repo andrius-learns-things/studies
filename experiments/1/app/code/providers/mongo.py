@@ -32,3 +32,6 @@ class MongoProvider(Provider):
 
     def search_persons(self, field, value):
         return [p for p in self.mongodb.persons.find({field: value})]
+
+    def add_person_indexes(self):
+        pass

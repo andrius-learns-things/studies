@@ -38,3 +38,6 @@ class InMemoryProvider(Provider):
                 results.append(p)
 
         return results
+
+    def add_person_indexes(self):
+        pass

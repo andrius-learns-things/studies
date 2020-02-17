@@ -22,3 +22,7 @@ class Provider(ABC):
     @abstractmethod
     def search_persons(self, field, value):
         pass
+
+    @abstractmethod
+    def add_person_indexes(self):
+        pass
