@@ -48,9 +48,12 @@ Done:
 - One entity experiment with all providers
 - Add time measurements
 - Scale up
+- Indexes
 
 Todo:
-- Indexes
+- Why no perf improvement with postgres index?
+- ORM and migrations for postgres
+- More entities and JOINS
 - MySql?
 - Couchbase?
 
