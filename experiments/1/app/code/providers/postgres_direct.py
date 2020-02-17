@@ -96,7 +96,11 @@ class PostgresDirectProvider(Provider):
         return results
 
     def add_person_indexes(self):
-        pass
+        create_index_query = ("CREATE INDEX idx_persons_fname ON {}.{}({});").format(
+            SCHEMA, "persons", "FNAME"
+        )
+
+        self._sql_command(create_index_query)
 
     # Single entity experiment - helpers
 

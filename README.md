@@ -51,6 +51,8 @@ Done:
 
 Todo:
 - Indexes
+- MySql?
+- Couchbase?
 
 Ideas:
 - PostgresAdmin? Other kind of admins?
