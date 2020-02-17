@@ -38,21 +38,10 @@ class RedisProvider(Provider):
         )
 
     def search_persons(self, field, value):
-
-        results = []
-
         if field == "first_name" and self.fn_index_exists:
-            index_key = PERSON_FN_INDEX_KEY_FORMAT.format(value)
-            index_val = self.redis.get(index_key)
-            return loads(index_val) if index_val else []
-
-        for p_id in self.all_person_ids:
-            key = PERSON_VALUES_KEY_FORMAT.format(p_id)
-            p = loads(self.redis.get(key))
-            if p[field] == value:
-                results.append(p)
-
-        return results
+            return self._search_persons_by_index(field, value)
+        else:
+            return self._search_persons_by_values(field, value)
 
     def add_person_indexes(self):
 
@@ -73,6 +62,26 @@ class RedisProvider(Provider):
         self.fn_index_exists = True
 
     # Single entity experiment - helpers
+
+    def _search_persons_by_index(self, field, value):
+        index_key = PERSON_FN_INDEX_KEY_FORMAT.format(value)
+        index_val = self.redis.get(index_key)
+        return loads(index_val) if index_val else []
+
+    def _search_persons_by_values(self, field, value):
+
+        results = []
+
+        if len(self.all_person_ids) >= 10000:
+            raise Exception("Too much")
+
+        for p_id in self.all_person_ids:
+            key = PERSON_VALUES_KEY_FORMAT.format(p_id)
+            p = loads(self.redis.get(key))
+            if p[field] == value:
+                results.append(p)
+
+        return results
 
     @property
     def all_person_ids(self):

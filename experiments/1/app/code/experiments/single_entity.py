@@ -1,7 +1,7 @@
 from .base import Experiment
 from time import time
 
-NUM = 1000
+NUM = 10000
 
 
 class SingleEntityExperiment(Experiment):
@@ -69,7 +69,13 @@ class SingleEntityExperiment(Experiment):
         output.append("Time: {}ms".format(elapsed_time))
 
     def _do_search(self, provider, search):
-        results = provider.search_persons(field=search["field"], value=search["value"])
+        try:
+            results = provider.search_persons(
+                field=search["field"], value=search["value"]
+            )
+        except Exception as ex:
+            if str(ex) == "Too much":
+                return "Too much to handle"
 
         result = "PASS" if len(results) == search["expected_result_count"] else "FAIL"
 
