@@ -3,6 +3,10 @@ from .base import Provider
 from json import loads, dumps
 
 
+PERSON_VALUES_KEY_FORMAT = "P_{}"
+PERSON_FN_INDEX_KEY_FORMAT = "PI_{}"
+
+
 class RedisProvider(Provider):
 
     # Constructor
@@ -25,18 +29,20 @@ class RedisProvider(Provider):
     # Single entity experiment
 
     def ensure_empty_person_structure(self):
-        self.all_person_ids = []
+        self.redis.flushdb()
 
     def register_person(self, person):
         self.all_person_ids = self.all_person_ids + [person["person_id"]]
-        self.redis.set("P_{}".format(person["person_id"]), dumps(person))
+        self.redis.set(
+            PERSON_VALUES_KEY_FORMAT.format(person["person_id"]), dumps(person)
+        )
 
     def search_persons(self, field, value):
 
         results = []
 
         for p_id in self.all_person_ids:
-            key = "P_{}".format(p_id)
+            key = PERSON_VALUES_KEY_FORMAT.format(p_id)
             p = loads(self.redis.get(key))
             if p[field] == value:
                 results.append(p)
@@ -44,7 +50,20 @@ class RedisProvider(Provider):
         return results
 
     def add_person_indexes(self):
-        pass
+
+        for p_id in self.all_person_ids:
+            key = PERSON_VALUES_KEY_FORMAT.format(p_id)
+            p = loads(self.redis.get(key))
+
+            first_name = p["first_name"]
+
+            index_key = PERSON_FN_INDEX_KEY_FORMAT.format(first_name)
+            index_val = self.redis.get(index_key)
+            index_val = loads(index_val) if index_val else []
+
+            index_val.append(p)
+
+            self.redis.set(index_key, dumps(index_val))
 
     # Single entity experiment - helpers
 
