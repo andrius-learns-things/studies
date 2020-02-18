@@ -100,3 +100,14 @@ class RedisProvider(Provider):
     @fn_index_exists.setter
     def fn_index_exists(self, value):
         self.redis.set("fn_index_exists", dumps(value))
+
+    # Two entities experiment
+
+    def ensure_empty_org_structures(self):
+        pass
+
+    def register_org(self, org, registration):
+        pass
+
+    def get_last_registered_orgs(self, subsystem):
+        return []

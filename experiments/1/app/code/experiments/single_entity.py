@@ -76,6 +76,8 @@ class SingleEntityExperiment(Experiment):
         except Exception as ex:
             if str(ex) == "Too much":
                 return "Too much to handle"
+            else:
+                raise ex
 
         result = "PASS" if len(results) == search["expected_result_count"] else "FAIL"
 

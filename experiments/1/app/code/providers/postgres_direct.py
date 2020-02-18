@@ -59,7 +59,7 @@ class PostgresDirectProvider(Provider):
         create_table_query = "DELETE FROM {}.{};".format(SCHEMA, "persons")
         self._sql_command(create_table_query)
 
-        drop_index_query = "DROP INDEX IF EXISTS idx_persons_fname ;"
+        drop_index_query = "DROP INDEX IF EXISTS idx_persons_fname;"
 
         self._sql_command(drop_index_query)
 
@@ -140,3 +140,14 @@ class PostgresDirectProvider(Provider):
         cursor = self.connection.cursor()
         cursor.execute(command)
         self.connection.commit()
+
+    # Two entities experiment
+
+    def ensure_empty_org_structures(self):
+        pass
+
+    def register_org(self, org, registration):
+        pass
+
+    def get_last_registered_orgs(self, subsystem):
+        return []

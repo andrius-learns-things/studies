@@ -41,3 +41,14 @@ class InMemoryProvider(Provider):
 
     def add_person_indexes(self):
         pass
+
+    # Two entities experiment
+
+    def ensure_empty_org_structures(self):
+        pass
+
+    def register_org(self, org, registration):
+        pass
+
+    def get_last_registered_orgs(self, subsystem):
+        return []

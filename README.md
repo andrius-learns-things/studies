@@ -52,6 +52,8 @@ Done:
 
 Todo:
 - Another experiment: More entities and JOINS
+  - Core
+  - Avoid duplication of measure func
 - Another provider - SQL Alchemy + migrations
 - Why no perf improvement with postgres index?
 - MySql?
