@@ -52,8 +52,6 @@ Done:
 
 Todo:
 - Another experiment: Two entities and JOINS
-  - Core
-  - Avoid duplication of measure func
   - Provider by provider
 - Another provider - SQL Alchemy + migrations
 - Why no perf improvement with postgres index?

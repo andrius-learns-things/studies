@@ -1,8 +1,5 @@
 from datetime import datetime
 from .base import Experiment
-from time import time
-
-NUM = 10000
 
 
 class TwoEntitiesJoinedExperiment(Experiment):
@@ -45,21 +42,6 @@ class TwoEntitiesJoinedExperiment(Experiment):
                 output.append(self._do_search(provider, search))
 
         self._measure(output, "Search orgs", func)
-
-    def _measure(self, output, title, function):
-
-        output.append("-")
-        output.append("Measuring {}".format(title))
-
-        start_time = time()
-        function()
-        end_time = time()
-
-        elapsed_time = round(
-            (end_time - start_time) * 1000
-        )  # x1000 to get ms from secs
-
-        output.append("Time: {}ms".format(elapsed_time))
 
     def _generate_registrations(self):
         return [
