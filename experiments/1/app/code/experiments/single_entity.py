@@ -1,7 +1,7 @@
 from .base import Experiment
 from time import time
 
-NUM = 10000
+NUM = 100
 
 
 class SingleEntityExperiment(Experiment):

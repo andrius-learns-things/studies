@@ -5,6 +5,7 @@ from providers.in_memory import InMemoryProvider
 from providers.postgres_direct import PostgresDirectProvider
 from experiments.hit_count import HitCountExperiment
 from experiments.single_entity import SingleEntityExperiment
+from experiments.two_entity_join import TwoEntitiesJoinedExperiment
 
 
 app = Flask(__name__)
@@ -16,7 +17,11 @@ providers = [
     PostgresDirectProvider(),
 ]
 
-experiments = [HitCountExperiment(), SingleEntityExperiment()]
+experiments = [
+    HitCountExperiment(),
+    SingleEntityExperiment(),
+    TwoEntitiesJoinedExperiment(),
+]
 
 
 @app.route("/")
@@ -28,11 +33,12 @@ def overview():
 
         all_results.append(" ")
         all_results.append(" ")
+        all_results.append(" ")
 
         all_results.append("TESTING {}".format(provider.name))
 
         for experiment in experiments:
-            all_results.append("---")
+            all_results.append("----------")
             all_results.append("Experiment: {}".format(experiment.name))
 
             exp_results = experiment.run_the_experiment(provider)

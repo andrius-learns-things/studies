@@ -51,9 +51,9 @@ Done:
 - Indexes
 
 Todo:
+- Another experiment: More entities and JOINS
+- Another provider - SQL Alchemy + migrations
 - Why no perf improvement with postgres index?
-- ORM and migrations for postgres
-- More entities and JOINS
 - MySql?
 - Couchbase?
 

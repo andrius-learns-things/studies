@@ -59,6 +59,10 @@ class PostgresDirectProvider(Provider):
         create_table_query = "DELETE FROM {}.{};".format(SCHEMA, "persons")
         self._sql_command(create_table_query)
 
+        drop_index_query = "DROP INDEX IF EXISTS idx_persons_fname ;"
+
+        self._sql_command(drop_index_query)
+
     def register_person(self, person):
         insert_query = (
             "INSERT INTO {}.{}(PERSON_ID, FNAME, LNAME) " "VALUES ('{}', '{}', '{}');"
