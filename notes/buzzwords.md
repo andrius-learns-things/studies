@@ -51,3 +51,5 @@
 `Docker compose tty flag` - Enables shell interaction
 
 `Transpiler` - Compiler, which changes from human readable lang to other human readable lang
+
+`MongoDB Aggregation Framework` - supports map-reduce, lookups, etc

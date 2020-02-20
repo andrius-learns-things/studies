@@ -57,7 +57,20 @@ class MongoProvider(Provider):
         self.mongodb.registrations.insert_one(registration)
 
     def get_last_registered_orgs(self, subsystem):
+
+        pipeline = [
+            {
+                "$lookup": {
+                    "from": "orgs",
+                    "localField": "org_id",
+                    "foreignField": "_id",
+                    "as": "registered_org",
+                }
+            },
+            {"$match": {"subsystem": subsystem}},
+        ]
+
         return [
-            {"name": "?"}
-            for r in self.mongodb.registrations.find({"subsystem": subsystem})
+            r["registered_org"][0]
+            for r in self.mongodb.registrations.aggregate(pipeline)
         ]
