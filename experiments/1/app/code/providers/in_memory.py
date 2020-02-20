@@ -3,6 +3,7 @@ from .base import Provider
 hits = 0
 
 persons = []
+subsystem_registrations = {}
 
 
 class InMemoryProvider(Provider):
@@ -48,7 +49,16 @@ class InMemoryProvider(Provider):
         pass
 
     def register_org(self, org, registration):
-        pass
+
+        subsystem = registration["subsystem"]
+        regs = subsystem_registrations.get(subsystem)
+
+        if not regs:
+            regs = []
+            subsystem_registrations[subsystem] = regs
+
+        regs.append(org)
 
     def get_last_registered_orgs(self, subsystem):
-        return []
+        regs = subsystem_registrations.get(subsystem)
+        return regs if regs else []
