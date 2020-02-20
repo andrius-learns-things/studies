@@ -39,10 +39,22 @@ class MongoProvider(Provider):
     # Two entities experiment
 
     def ensure_empty_org_structures(self):
-        pass
+        self.mongodb.orgs.drop()
+        self.mongodb.registrations.drop()
+        self.mongodb.registrations.create_index([("subsystem", DESCENDING)])
 
     def register_org(self, org, registration):
-        pass
+
+        org = self.mongodb.orgs.find_one({"name": org["name"]})
+
+        if not org:
+            org_id = self.mongodb.orgs.insert_one(org)
+        else:
+            org_id = org["id"]
+
+        registration["org_id"] = org_id
+
+        self.mongodb.registrations.insert_one(registration)
 
     def get_last_registered_orgs(self, subsystem):
-        return []
+        return [r for r in self.mongodb.registrations.find({"subsystem": subsystem})]
