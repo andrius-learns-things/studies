@@ -19,3 +19,7 @@ https://api.mongodb.com/python/current/tutorial.html **Mongo commands**
 https://www.psycopg.org/docs/cursor.html **Plain PSQL commands in python**
 
 https://github.com/engineer-man/youtube/blob/master/060/outline.txt **YT Engineer man's summary of linux dirs**
+
+https://stackoverflow.com/questions/41992885/pymongo-how-to-match-on-lookup
+
+https://docs.mongodb.com/manual/reference/operator/aggregation/lookup/
