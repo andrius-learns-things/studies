@@ -34,9 +34,9 @@ class TwoEntitiesJoinedExperiment(Experiment):
     def _experiment_search_orgs(self, provider, output):
         def func():
             searches = [
-                {"subsystem": "_", "expected_result_count": 0},
-                {"subsystem": "I", "expected_result_count": 1},
-                {"subsystem": "II", "expected_result_count": 2},
+                {"subsystem": "_", "expected_result": []},
+                {"subsystem": "I", "expected_result": ["Company A"]},
+                {"subsystem": "II", "expected_result": ["Company A", "Company B"]},
             ]
             for search in searches:
                 output.append(self._do_search(provider, search))
@@ -68,8 +68,16 @@ class TwoEntitiesJoinedExperiment(Experiment):
             else:
                 raise ex
 
-        result = "PASS" if len(results) == search["expected_result_count"] else "FAIL"
+        org_names = [o["name"] for o in results]
+        org_names_joined = "|".join(org_names)
+        results_joined = "|".join(search["expected_result"])
 
-        return "Search by {} returned {}, expected {} | {}".format(
-            search["subsystem"], len(results), search["expected_result_count"], result
+        result = (
+            "PASS"
+            if org_names_joined == results_joined
+            else "FAIL (received '{}' != expected '{}')".format(
+                org_names, results_joined
+            )
         )
+
+        return "Search by '{}': {}".format(search["subsystem"], result)

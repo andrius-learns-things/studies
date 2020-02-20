@@ -57,4 +57,7 @@ class MongoProvider(Provider):
         self.mongodb.registrations.insert_one(registration)
 
     def get_last_registered_orgs(self, subsystem):
-        return [r for r in self.mongodb.registrations.find({"subsystem": subsystem})]
+        return [
+            {"name": "?"}
+            for r in self.mongodb.registrations.find({"subsystem": subsystem})
+        ]
