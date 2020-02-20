@@ -45,12 +45,12 @@ class MongoProvider(Provider):
 
     def register_org(self, org, registration):
 
-        org = self.mongodb.orgs.find_one({"name": org["name"]})
+        existing_org = self.mongodb.orgs.find_one({"name": org["name"]})
 
-        if not org:
-            org_id = self.mongodb.orgs.insert_one(org)
+        if not existing_org:
+            org_id = self.mongodb.orgs.insert_one(org).inserted_id
         else:
-            org_id = org["id"]
+            org_id = existing_org["_id"]
 
         registration["org_id"] = org_id
 
