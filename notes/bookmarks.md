@@ -23,3 +23,14 @@ https://github.com/engineer-man/youtube/blob/master/060/outline.txt **YT Enginee
 https://stackoverflow.com/questions/41992885/pymongo-how-to-match-on-lookup
 
 https://docs.mongodb.com/manual/reference/operator/aggregation/lookup/
+
+**Excellent tutorial of SQLAlchemy Core**:
+
+https://www.tutorialspoint.com/sqlalchemy/sqlalchemy_core_creating_table.htm
+https://www.tutorialspoint.com/sqlalchemy/sqlalchemy_core_sql_expressions.htm
+https://www.tutorialspoint.com/sqlalchemy/sqlalchemy_core_selecting_rows.htm
+https://www.tutorialspoint.com/sqlalchemy/sqlalchemy_core_using_update_expression.htm
+https://www.tutorialspoint.com/sqlalchemy/sqlalchemy_core_using_delete_expression.htm
+https://www.tutorialspoint.com/sqlalchemy/sqlalchemy_core_using_multiple_tables.htm
+https://www.tutorialspoint.com/sqlalchemy/sqlalchemy_core_using_joins.htm
+https://www.tutorialspoint.com/sqlalchemy/sqlalchemy_core_using_conjunctions.htm
