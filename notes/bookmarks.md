@@ -27,3 +27,5 @@ https://docs.mongodb.com/manual/reference/operator/aggregation/lookup/
 https://www.tutorialspoint.com/sqlalchemy/sqlalchemy_core_creating_table.htm **Excellent tutorial of SQLAlchemy Core**:
 
 https://www.tutorialspoint.com/sqlalchemy/sqlalchemy_orm_declaring_mapping.htm **Excellent tutorial of SQLAlchemy ORM**
+
+https://medium.com/@sean_bradley/add-swagger-ui-to-your-python-flask-api-683bfbb32b36 **One page tutorial about swagger UI in flask**
