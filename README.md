@@ -66,3 +66,10 @@ Ideas:
 DONE.
 
 See [Link](/experiments/2/Readme.md)
+
+
+## 2. Swagger UI served for trivial flask app
+
+TODO...
+
+See [Link](/experiments/3/)
