@@ -70,6 +70,8 @@ See [Link](/experiments/2/Readme.md)
 
 ## 2. Swagger UI served for trivial flask app
 
+Following https://medium.com/@sean_bradley/add-swagger-ui-to-your-python-flask-api-683bfbb32b36
+
 TODO...
 
 See [Link](/experiments/3/)

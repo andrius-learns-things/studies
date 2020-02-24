@@ -53,3 +53,7 @@
 `Transpiler` - Compiler, which changes from human readable lang to other human readable lang
 
 `MongoDB Aggregation Framework` - supports map-reduce, lookups, etc
+
+`Swagger` - In-browser documentation & tools to test it for REST APIs
+
+`Flask blueprint` - Modular "sub-app" in flash app
