@@ -57,3 +57,17 @@
 `Swagger` - In-browser documentation & tools to test it for REST APIs
 
 `Flask blueprint` - Modular "sub-app" in flash app
+
+`flask_swagger_ui` - Swagger-Flask lib. Simple lib, which serves Swagger UI, defined in a file (so API & docs get duplicated)
+
+`flask-restplus` - Swagger-Flask lib. A bit more advanced lib, which autogenerates swagger out of your method definitions
+
+`connexion` - Swagger-Flask lib. A lib, which adds python handlers to your existing swagger definition files.
+
+`marshmallow` - Serialization lib
+
+`pickle` - Another serialization lib
+
+`schematics` - Validation lib
+
+`schema` - Validation lib

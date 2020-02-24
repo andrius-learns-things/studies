@@ -29,3 +29,5 @@ https://www.tutorialspoint.com/sqlalchemy/sqlalchemy_core_creating_table.htm **E
 https://www.tutorialspoint.com/sqlalchemy/sqlalchemy_orm_declaring_mapping.htm **Excellent tutorial of SQLAlchemy ORM**
 
 https://medium.com/@sean_bradley/add-swagger-ui-to-your-python-flask-api-683bfbb32b36 **One page tutorial about swagger UI in flask**
+
+https://www.yeahhub.com/7-best-python-libraries-validating-data/ **6 alternatives to schematics for data validation**
