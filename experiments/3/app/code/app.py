@@ -1,11 +1,11 @@
 from flask import Flask
 from flask_swagger_ui import get_swaggerui_blueprint
-
+from flask import jsonify
 
 app = Flask(__name__)
 
 
-swagger_url = "/swagger"
+swagger_url = ""
 api_url = "/static/swagger.json"
 
 blueprint = get_swaggerui_blueprint(
@@ -15,10 +15,10 @@ blueprint = get_swaggerui_blueprint(
 app.register_blueprint(blueprint, url_prefix=swagger_url)
 
 
-@app.route("/")
-def overview():
-    output = "Minimal Flask app"
-    return output
+@app.route("/random_strings")
+def get_random_strings():
+    strings = ["AAA", "BBB", "CCC"]
+    return jsonify(strings)
 
 
 if __name__ == "__main__":

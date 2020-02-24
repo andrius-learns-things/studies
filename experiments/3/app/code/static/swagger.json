@@ -11,5 +11,19 @@
             "name": "MIT",
             "url": "https://opensource.org/licenses/MIT"
         }
-    }
+    },
+    "paths": {
+        "/random_strings": {
+            "get": {
+                "summary": "Returns a list of random strings",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "type": "array",
+                        "items": "string"
+                    }
+                }
+            }
+        }
+    },
 }
