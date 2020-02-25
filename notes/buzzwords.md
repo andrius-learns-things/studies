@@ -71,3 +71,9 @@
 `schematics` - Validation lib
 
 `schema` - Validation lib
+
+`bravado_core` - Helps with parsing and validating by Swagger 2.0 schemas
+
+`bravado` - Dynamically creates client code for Swagger 2.0 services.
+
+`drf-yasg` - Swagger generator for DjangoREST framework. Many stars in GitHub.
