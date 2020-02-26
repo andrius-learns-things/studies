@@ -31,3 +31,7 @@ https://www.tutorialspoint.com/sqlalchemy/sqlalchemy_orm_declaring_mapping.htm *
 https://medium.com/@sean_bradley/add-swagger-ui-to-your-python-flask-api-683bfbb32b36 **One page tutorial about swagger UI in flask**
 
 https://www.yeahhub.com/7-best-python-libraries-validating-data/ **6 alternatives to schematics for data validation**
+
+https://graphql.org/learn/ **GraphQL**
+
+https://docs.graphene-python.org/en/latest/quickstart/ **Graphene**

@@ -1,0 +1,11 @@
+version: "3"
+services:
+  web:
+    build:
+      context: ./app
+    volumes:
+      - ./app/code:/code
+    ports:
+      - "8055:5000"
+    stdin_open: true
+    tty: true

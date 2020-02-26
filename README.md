@@ -81,3 +81,8 @@ See [Link](/experiments/3/)
 Following https://towardsdatascience.com/working-with-apis-using-flask-flask-restplus-and-swagger-ui-7cf447deda7f
 
 DONE.
+
+## 4. Graphene lib for GraphQL in python
+
+TODO:
+- MVP
