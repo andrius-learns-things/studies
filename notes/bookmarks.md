@@ -35,3 +35,5 @@ https://www.yeahhub.com/7-best-python-libraries-validating-data/ **6 alternative
 https://graphql.org/learn/ **GraphQL**
 
 https://docs.graphene-python.org/en/latest/quickstart/ **Graphene**
+
+https://docs.graphene-python.org/en/latest/types/#typesreference **Graphene types**
