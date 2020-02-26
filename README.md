@@ -82,7 +82,6 @@ Following https://towardsdatascience.com/working-with-apis-using-flask-flask-res
 
 DONE.
 
-## 4. Graphene lib for GraphQL in python
+## 5. Graphene lib for GraphQL in python
 
-TODO:
-- MVP
+FAILED. Got stuck at https://github.com/graphql-python/graphene/issues/546
