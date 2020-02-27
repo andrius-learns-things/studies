@@ -37,3 +37,7 @@ https://graphql.org/learn/ **GraphQL**
 https://docs.graphene-python.org/en/latest/quickstart/ **Graphene**
 
 https://docs.graphene-python.org/en/latest/types/#typesreference **Graphene types**
+
+https://phil.tech/api/2017/01/24/graphql-vs-rest-overview/ **GraphQL and REST overviewed**
+
+https://www.martinfowler.com/articles/richardsonMaturityModel.html **REST maturity model**
