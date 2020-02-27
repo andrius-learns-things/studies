@@ -80,6 +80,6 @@
 
 `GraphQL` - Alternative to REST
 
-`
+`GraphiQL` - InBrowser tool for GraphQL for writing, validating, testing
 
 `graphene` - Python lib for GraphQL
