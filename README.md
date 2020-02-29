@@ -89,36 +89,53 @@ FAILED. Got stuck at https://github.com/graphql-python/graphene/issues/546
 
 # Full-stack apps
 
-| Component                               | Stack #1 (React-Python) | <- status | Stack #2 (React-Django) | <- status | Stack #3 (.Net Core) | <- status |
-| :-------------------------------------- | :---------------------- | :-------: | :---------------------- | :-------: | :------------------- | :-------: |
-|                                         |                         |           |                         |           |                      |           |
-| **PROJECT SETUP**                       |                         |           |                         |           |                      |           |
-| Git service                             | GitHub                  |   DONE    | <- same?                |    td     | <- same?             |    td     |
-| Docker-compose for local runs           | GitHub                  |   DONE    | <- same?                |    td     | <- same?             |    td     |
-|                                         |                         |           |                         |           |                      |           |
-| **FRONTEND**                            |                         |           |                         |           |                      |           |
-| Css framework                           | Bootstrap               |    td     | CSS grid                |    td     | Pure (?)             |    td     |
-| App framework                           | React+Flux              |    td     | React+Redux             |    td     | Vue (?)              |    td     |
-| Language                                | ES6                     |    td     | <- same?                |    td     | Typescript           |    td     |
-| Bundler                                 | Webpack                 |    td     | <- same?                |    td     | (?)                  |    td     |
-| Packager                                | NPM                     |    td     | <- same?                |    td     | Yarn                 |    td     |
-| Unit tests                              | (?)                     |    td     | (?)                     |    td     | Yarn                 |    td     |
-| Code formatter                          | (?)                     |    td     | (?)                     |    td     | (?)                  |    td     |
-| Debugger                                | (?)                     |    td     | (?)                     |    td     | (?)                  |    td     |
-| CI & pre-commit - code quality checks   | ESlint (?)              |    td     | (?)                     |    td     | (?)                  |    td     |
-| CI & pre-commit - unit tests & coverage | (?)                     |    td     | (?)                     |    td     | (?)                  |    td     |
-|                                         |                         |           |                         |           |                      |           |
-| **BACKEND**                             |                         |           |                         |           |                      |           |
-| Code formatter                          | Black                   |    td     | (?)                     |    td     | (?)                  |    td     |
-| Unit tests                              | Pytest                  |    td     | <- same?                |    td     | Yarn                 |    td     |
-| Debugger                                | Pdb                     |    td     | (?)                     |    td     | (?)                  |    td     |
-| CI & pre-commit - code quality checks   | Flake8 + complexity     |    td     | (?)                     |    td     | (?)                  |    td     |
-| CI & pre-commit - unit tests & coverage | Pytest coverage         |    td     | <- same?                |    td     | (?)                  |    td     |
-|                                         |                         |           |                         |           |                      |           |
-| **CI/CD PIPELINE**                      |                         |           |                         |           |                      |           |
-| CI service                              | Travis                  |    td     | (?)                     |    td     | (?)                  |    td     |
-| Hosting (runners, alpha, prod)          | DigitalOcean (?)        |    td     | (?)                     |    td     | (?)                  |    td     |
-| Deploy to alpha                         | Minikube (?)            |    td     | (?)                     |    td     | (?)                  |    td     |
-| Selenium smoke tests in alpha           | Robot framework         |    td     | (?)                     |    td     | (?)                  |    td     |
-| Deploy to prod                          | Minikube (?)            |    td     | (?)                     |    td     | (?)                  |    td     |
-| Selenium health tests in prod           | Robot framework         |    td     | (?)                     |    td     | (?)                  |    td     |
+| Component                                   | Stack #1 (React-Python) | <- status | Stack #2 (React-Django) | <- status | Stack #3 (.Net Core) | <- status |
+| :------------------------------------------ | :---------------------- | :-------: | :---------------------- | :-------: | :------------------- | :-------: |
+| .                                           |                         |           |                         |           |                      |           |
+| **PROJECT SETUP**                           |                         |           |                         |           |                      |           |
+| Git service                                 | GitHub                  |   DONE    | <- same?                |    td     | <- same?             |    td     |
+| Docker-compose for local runs               | GitHub                  |    td     | <- same?                |    td     | <- same?             |    td     |
+| .                                           |                         |           |                         |           |                      |           |
+| **FRONTEND**                                |                         |           |                         |           |                      |           |
+| Css framework                               | Bootstrap               |    td     | CSS grid                |    td     | Pure (?)             |    td     |
+| App framework                               | React+Flux              |    td     | React+Redux             |    td     | Vue (?)              |    td     |
+| Language                                    | ES6                     |    td     | <- same?                |    td     | Typescript           |    td     |
+| Bundler                                     | Webpack                 |    td     | <- same?                |    td     | (?)                  |    td     |
+| Packager                                    | NPM                     |    td     | <- same?                |    td     | Yarn                 |    td     |
+| Unit tests                                  | (?)                     |    td     | (?)                     |    td     | Yarn                 |    td     |
+| Code formatter                              | (?)                     |    td     | (?)                     |    td     | (?)                  |    td     |
+| Debugger                                    | (?)                     |    td     | (?)                     |    td     | (?)                  |    td     |
+| CI & pre-commit - code quality checks       | ESlint (?)              |    td     | (?)                     |    td     | (?)                  |    td     |
+| CI & pre-commit - test coverage             | (?)                     |    td     | (?)                     |    td     | (?)                  |    td     |
+| .                                           |                         |           |                         |           |                      |           |
+| **BACKEND - WEB SERVER**                    |                         |           |                         |           |                      |           |
+| Code formatter                              | Black                   |    td     | (?)                     |    td     | (?)                  |    td     |
+| Unit tests                                  | Pytest                  |    td     | <- same?                |    td     | Yarn                 |    td     |
+| Debugger                                    | Pdb                     |    td     | (?)                     |    td     | (?)                  |    td     |
+| CI & pre-commit - code quality checks       | Flake8 + complexity     |    td     | (?)                     |    td     | (?)                  |    td     |
+| CI & pre-commit - test coverage             | Pytest coverage         |    td     | <- same?                |    td     | (?)                  |    td     |
+| Language                                    | Python                  |    td     | Python                  |    td     | C#                   |    td     |
+| Web framework                               | Flask                   |    td     | Django                  |    td     | ASP.Net Core         |    td     |
+| .                                           |                         |           |                         |           |                      |           |
+| **BACKEND - API**                           |                         |           |                         |           |                      |           |
+| REST Endpoints                              | (?)                     |    td     | (?)                     |    td     | (?)                  |    td     |
+| REST documentation                          | Swagger with (?)        |    td     | RAML with (?)           |    td     | Swagger with (?)     |    td     |
+| REST json schema validators                 | Schematics              |    td     | (?)                     |    td     | (?)                  |    td     |
+| GraphQL Endpoints                           | (?)                     |    td     | (?)                     |    td     | (?)                  |    td     |
+| .                                           |                         |           |                         |           |                      |           |
+| **BACKEND - STORAGE**                       |                         |           |                         |           |                      |           |
+| Sessions                                    | Redis                   |    td     | (?)                     |    td     | (?)                  |    td     |
+| Cashing                                     | Redis                   |    td     | (?)                     |    td     | (?)                  |    td     |
+| Event store                                 | MongoDB (?)             |    td     | (?)                     |    td     | (?)                  |    td     |
+| Read model                                  | PostgreSQL (?)          |    td     | (?)                     |    td     | (?)                  |    td     |
+| .                                           |                         |           |                         |           |                      |           |
+| **CI/CD & INFRA**                           |                         |           |                         |           |                      |           |
+| CI service                                  | Travis                  |    td     | (?)                     |    td     | (?)                  |    td     |
+| Hosting (for runners, alpha, prod)          | DigitalOcean (?)        |    td     | (?)                     |    td     | (?)                  |    td     |
+| Deploy to alpha                             | Minikube (?)            |    td     | (?)                     |    td     | (?)                  |    td     |
+| Selenium smoke tests in alpha               | Robot framework         |    td     | (?)                     |    td     | (?)                  |    td     |
+| Deploy to prod                              | Minikube (?)            |    td     | (?)                     |    td     | (?)                  |    td     |
+| Selenium health tests in prod               | Robot framework         |    td     | (?)                     |    td     | (?)                  |    td     |
+| Backend error tracker - alpha               | Sentry                  |    td     | <- same?                |    td     | (?)                  |    td     |
+| Logging aggregation & search - alpha & prod | Graylog (?)             |    td     | ES & Kibana (?)         |    td     | (?)                  |    td     |
+| Metrics - prod                              | NewRelic (?)            |    td     | Graphite & Graphana (?) |    td     | (?)                  |    td     |
