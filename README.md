@@ -21,10 +21,12 @@ It has:
 ## 1. Pre-commit setup
 
 Done:
+
 - Pre-commits with black & flake8
 - Flake8 complexity enforcement?
 
 Ideas:
+
 - run.sh script, solved docker sudo problems
 - Full test coverage enforcement?
 
@@ -41,6 +43,7 @@ To run, execute `docker-compose up`
 Status: In progress...
 
 Done:
+
 - Redis POC
 - Mongo POC
 - Mounted source files
@@ -51,6 +54,7 @@ Done:
 - Indexes
 
 Todo:
+
 - Another experiment: Two entities and JOINS
   - Provider by provider
 - Another provider - SQL Alchemy + migrations
@@ -59,6 +63,7 @@ Todo:
 - Couchbase?
 
 Ideas:
+
 - PostgresAdmin? Other kind of admins?
 
 ## 2. PDB debugging with docker and flask
@@ -66,7 +71,6 @@ Ideas:
 DONE.
 
 See [Link](/experiments/2/Readme.md)
-
 
 ## 3. Swagger UI served for trivial flask app
 
@@ -86,13 +90,12 @@ DONE.
 
 FAILED. Got stuck at https://github.com/graphql-python/graphene/issues/546
 
-
 # Full-stack apps
 
 ## Stack #1 (React-Python)
 
 TODO:
-- Cleanup shared store and store component
+
 - Make things work
 - Cleanup package.json
 - Upgrade package.json libs, as much as possible
