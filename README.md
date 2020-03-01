@@ -97,7 +97,8 @@ FAILED. Got stuck at https://github.com/graphql-python/graphene/issues/546
 | .                                        |                         |          |                           |        |                      |        |
 | **FRONTEND**                             |                         |          |                           |        |                      |        |
 | Css framework                            | Bootstrap               |    td    | CSS grid                  |   td   | Pure (?)             |   td   |
-| App framework                            | React+Flux              |    td    | React+Redux               |   td   | Vue (?)              |   td   |
+| Css language                             | SASS                    |    td    | <- same (?)               |   td   | <- same (?)          |   td   |
+| App framework                            | React + Flux            |    td    | React + ContextAPI (?)    |   td   | Vue (?)              |   td   |
 | Localization framework                   | (?)                     |    td    | (?)                       |   td   | (?)                  |   td   |
 | Language                                 | ES6                     |    td    | <- same (?)               |   td   | Typescript           |   td   |
 | Bundler                                  | Webpack                 |    td    | <- same (?)               |   td   | (?)                  |   td   |
@@ -152,9 +153,10 @@ FAILED. Got stuck at https://github.com/graphql-python/graphene/issues/546
 | **CI/CD & INFRA**                        |                         |          |                           |        |                      |        |
 | CI service                               | Travis                  |    td    | (?)                       |   td   | (?)                  |   td   |
 | Hosting (for runners, alpha, prod)       | DigitalOcean (?)        |    td    | (?)                       |   td   | (?)                  |   td   |
+| Infra as a code                          | Minikube (?)            |    td    | (?)                       |   td   | (?)                  |   td   |
 | Web server                               | Nginx                   |    td    | (?)                       |   td   | (?)                  |   td   |
 | Web application server                   | uWSGI                   |    td    | (?)                       |   td   | (?)                  |   td   |
-| Deploy to alpha & prod                   | Minikube (?)            |    td    | (?)                       |   td   | (?)                  |   td   |
+| Deploy to alpha & prod                   | Custom                  |    td    | (?)                       |   td   | (?)                  |   td   |
 | Version endpoint and after-deploy checks | Custom                  |    td    | (?)                       |   td   | (?)                  |   td   |
 | Liveness & readyness endpoints           | Custom                  |    td    | (?)                       |   td   | (?)                  |   td   |
 | Selenium smoke tests in alpha            | Robot framework         |    td    | (?)                       |   td   | (?)                  |   td   |
