@@ -93,9 +93,7 @@ FAILED. Got stuck at https://github.com/graphql-python/graphene/issues/546
 | :--------------------------------------- | :---------------------- | :----: | :------------------------ | :----: | :------------------- | :----: |
 | .                                        |                         |        |                           |        |                      |        |
 | **PROJECT SETUP**                        |                         |        |                           |        |                      |        |
-| Git service                              | GitHub                  |  DONE  | <- same (?)               |   td   | <- same (?)          |   td   |
-| Docker-compose for local runs            | GitHub                  |   td   | <- same (?)               |   td   | <- same (?)          |   td   |
-| Readme & local run with one command      | Custom                  |   td   | (?)                       |   td   | (?)                  |   td   |
+| Readme & one-command setup               | Docker compose          |  DONE  | <- same (?)               |   td   | <- same (?)          |   td   |
 | .                                        |                         |        |                           |        |                      |        |
 | **FRONTEND**                             |                         |        |                           |        |                      |        |
 | Css framework                            | Bootstrap               |   td   | CSS grid                  |   td   | Pure (?)             |   td   |

@@ -4,9 +4,9 @@ Taken from https://www.agiratech.com/debugging-python-flask-app-in-docker-contai
 
 To get into debugger:
 
-- `sudo docker-compose up -d --build`
-- `sudo docker ps`
-- `sudo docker attach 39139f6dd788` - Replace with real img id
+- `docker-compose up -d --build`
+- `docker ps`
+- `docker attach 39139f6dd788` - Replace with real img id
 - Open http://localhost:8052/ in browser
 
 In debugger you can:
