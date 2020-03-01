@@ -2,9 +2,9 @@ version: "3"
 services:
   client:
     build:
-      context: ./client
+      context: ./client_poc
     volumes:
-      - ./client:/code
+      - ./client_poc:/code
     ports:
       - "8100:8080"
   # server:
