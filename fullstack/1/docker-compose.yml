@@ -1,11 +1,18 @@
 version: "3"
 services:
-  web:
+  client:
     build:
-      context: ./server
+      context: ./client
     volumes:
-      - ./server:/code
+      - ./client:/code
     ports:
-      - "8100:5000"
-    stdin_open: true
-    tty: true
+      - "8100:8080"
+  # server:
+  #   build:
+  #     context: ./server
+  #   volumes:
+  #     - ./server:/code
+  #   ports:
+  #     - "8101:5000"
+  #   stdin_open: true
+  #   tty: true

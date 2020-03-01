@@ -111,6 +111,7 @@ TODO:
 | **FRONTEND**                             |                         |          |                           |        |                      |        |
 | Css framework                            | Bootstrap               |    td    | CSS grid                  |   td   | Pure (?)             |   td   |
 | Css language                             | SASS                    |    td    | <- same (?)               |   td   | <- same (?)          |   td   |
+| Css theme customizations                 | Custom (?)              |    td    | <- same (?)               |   td   | <- same (?)          |   td   |
 | App framework                            | React + Flux            |    td    | React + ContextAPI (?)    |   td   | Vue (?)              |   td   |
 | Localization framework                   | (?)                     |    td    | (?)                       |   td   | (?)                  |   td   |
 | Language                                 | ES6                     |    td    | <- same (?)               |   td   | Typescript           |   td   |
