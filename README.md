@@ -89,6 +89,16 @@ FAILED. Got stuck at https://github.com/graphql-python/graphene/issues/546
 
 # Full-stack apps
 
+## Stack #1 (React-Python)
+
+TODO:
+- Cleanup shared store and store component
+- Make things work
+- Cleanup package.json
+- Upgrade package.json libs, as much as possible
+
+## Overview of full stack apps
+
 | Component                                | Stack #1 (React-Python) |  status  | Stack #2 (React-Django)   | status | Stack #3 (.Net Core) | status |
 | :--------------------------------------- | :---------------------- | :------: | :------------------------ | :----: | :------------------- | :----: |
 | .                                        |                         |          |                           |        |                      |        |
