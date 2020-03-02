@@ -97,8 +97,10 @@ FAILED. Got stuck at https://github.com/graphql-python/graphene/issues/546
 TODO:
 
 - Make things work. Maybe by https://www.valentinog.com/blog/babel/
-- Cleanup package.json
-- Upgrade package.json libs, as much as possible
+- Make things work in docker compose
+- Add flux
+- Add react router
+- Add bootstrap
 
 ## Overview of full stack apps
 
