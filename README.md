@@ -112,7 +112,9 @@ TODO:
 | Css framework                            | Bootstrap               |    td    | CSS grid                  |   td   | Pure (?)             |   td   |
 | Css language                             | SASS                    |    td    | <- same (?)               |   td   | <- same (?)          |   td   |
 | Css theme customizations                 | Custom (?)              |    td    | <- same (?)               |   td   | <- same (?)          |   td   |
-| App framework                            | React + Flux            |    td    | React + ContextAPI (?)    |   td   | Vue (?)              |   td   |
+| Web framework                            | React                   |    td    | React                     |   td   | Vue (?)              |   td   |
+| App framework                            | Flux                    |    td    | ContextAPI / Redux (?)    |   td   | Vue (?)              |   td   |
+| Routing                                  | React router            |    td    | React router              |   td   | Custom (?)           |   td   |
 | App elements (validation, etc)           | Custom                  |    td    | Custom                    |   td   | Custom               |   td   |
 | Localization framework                   | (?)                     |    td    | (?)                       |   td   | (?)                  |   td   |
 | Language                                 | ES6                     |    td    | <- same (?)               |   td   | Typescript           |   td   |
