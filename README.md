@@ -97,10 +97,10 @@ FAILED. Got stuck at https://github.com/graphql-python/graphene/issues/546
 DONE:
 
 - Make things work. Maybe by https://www.valentinog.com/blog/babel/
+- Make things work in docker compose
 
 TODO:
 
-- Make things work in docker compose
 - Add flux
 - Add react router
 - Add bootstrap
@@ -117,15 +117,15 @@ TODO:
 | Css framework                            | Bootstrap               |    td    | CSS grid                  |   td   | Pure (?)             |   td   |
 | Css language                             | SASS                    |    td    | <- same (?)               |   td   | <- same (?)          |   td   |
 | Css theme customizations                 | Custom (?)              |    td    | <- same (?)               |   td   | <- same (?)          |   td   |
-| Web framework                            | React                   |    td    | React                     |   td   | Vue (?)              |   td   |
+| Web framework                            | React                   | **DONE** | React                     |   td   | Vue (?)              |   td   |
 | App framework                            | Flux                    |    td    | ContextAPI / Redux (?)    |   td   | Vue (?)              |   td   |
 | Routing                                  | React router            |    td    | React router              |   td   | Custom (?)           |   td   |
 | App elements (validation, etc)           | Custom                  |    td    | Custom                    |   td   | Custom               |   td   |
 | Localization framework                   | (?)                     |    td    | (?)                       |   td   | (?)                  |   td   |
-| Language                                 | ES6                     |    td    | <- same (?)               |   td   | Typescript           |   td   |
-| Bundler                                  | Webpack                 |    td    | <- same (?)               |   td   | (?)                  |   td   |
-| Packager                                 | NPM                     |    td    | <- same (?)               |   td   | Yarn                 |   td   |
-| Code formatter                           | (?)                     |    td    | (?)                       |   td   | (?)                  |   td   |
+| Language                                 | ES6                     | **DONE** | <- same (?)               |   td   | Typescript           |   td   |
+| Bundler                                  | Webpack                 | **DONE** | <- same (?)               |   td   | (?)                  |   td   |
+| Packager                                 | NPM                     | **DONE** | <- same (?)               |   td   | Yarn                 |   td   |
+| Code formatter                           | VS Code prettier        | **DONE** | (?)                       |   td   | (?)                  |   td   |
 | Debugger                                 | (?)                     |    td    | (?)                       |   td   | (?)                  |   td   |
 | Unit tests                               | (?)                     |    td    | (?)                       |   td   | (?)                  |   td   |
 | Extensive logging (posts to back)        | Custom                  |    td    | (?)                       |   td   | (?)                  |   td   |
