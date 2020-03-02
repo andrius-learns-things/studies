@@ -94,9 +94,12 @@ FAILED. Got stuck at https://github.com/graphql-python/graphene/issues/546
 
 ## Stack #1 (React-Python)
 
-TODO:
+DONE:
 
 - Make things work. Maybe by https://www.valentinog.com/blog/babel/
+
+TODO:
+
 - Make things work in docker compose
 - Add flux
 - Add react router
