@@ -35,5 +35,9 @@
     "url-loader": "0.6.2",
     "webpack": "2.7.0",
     "webpack-dev-server": "2.11.2"
+  },
+  "devDependencies": {
+    "webpack": "^2.7.0",
+    "webpack-cli": "^3.3.11"
   }
 }
