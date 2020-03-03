@@ -1,24 +1,20 @@
-import React from "react";
-// import sharedStore from "../../SharedStore.js";
+import { Component } from "react";
+import sharedStore from "../../SharedStore.js";
 
-// class StoreComponent extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = sharedStore.getState();
-//   }
-
-//   componentDidMount() {
-//     this.storeSubscription = sharedStore.addListener(() => {
-//       let state = sharedStore.getState();
-//       this.setState(state);
-//     });
-//   }
-
-//   componentWillUnmount() {
-//     this.storeSubscription.remove();
-//   }
-// }
-
-class StoreComponent extends React.Component {}
+class StoreComponent extends Component {
+  constructor(props) {
+    super(props);
+    this.state = sharedStore.getState();
+  }
+  componentDidMount() {
+    this.storeSubscription = sharedStore.addListener(() => {
+      let state = sharedStore.getState();
+      this.setState(state);
+    });
+  }
+  componentWillUnmount() {
+    this.storeSubscription.remove();
+  }
+}
 
 export default StoreComponent;

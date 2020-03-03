@@ -1,12 +1,12 @@
 import { ReduceStore } from "flux/utils";
 import dispatcher from "./Dispatcher.js";
+import ActionTypes from "./actions/ActionTypes.js";
 
 class SharedStore extends ReduceStore {
   getInitialState() {
-    let state = {
+    return {
       timesNavigated: 0
     };
-    return state;
   }
 
   reduce(state, action) {
@@ -19,7 +19,7 @@ class SharedStore extends ReduceStore {
     return newState;
   }
 
-  [ActionTypes.ROUTE_ENTERED](state, action) {
+  [ActionTypes.ROUTE_ENTERED](state) {
     state.timesNavigated = state.timesNavigated + 1;
   }
 }
