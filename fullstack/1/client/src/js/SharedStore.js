@@ -12,6 +12,9 @@ class SharedStore extends ReduceStore {
   reduce(state, action) {
     let newState = Object.assign({}, state);
 
+    console.log("Action happened");
+    console.log(action);
+
     if (this[action.type]) {
       this[action.type](newState, action);
     }
