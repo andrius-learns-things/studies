@@ -102,8 +102,9 @@ DONE:
 
 TODO:
 
+- Add react router. Make route entered first action in flux. Count route changes.
+- Call backend and fix routing problems
 - Console errors (due to hot reload or smth like that)
-- Add react router
 - Add bootstrap
 
 ## Overview of full stack apps

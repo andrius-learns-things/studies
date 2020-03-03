@@ -3,11 +3,7 @@ import StoreComponent from "./base/StoreComponent.jsx";
 
 class Home extends StoreComponent {
   render() {
-    return (
-      <p>
-        <p>Home</p>
-      </p>
-    );
+    return <p>Home</p>;
   }
 }
 

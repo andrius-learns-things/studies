@@ -1,9 +1,8 @@
 FROM node:13.8-alpine
 
-# Python app dependencies:
-COPY ./package.json /package.json
-RUN npm install
+EXPOSE 8080
 
-EXPOSE 5000
+COPY ./ /code/
+WORKDIR /code
 
-CMD ["npm", "run debug"]
+CMD ["/bin/sh", "/code/run.sh"]

@@ -3,11 +3,7 @@ import StoreComponent from "./base/StoreComponent.jsx";
 
 class About extends StoreComponent {
   render() {
-    return (
-      <p>
-        <p>About this site...</p>
-      </p>
-    );
+    return <p>About this site...</p>;
   }
 }
 
