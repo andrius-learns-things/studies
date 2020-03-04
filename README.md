@@ -100,12 +100,13 @@ DONE:
 - Make things work in docker compose
 - Add flux
 - Add react router. Make route entered first action in flux. Count route changes.
+- Add bootstrap
 
 TODO:
 
 - Call backend and fix routing problems
 - Console errors (due to hot reload or smth like that)
-- Add bootstrap
+- NPM install warnings (a few things depretiated)
 
 ## Overview of full stack apps
 
@@ -116,7 +117,7 @@ TODO:
 | Readme & one-command setup               | Docker compose          | **DONE** | <- same (?)               |   td   | <- same (?)          |   td   |
 | .                                        |                         |          |                           |        |                      |        |
 | **FRONTEND**                             |                         |          |                           |        |                      |        |
-| Css framework                            | Bootstrap               |    td    | CSS grid                  |   td   | Pure (?)             |   td   |
+| Css framework                            | Bootstrap               | **DONE** | CSS grid                  |   td   | Pure (?)             |   td   |
 | Css language                             | SASS                    |    td    | <- same (?)               |   td   | <- same (?)          |   td   |
 | Css theme customizations                 | Custom (?)              |    td    | <- same (?)               |   td   | <- same (?)          |   td   |
 | Web framework                            | React                   | **DONE** | React                     |   td   | Vue (?)              |   td   |

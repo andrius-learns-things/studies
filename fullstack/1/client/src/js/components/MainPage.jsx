@@ -12,6 +12,8 @@ import routeEntered from "../actions/actionCreators/RouteEntered.js";
 import Home from "./Home.jsx";
 import About from "./About.jsx";
 
+import "bootstrap/dist/css/bootstrap.css";
+
 function RouterContents() {
   let location = useLocation();
   React.useEffect(() => {
