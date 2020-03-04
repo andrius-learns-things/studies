@@ -99,98 +99,99 @@ DONE:
 - Make things work. Maybe by https://www.valentinog.com/blog/babel/
 - Make things work in docker compose
 - Add flux
+- Add react router. Make route entered first action in flux. Count route changes.
 
 TODO:
 
-- Add react router. Make route entered first action in flux. Count route changes.
 - Call backend and fix routing problems
 - Console errors (due to hot reload or smth like that)
 - Add bootstrap
 
 ## Overview of full stack apps
 
-| Component                                 | Stack #1 (React-Python) |  status  | Stack #2 (React-Django)   | status | Stack #3 (.Net Core) | status |
-| :---------------------------------------- | :---------------------- | :------: | :------------------------ | :----: | :------------------- | :----: |
-| .                                         |                         |          |                           |        |                      |        |
-| **PROJECT SETUP**                         |                         |          |                           |        |                      |        |
-| Readme & one-command setup                | Docker compose          | **DONE** | <- same (?)               |   td   | <- same (?)          |   td   |
-| .                                         |                         |          |                           |        |                      |        |
-| **FRONTEND**                              |                         |          |                           |        |                      |        |
-| Css framework                             | Bootstrap               |    td    | CSS grid                  |   td   | Pure (?)             |   td   |
-| Css language                              | SASS                    |    td    | <- same (?)               |   td   | <- same (?)          |   td   |
-| Css theme customizations                  | Custom (?)              |    td    | <- same (?)               |   td   | <- same (?)          |   td   |
-| Web framework                             | React                   | **DONE** | React                     |   td   | Vue (?)              |   td   |
-| App framework                             | Flux                    | **DONE** | ContextAPI / Redux (?)    |   td   | Vue (?)              |   td   |
-| Routing                                   | React router            |    td    | React router              |   td   | Custom (?)           |   td   |
-| App core (validation, backend calls, etc) | Custom                  |    td    | Custom                    |   td   | Custom               |   td   |
-| Localization framework                    | React-Intl              |    td    | (?)                       |   td   | (?)                  |   td   |
-| Language                                  | ES6                     | **DONE** | <- same (?)               |   td   | Typescript           |   td   |
-| Bundler                                   | Webpack                 | **DONE** | <- same (?)               |   td   | (?)                  |   td   |
-| Packager                                  | NPM                     | **DONE** | <- same (?)               |   td   | Yarn                 |   td   |
-| Code formatter                            | VS Code prettier        | **DONE** | (?)                       |   td   | (?)                  |   td   |
-| Debugger                                  | (?)                     |    td    | (?)                       |   td   | (?)                  |   td   |
-| Unit tests                                | (?)                     |    td    | (?)                       |   td   | (?)                  |   td   |
-| Extensive logging (posts to back)         | Custom                  |    td    | (?)                       |   td   | (?)                  |   td   |
-| CI & pre-commit - code quality checks     | ESlint (?)              |    td    | (?)                       |   td   | (?)                  |   td   |
-| CI & pre-commit - test coverage           | (?)                     |    td    | (?)                       |   td   | (?)                  |   td   |
-| CI & pre-commit - security checks         | NPM audit (?)           |    td    | (?)                       |   td   | (?)                  |   td   |
-| .                                         |                         |          |                           |        |                      |        |
-| **BACKEND - WEB SERVER**                  |                         |          |                           |        |                      |        |
-| Code formatter                            | Black                   | **DONE** | (?)                       |   td   | (?)                  |   td   |
-| Debugger                                  | Pdb                     | **DONE** | (?)                       |   td   | (?)                  |   td   |
-| Unit tests                                | Pytest                  |    td    | <- same (?)               |   td   | Yarn                 |   td   |
-| Extensive logging                         | Custom                  |    td    | (?)                       |   td   | (?)                  |   td   |
-| CI & pre-commit - code quality checks     | Flake8 + complexity     |    td    | (?)                       |   td   | (?)                  |   td   |
-| CI & pre-commit - test coverage           | Pytest coverage         |    td    | <- same (?)               |   td   | (?)                  |   td   |
-| CI & pre-commit - security checks         | Bandit (?)              |    td    | (?)                       |   td   | (?)                  |   td   |
-| Language                                  | Python                  | **DONE** | Python                    |   td   | C#                   |   td   |
-| Web framework                             | Flask                   | **DONE** | Django                    |   td   | ASP.Net Core         |   td   |
-| App engine - permissions, auth, worflows  | Custom                  |    td    | (?)                       |   td   | (?)                  |   td   |
-| .                                         |                         |          |                           |        |                      |        |
-| **BACKEND - API**                         |                         |          |                           |        |                      |        |
-| REST endpoints                            | Flask REST              |    td    | Django REST               |   td   | (?)                  |   td   |
-| REST documentation                        | Swagger with (?)        |    td    | RAML with (?)             |   td   | Swagger with (?)     |   td   |
-| REST json schema validators               | Schematics              |    td    | (?)                       |   td   | (?)                  |   td   |
-| GraphQL Endpoints                         | (?)                     |    td    | (?)                       |   td   | (?)                  |   td   |
-| .                                         |                         |          |                           |        |                      |        |
-| **BACKEND - APP CONTEXTS**                |                         |          |                           |        |                      |        |
-| Session context                           | Redis                   |    td    | (?)                       |   td   | (?)                  |   td   |
-| Cashe context                             | Redis                   |    td    | (?)                       |   td   | (?)                  |   td   |
-| App context                               | Custom                  |    td    | (?)                       |   td   | (?)                  |   td   |
-| Request context                           | Custom                  |    td    | (?)                       |   td   | (?)                  |   td   |
-| Cookie context                            | Custom                  |    td    | (?)                       |   td   | (?)                  |   td   |
-| .                                         |                         |          |                           |        |                      |        |
-| **BACKEND - ES&CQRS BASED STORAGE**       |                         |          |                           |        |                      |        |
-| Immutable event store                     | MongoDB (?)             |    td    | (?)                       |   td   | (?)                  |   td   |
-| Solution for GDPR vs immutability         | Custom (?)              |    td    | (?)                       |   td   | (?)                  |   td   |
-| Read model                                | PostgreSQL              |    td    | <- same (?)               |   td   | (?)                  |   td   |
-| Read model - ORM                          | SQL Alchemy             |    td    | Django ORM                |   td   | (?)                  |   td   |
-| Read model - Schema migrations            | Alembic                 |    td    | Django ORM migrations (?) |   td   | (?)                  |   td   |
-| .                                         |                         |          |                           |        |                      |        |
-| **BACKEND - ASYNC TASKS**                 |                         |          |                           |        |                      |        |
-| Framework                                 | Celery                  |    td    | (?)                       |   td   | (?)                  |   td   |
-| Queue                                     | RabbitMQ                |    td    | (?)                       |   td   | (?)                  |   td   |
-| .                                         |                         |          |                           |        |                      |        |
-| **BACKEND - FULL-TEXT SEARCH**            |                         |          |                           |        |                      |        |
-| Engine                                    | Elastic search          |    td    | (?)                       |   td   | (?)                  |   td   |
-| .                                         |                         |          |                           |        |                      |        |
-| **CI/CD & INFRA**                         |                         |          |                           |        |                      |        |
-| CI service                                | Travis                  |    td    | (?)                       |   td   | (?)                  |   td   |
-| Hosting (for runners, alpha, prod)        | DigitalOcean (?)        |    td    | (?)                       |   td   | (?)                  |   td   |
-| Infra as a code                           | Minikube (?)            |    td    | (?)                       |   td   | (?)                  |   td   |
-| Web server                                | Nginx                   |    td    | (?)                       |   td   | (?)                  |   td   |
-| Web application server                    | uWSGI                   |    td    | (?)                       |   td   | (?)                  |   td   |
-| Deploy to alpha & prod                    | Custom                  |    td    | (?)                       |   td   | (?)                  |   td   |
-| Version endpoint and after-deploy checks  | Custom                  |    td    | (?)                       |   td   | (?)                  |   td   |
-| Liveness & readyness endpoints            | Custom                  |    td    | (?)                       |   td   | (?)                  |   td   |
-| Selenium smoke tests in alpha             | Robot framework         |    td    | (?)                       |   td   | (?)                  |   td   |
-| Selenium health tests in prod             | Robot framework         |    td    | (?)                       |   td   | (?)                  |   td   |
-| Backend error tracker - alpha             | Sentry                  |    td    | <- same (?)               |   td   | (?)                  |   td   |
-| Logging aggregation (a, p)                | Graylog (?)             |    td    | ES & Kibana (?)           |   td   | (?)                  |   td   |
-| Infra metrics - prod                      | NewRelic (?)            |    td    | Graphite & Graphana (?)   |   td   | (?)                  |   td   |
-| User metrics - prod                       | Google analytics (?)    |    td    | (?)                       |   td   | (?)                  |   td   |
-| .                                         |                         |          |                           |        |                      |        |
-| **CI/CD EXOTICS**                         |                         |          |                           |        |                      |        |
-| Memory leak checks                        | (?)                     |    td    | (?)                       |   td   | (?)                  |   td   |
-| Performance tests                         | (?)                     |    td    | (?)                       |   td   | (?)                  |   td   |
-| Clean error log enforced                  | (?)                     |    td    | (?)                       |   td   | (?)                  |   td   |
+| Component                                | Stack #1 (React-Python) |  status  | Stack #2 (React-Django)   | status | Stack #3 (.Net Core) | status |
+| :--------------------------------------- | :---------------------- | :------: | :------------------------ | :----: | :------------------- | :----: |
+| .                                        |                         |          |                           |        |                      |        |
+| **PROJECT SETUP**                        |                         |          |                           |        |                      |        |
+| Readme & one-command setup               | Docker compose          | **DONE** | <- same (?)               |   td   | <- same (?)          |   td   |
+| .                                        |                         |          |                           |        |                      |        |
+| **FRONTEND**                             |                         |          |                           |        |                      |        |
+| Css framework                            | Bootstrap               |    td    | CSS grid                  |   td   | Pure (?)             |   td   |
+| Css language                             | SASS                    |    td    | <- same (?)               |   td   | <- same (?)          |   td   |
+| Css theme customizations                 | Custom (?)              |    td    | <- same (?)               |   td   | <- same (?)          |   td   |
+| Web framework                            | React                   | **DONE** | React                     |   td   | Vue (?)              |   td   |
+| App framework                            | Flux                    | **DONE** | ContextAPI / Redux (?)    |   td   | Vue (?)              |   td   |
+| Routing                                  | React router            | **DONE** | React router              |   td   | Custom (?)           |   td   |
+| Ajax                                     | Superagent              |    td    | (?)                       |   td   | (?)                  |   td   |
+| Form validation mechanism                | Custom                  |    td    | Custom                    |   td   | Custom               |   td   |
+| Localization framework                   | React-Intl              |    td    | (?)                       |   td   | (?)                  |   td   |
+| Language                                 | ES6                     | **DONE** | <- same (?)               |   td   | Typescript           |   td   |
+| Bundler                                  | Webpack                 | **DONE** | <- same (?)               |   td   | (?)                  |   td   |
+| Packager                                 | NPM                     | **DONE** | <- same (?)               |   td   | Yarn                 |   td   |
+| Code formatter                           | VS Code prettier        | **DONE** | (?)                       |   td   | (?)                  |   td   |
+| Debugger                                 | (?)                     |    td    | (?)                       |   td   | (?)                  |   td   |
+| Unit tests                               | (?)                     |    td    | (?)                       |   td   | (?)                  |   td   |
+| Extensive logging (posts to back)        | Custom                  |    td    | (?)                       |   td   | (?)                  |   td   |
+| CI & pre-commit - code quality checks    | ESlint (?)              |    td    | (?)                       |   td   | (?)                  |   td   |
+| CI & pre-commit - test coverage          | (?)                     |    td    | (?)                       |   td   | (?)                  |   td   |
+| CI & pre-commit - security checks        | NPM audit (?)           |    td    | (?)                       |   td   | (?)                  |   td   |
+| .                                        |                         |          |                           |        |                      |        |
+| **BACKEND - WEB SERVER**                 |                         |          |                           |        |                      |        |
+| Code formatter                           | Black                   | **DONE** | (?)                       |   td   | (?)                  |   td   |
+| Debugger                                 | Pdb                     | **DONE** | (?)                       |   td   | (?)                  |   td   |
+| Unit tests                               | Pytest                  |    td    | <- same (?)               |   td   | Yarn                 |   td   |
+| Extensive logging                        | Custom                  |    td    | (?)                       |   td   | (?)                  |   td   |
+| CI & pre-commit - code quality checks    | Flake8 + complexity     |    td    | (?)                       |   td   | (?)                  |   td   |
+| CI & pre-commit - test coverage          | Pytest coverage         |    td    | <- same (?)               |   td   | (?)                  |   td   |
+| CI & pre-commit - security checks        | Bandit (?)              |    td    | (?)                       |   td   | (?)                  |   td   |
+| Language                                 | Python                  | **DONE** | Python                    |   td   | C#                   |   td   |
+| Web framework                            | Flask                   | **DONE** | Django                    |   td   | ASP.Net Core         |   td   |
+| App engine - permissions, auth, worflows | Custom                  |    td    | (?)                       |   td   | (?)                  |   td   |
+| .                                        |                         |          |                           |        |                      |        |
+| **BACKEND - API**                        |                         |          |                           |        |                      |        |
+| REST endpoints                           | Flask REST              |    td    | Django REST               |   td   | (?)                  |   td   |
+| REST documentation                       | Swagger with (?)        |    td    | RAML with (?)             |   td   | Swagger with (?)     |   td   |
+| REST json schema validators              | Schematics              |    td    | (?)                       |   td   | (?)                  |   td   |
+| GraphQL Endpoints                        | (?)                     |    td    | (?)                       |   td   | (?)                  |   td   |
+| .                                        |                         |          |                           |        |                      |        |
+| **BACKEND - APP CONTEXTS**               |                         |          |                           |        |                      |        |
+| Session context                          | Redis                   |    td    | (?)                       |   td   | (?)                  |   td   |
+| Cashe context                            | Redis                   |    td    | (?)                       |   td   | (?)                  |   td   |
+| App context                              | Custom                  |    td    | (?)                       |   td   | (?)                  |   td   |
+| Request context                          | Custom                  |    td    | (?)                       |   td   | (?)                  |   td   |
+| Cookie context                           | Custom                  |    td    | (?)                       |   td   | (?)                  |   td   |
+| .                                        |                         |          |                           |        |                      |        |
+| **BACKEND - ES&CQRS BASED STORAGE**      |                         |          |                           |        |                      |        |
+| Immutable event store                    | MongoDB (?)             |    td    | (?)                       |   td   | (?)                  |   td   |
+| Solution for GDPR vs immutability        | Custom (?)              |    td    | (?)                       |   td   | (?)                  |   td   |
+| Read model                               | PostgreSQL              |    td    | <- same (?)               |   td   | (?)                  |   td   |
+| Read model - ORM                         | SQL Alchemy             |    td    | Django ORM                |   td   | (?)                  |   td   |
+| Read model - Schema migrations           | Alembic                 |    td    | Django ORM migrations (?) |   td   | (?)                  |   td   |
+| .                                        |                         |          |                           |        |                      |        |
+| **BACKEND - ASYNC TASKS**                |                         |          |                           |        |                      |        |
+| Framework                                | Celery                  |    td    | (?)                       |   td   | (?)                  |   td   |
+| Queue                                    | RabbitMQ                |    td    | (?)                       |   td   | (?)                  |   td   |
+| .                                        |                         |          |                           |        |                      |        |
+| **BACKEND - FULL-TEXT SEARCH**           |                         |          |                           |        |                      |        |
+| Engine                                   | Elastic search          |    td    | (?)                       |   td   | (?)                  |   td   |
+| .                                        |                         |          |                           |        |                      |        |
+| **CI/CD & INFRA**                        |                         |          |                           |        |                      |        |
+| CI service                               | Travis                  |    td    | (?)                       |   td   | (?)                  |   td   |
+| Hosting (for runners, alpha, prod)       | DigitalOcean (?)        |    td    | (?)                       |   td   | (?)                  |   td   |
+| Infra as a code                          | Minikube (?)            |    td    | (?)                       |   td   | (?)                  |   td   |
+| Web server                               | Nginx                   |    td    | (?)                       |   td   | (?)                  |   td   |
+| Web application server                   | uWSGI                   |    td    | (?)                       |   td   | (?)                  |   td   |
+| Deploy to alpha & prod                   | Custom                  |    td    | (?)                       |   td   | (?)                  |   td   |
+| Version endpoint and after-deploy checks | Custom                  |    td    | (?)                       |   td   | (?)                  |   td   |
+| Liveness & readyness endpoints           | Custom                  |    td    | (?)                       |   td   | (?)                  |   td   |
+| Selenium smoke tests in alpha            | Robot framework         |    td    | (?)                       |   td   | (?)                  |   td   |
+| Selenium health tests in prod            | Robot framework         |    td    | (?)                       |   td   | (?)                  |   td   |
+| Backend error tracker - alpha            | Sentry                  |    td    | <- same (?)               |   td   | (?)                  |   td   |
+| Logging aggregation (a, p)               | Graylog (?)             |    td    | ES & Kibana (?)           |   td   | (?)                  |   td   |
+| Infra metrics - prod                     | NewRelic (?)            |    td    | Graphite & Graphana (?)   |   td   | (?)                  |   td   |
+| User metrics - prod                      | Google analytics (?)    |    td    | (?)                       |   td   | (?)                  |   td   |
+| .                                        |                         |          |                           |        |                      |        |
+| **CI/CD EXOTICS**                        |                         |          |                           |        |                      |        |
+| Memory leak checks                       | (?)                     |    td    | (?)                       |   td   | (?)                  |   td   |
+| Performance tests                        | (?)                     |    td    | (?)                       |   td   | (?)                  |   td   |
+| Clean error log enforced                 | (?)                     |    td    | (?)                       |   td   | (?)                  |   td   |

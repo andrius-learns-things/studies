@@ -12,6 +12,24 @@ import routeEntered from "../actions/actionCreators/RouteEntered.js";
 import Home from "./Home.jsx";
 import About from "./About.jsx";
 
+function RouterContents() {
+  let location = useLocation();
+  React.useEffect(() => {
+    routeEntered(location.pathname);
+  }, [location]);
+
+  return (
+    <Switch>
+      <Route path="/about">
+        <About />
+      </Route>
+      <Route path="/">
+        <Home />
+      </Route>
+    </Switch>
+  );
+}
+
 function RouterComponent() {
   return (
     <div>
@@ -26,15 +44,7 @@ function RouterComponent() {
             </li>
           </ul>
         </nav>
-
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
+        <RouterContents />
       </Router>
     </div>
   );
