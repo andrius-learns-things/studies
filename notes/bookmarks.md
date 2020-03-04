@@ -43,3 +43,7 @@ https://phil.tech/api/2017/01/24/graphql-vs-rest-overview/ **GraphQL and REST ov
 https://www.martinfowler.com/articles/richardsonMaturityModel.html **REST maturity model**
 
 https://www.valentinog.com/blog/babel/ **Nice React, Webpack, Babel tutorial**
+
+https://medium.com/@vladbezden/webpack-configuration-for-using-bootstrap-in-react-a6ef2dfa1d95 **Nice bootstrap for react & webpack tutorial**
+
+https://react-bootstrap.github.io/layout/grid/ **React-bootstrap**

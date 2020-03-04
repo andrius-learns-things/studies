@@ -104,6 +104,8 @@ DONE:
 
 TODO:
 
+- Stylize a bot more (esp navbar)
+- Localizations. Localization tools
 - Call backend and fix routing problems
 - Console errors (due to hot reload or smth like that)
 - NPM install warnings (a few things depretiated)

@@ -12,6 +12,8 @@ import routeEntered from "../actions/actionCreators/RouteEntered.js";
 import Home from "./Home.jsx";
 import About from "./About.jsx";
 
+import { Container, Row } from "react-bootstrap";
+
 import "bootstrap/dist/css/bootstrap.css";
 
 function RouterContents() {
@@ -34,21 +36,25 @@ function RouterContents() {
 
 function RouterComponent() {
   return (
-    <div>
+    <Container>
       <Router>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-          </ul>
-        </nav>
-        <RouterContents />
+        <Row>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/about">About</Link>
+              </li>
+            </ul>
+          </nav>
+        </Row>
+        <Row>
+          <RouterContents />
+        </Row>
       </Router>
-    </div>
+    </Container>
   );
 }
 
