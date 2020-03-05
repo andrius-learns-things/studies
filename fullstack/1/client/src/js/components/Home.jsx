@@ -1,8 +1,19 @@
 import React from "react";
-import StoreComponent from "./base/StoreComponent.jsx";
 import { Button } from "react-bootstrap";
+import StoreComponent from "./base/StoreComponent.jsx";
+import getItemsBtnClicked from "../actions/actionCreators/GetItemsBtnClicked.js";
 
 class Home extends StoreComponent {
+  renderItems(items) {
+    return items ? (
+      <ul>
+        {items.map((item, index) => (
+          <li key={index}>{item.name}</li>
+        ))}
+      </ul>
+    ) : null;
+  }
+
   render() {
     return (
       <div>
@@ -12,8 +23,11 @@ class Home extends StoreComponent {
           of times.
         </p>
         <p>
-          <Button variant="success">Great succėss</Button>
+          <Button variant="success" onClick={getItemsBtnClicked}>
+            Get items
+          </Button>
         </p>
+        <p>{this.renderItems(this.state.items)}</p>
       </div>
     );
   }

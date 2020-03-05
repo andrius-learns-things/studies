@@ -12,7 +12,7 @@ let getEndFunction = function(successActionType, errorActionType) {
       // Success
       let action = {
         type: successActionType,
-        result: res.body.result,
+        result: res.body,
         endOfAjaxRequest: true
       };
       dispatcher.dispatch(action);
