@@ -120,26 +120,33 @@ TODO:
 | **PROJECT SETUP**                        |                         |          |                           |        |                      |        |
 | Readme & one-command setup               | Docker compose          | **DONE** | <- same (?)               |   td   | <- same (?)          |   td   |
 | .                                        |                         |          |                           |        |                      |        |
-| **FRONTEND**                             |                         |          |                           |        |                      |        |
+| **FRONTEND TECH STACK**                  |                         |          |                           |        |                      |        |
 | Css framework                            | Bootstrap               | **DONE** | CSS grid                  |   td   | Pure (?)             |   td   |
-| Css language                             | SASS                    |    td    | <- same (?)               |   td   | <- same (?)          |   td   |
-| Css theme customizations                 | Custom (?)              |    td    | <- same (?)               |   td   | <- same (?)          |   td   |
 | Web framework                            | React                   | **DONE** | React                     |   td   | Vue (?)              |   td   |
 | App framework                            | Flux                    | **DONE** | ContextAPI / Redux (?)    |   td   | Vue (?)              |   td   |
-| Routing                                  | React router            | **DONE** | React router              |   td   | Custom (?)           |   td   |
-| Ajax                                     | Superagent              |    td    | (?)                       |   td   | (?)                  |   td   |
-| Form validation mechanism                | Custom                  |    td    | Custom                    |   td   | Custom               |   td   |
-| Localization framework                   | React-Intl              |    td    | (?)                       |   td   | (?)                  |   td   |
 | Language                                 | ES6                     | **DONE** | <- same (?)               |   td   | Typescript           |   td   |
 | Bundler                                  | Webpack                 | **DONE** | <- same (?)               |   td   | (?)                  |   td   |
 | Packager                                 | NPM                     | **DONE** | <- same (?)               |   td   | Yarn                 |   td   |
+| .                                        |                         |          |                           |        |                      |        |
+| **FRONTEND LIBS & TOOLS**                |                         |          |                           |        |                      |        |
 | Code formatter                           | VS Code prettier        | **DONE** | (?)                       |   td   | (?)                  |   td   |
+| Routing                                  | React router            | **DONE** | React router              |   td   | Custom (?)           |   td   |
+| Ajax requests                            | Superagent              | **DONE** | (?)                       |   td   | (?)                  |   td   |
+| Transpiler                               | Babel                   | **DONE** |                           |   td   |                      |   td   |
+| Integrations                             | React-Bootstrap         | **DONE** |                           |   td   |                      |   td   |
+| Integrations                             | React-Router-Bootstrap  | **DONE** |                           |   td   |                      |   td   |
 | Debugger                                 | (?)                     |    td    | (?)                       |   td   | (?)                  |   td   |
 | Unit tests                               | (?)                     |    td    | (?)                       |   td   | (?)                  |   td   |
-| Extensive logging (posts to back)        | Custom                  |    td    | (?)                       |   td   | (?)                  |   td   |
+| Localization framework                   | React-Intl              |    td    | (?)                       |   td   | (?)                  |   td   |
 | CI & pre-commit - code quality checks    | ESlint (?)              |    td    | (?)                       |   td   | (?)                  |   td   |
 | CI & pre-commit - test coverage          | (?)                     |    td    | (?)                       |   td   | (?)                  |   td   |
 | CI & pre-commit - security checks        | NPM audit (?)           |    td    | (?)                       |   td   | (?)                  |   td   |
+| .                                        |                         |          |                           |        |                      |        |
+| **FRONTEND CUSTOM PROGRAMMING**          |                         |          |                           |        |                      |        |
+| Css customizations                       | SASS                    |    td    | <- same (?)               |   td   | <- same (?)          |   td   |
+| Custom theme                             | (?)                     |    td    | <- same (?)               |   td   | <- same (?)          |   td   |
+| Extensive logging (posts to back)        | Custom                  |    td    | (?)                       |   td   | (?)                  |   td   |
+| Form validation mechanism                | Custom                  |    td    | Custom                    |   td   | Custom               |   td   |
 | .                                        |                         |          |                           |        |                      |        |
 | **BACKEND - WEB SERVER**                 |                         |          |                           |        |                      |        |
 | Code formatter                           | Black                   | **DONE** | (?)                       |   td   | (?)                  |   td   |
