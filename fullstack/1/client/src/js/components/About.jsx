@@ -3,7 +3,13 @@ import StoreComponent from "./base/StoreComponent.jsx";
 
 class About extends StoreComponent {
   render() {
-    return <p>About this site...</p>;
+    return (
+      <p>
+        Home. Navigated{" "}
+        {this.state.timesNavigated ? this.state.timesNavigated : "?"} number of
+        times.
+      </p>
+    );
   }
 }
 

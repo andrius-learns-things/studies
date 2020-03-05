@@ -101,11 +101,10 @@ DONE:
 - Add flux
 - Add react router. Make route entered first action in flux. Count route changes.
 - Add bootstrap
+- Call backend and fix routing problems
 
 TODO:
 
-- Call backend and fix routing problems
--
 - Stylize a bot more (esp navbar)
 - Bootstrap theme
 - Localizations. Localization tools

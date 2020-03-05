@@ -3,16 +3,15 @@ import {
   HashRouter as Router,
   Switch,
   Route,
-  Link,
   useLocation
 } from "react-router-dom";
 import ReactDOM from "react-dom";
+import { Container, Row, Nav } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 
 import routeEntered from "../actions/actionCreators/RouteEntered.js";
 import Home from "./Home.jsx";
 import About from "./About.jsx";
-
-import { Container, Row } from "react-bootstrap";
 
 import "bootstrap/dist/css/bootstrap.css";
 
@@ -38,19 +37,21 @@ function RouterComponent() {
   return (
     <Container>
       <Router>
-        <Row>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/about">About</Link>
-              </li>
-            </ul>
-          </nav>
+        <Row className="mt-5">
+          <Nav variant="pills" defaultActiveKey="/home" as="ul">
+            <Nav.Item as="li">
+              <LinkContainer to="/home">
+                <Nav.Link>Home</Nav.Link>
+              </LinkContainer>
+            </Nav.Item>
+            <Nav.Item as="li">
+              <LinkContainer to="/about">
+                <Nav.Link>About</Nav.Link>
+              </LinkContainer>
+            </Nav.Item>
+          </Nav>
         </Row>
-        <Row>
+        <Row className="mt-5">
           <RouterContents />
         </Row>
       </Router>
