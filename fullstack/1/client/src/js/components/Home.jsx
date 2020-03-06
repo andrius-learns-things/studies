@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Table } from "react-bootstrap";
 import StoreComponent from "./base/StoreComponent.jsx";
-import getItemsBtnClicked from "../actions/actionCreators/GetItemsBtnClicked.js";
+import addItemBtnClicked from "../actions/actionCreators/AddItemBtnClicked.js";
 
 class Home extends StoreComponent {
   renderItems(items) {
@@ -29,8 +29,8 @@ class Home extends StoreComponent {
     return (
       <div>
         <p>
-          <Button variant="success" onClick={getItemsBtnClicked}>
-            Get items
+          <Button variant="success" onClick={addItemBtnClicked}>
+            Add item
           </Button>
         </p>
         {this.renderItems(this.state.items)}

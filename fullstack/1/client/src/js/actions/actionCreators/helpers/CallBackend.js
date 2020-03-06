@@ -36,3 +36,8 @@ export function getFromBackend(url, successActionType, errorActionType) {
   let req = request.get(prepareAbsoluteUrl(url));
   req.end(getEndFunction(successActionType, errorActionType));
 }
+
+export function postToBackend(url, successActionType, errorActionType, data) {
+  let req = request.post(prepareAbsoluteUrl(url));
+  req.send(data).end(getEndFunction(successActionType, errorActionType));
+}

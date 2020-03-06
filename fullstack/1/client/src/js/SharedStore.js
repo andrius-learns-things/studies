@@ -2,6 +2,7 @@ import { ReduceStore } from "flux/utils";
 import dispatcher from "./Dispatcher.js";
 import ActionTypes from "./actions/ActionTypes.js";
 import getItems from "./actions/actionCreators/GetItems.js";
+import addItem from "./actions/actionCreators/AddItem.js";
 
 class SharedStore extends ReduceStore {
   getInitialState() {
@@ -25,13 +26,18 @@ class SharedStore extends ReduceStore {
 
   [ActionTypes.ROUTE_ENTERED](state) {
     state.timesNavigated = state.timesNavigated + 1;
-  }
-
-  [ActionTypes.GET_ITEMS_BTN_CLICKED](state) {
     getItems();
   }
 
   [ActionTypes.GET_ITEMS_SUCCESS](state, action) {
+    state.items = action.result;
+  }
+
+  [ActionTypes.ADD_ITEM_BTN_CLICKED]() {
+    addItem({});
+  }
+
+  [ActionTypes.ADD_ITEM_SUCCESS](state, action) {
     state.items = action.result;
   }
 }
