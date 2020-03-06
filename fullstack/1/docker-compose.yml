@@ -7,6 +7,8 @@ services:
       - ./client:/code
     ports:
       - "8100:8080"
+    depends_on:
+      - mongo
   server:
     build:
       context: ./server
@@ -14,5 +16,9 @@ services:
       - ./server:/code
     ports:
       - "8101:5000"
+    depends_on:
+      - mongo
     stdin_open: true
     tty: true
+  mongo:
+    image: mongo

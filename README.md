@@ -103,12 +103,15 @@ DONE:
 - Add bootstrap
 - Call backend and fix routing problems
 
-TODO:
+TODO (BACKEND):
+
+- Basis for event source solution
+
+TODO (FRONTEND):
 
 - Stylize a bot more (esp navbar)
 - Bootstrap theme
 - Localizations. Localization tools
--
 - Console errors (due to hot reload or smth like that)
 - NPM install warnings (a few things depretiated)
 

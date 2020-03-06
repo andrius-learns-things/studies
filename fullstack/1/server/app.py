@@ -1,6 +1,9 @@
 from flask import Flask, jsonify
+from .events.event_store.mongo import MongoEventStore
 
 app = Flask(__name__)
+
+event_store = MongoEventStore()
 
 
 items = [{"name": "A"}, {"name": "B"}]
