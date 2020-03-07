@@ -94,7 +94,7 @@ FAILED. Got stuck at https://github.com/graphql-python/graphene/issues/546
 
 ## Stack #1 (React-Python)
 
-DONE:
+DONE (FRONTEND):
 
 - Make things work. Maybe by https://www.valentinog.com/blog/babel/
 - Make things work in docker compose
@@ -103,9 +103,13 @@ DONE:
 - Add bootstrap
 - Call backend and fix routing problems
 
+DONE (BACKEND):
+
+- Mongo as Event store
+
 TODO (BACKEND):
 
-- Basis for event source solution
+- SQL Alchemy + Postgres as ReadModel
 
 TODO (FRONTEND):
 
@@ -121,7 +125,8 @@ TODO (FRONTEND):
 | :--------------------------------------- | :---------------------- | :------: | :------------------------ | :----: | :------------------- | :----: |
 | .                                        |                         |          |                           |        |                      |        |
 | **PROJECT SETUP**                        |                         |          |                           |        |                      |        |
-| Readme & one-command setup               | Docker compose          | **DONE** | <- same (?)               |   td   | <- same (?)          |   td   |
+| Readme                                   | Markdown                | **DONE** | <- same (?)               |   td   | <- same (?)          |   td   |
+| One-command setup                        | Docker compose          | **DONE** | <- same (?)               |   td   | <- same (?)          |   td   |
 | .                                        |                         |          |                           |        |                      |        |
 | **FRONTEND TECH STACK**                  |                         |          |                           |        |                      |        |
 | Css framework                            | Bootstrap               | **DONE** | CSS grid                  |   td   | Pure (?)             |   td   |
@@ -154,34 +159,34 @@ TODO (FRONTEND):
 | **BACKEND - WEB SERVER**                 |                         |          |                           |        |                      |        |
 | Code formatter                           | Black                   | **DONE** | (?)                       |   td   | (?)                  |   td   |
 | Debugger                                 | Pdb                     | **DONE** | (?)                       |   td   | (?)                  |   td   |
+| Language                                 | Python                  | **DONE** | Python                    |   td   | C#                   |   td   |
+| Web framework                            | Flask                   | **DONE** | Django                    |   td   | ASP.Net Core         |   td   |
 | Unit tests                               | Pytest                  |    td    | <- same (?)               |   td   | Yarn                 |   td   |
 | Extensive logging                        | Custom                  |    td    | (?)                       |   td   | (?)                  |   td   |
 | CI & pre-commit - code quality checks    | Flake8 + complexity     |    td    | (?)                       |   td   | (?)                  |   td   |
 | CI & pre-commit - test coverage          | Pytest coverage         |    td    | <- same (?)               |   td   | (?)                  |   td   |
 | CI & pre-commit - security checks        | Bandit (?)              |    td    | (?)                       |   td   | (?)                  |   td   |
-| Language                                 | Python                  | **DONE** | Python                    |   td   | C#                   |   td   |
-| Web framework                            | Flask                   | **DONE** | Django                    |   td   | ASP.Net Core         |   td   |
 | App engine - permissions, auth, worflows | Custom                  |    td    | (?)                       |   td   | (?)                  |   td   |
 | .                                        |                         |          |                           |        |                      |        |
+| **BACKEND - ES&CQRS BASED STORAGE**      |                         |          |                           |        |                      |        |
+| Event store                              | MongoDB                 | **DONE** | (?)                       |   td   | (?)                  |   td   |
+| Event store - Admin UI                   | MongoDB Express         | **DONE** | (?)                       |   td   | (?)                  |   td   |
+| Read model                               | PostgreSQL              |    td    | <- same (?)               |   td   | (?)                  |   td   |
+| Read model - ORM                         | SQL Alchemy             |    td    | Django ORM                |   td   | (?)                  |   td   |
+| Read model - Schema migrations           | Alembic                 |    td    | Django ORM migrations (?) |   td   | (?)                  |   td   |
+| Solution for GDPR vs immutability        | Custom (?)              |    td    | (?)                       |   td   | (?)                  |   td   |
+| .                                        |                         |          |                           |        |                      |        |
 | **BACKEND - API**                        |                         |          |                           |        |                      |        |
-| REST endpoints                           | Flask REST              |    td    | Django REST               |   td   | (?)                  |   td   |
-| REST documentation                       | Swagger with (?)        |    td    | RAML with (?)             |   td   | Swagger with (?)     |   td   |
+| REST OpenAPI documentation               | (?)                     |    td    | (?)                       |   td   | (?)                  |   td   |
 | REST json schema validators              | Schematics              |    td    | (?)                       |   td   | (?)                  |   td   |
 | GraphQL Endpoints                        | (?)                     |    td    | (?)                       |   td   | (?)                  |   td   |
 | .                                        |                         |          |                           |        |                      |        |
-| **BACKEND - APP CONTEXTS**               |                         |          |                           |        |                      |        |
+| **BACKEND - APP STORAGE CONTEXTS**       |                         |          |                           |        |                      |        |
 | Session context                          | Redis                   |    td    | (?)                       |   td   | (?)                  |   td   |
 | Cashe context                            | Redis                   |    td    | (?)                       |   td   | (?)                  |   td   |
 | App context                              | Custom                  |    td    | (?)                       |   td   | (?)                  |   td   |
 | Request context                          | Custom                  |    td    | (?)                       |   td   | (?)                  |   td   |
 | Cookie context                           | Custom                  |    td    | (?)                       |   td   | (?)                  |   td   |
-| .                                        |                         |          |                           |        |                      |        |
-| **BACKEND - ES&CQRS BASED STORAGE**      |                         |          |                           |        |                      |        |
-| Immutable event store                    | MongoDB (?)             |    td    | (?)                       |   td   | (?)                  |   td   |
-| Solution for GDPR vs immutability        | Custom (?)              |    td    | (?)                       |   td   | (?)                  |   td   |
-| Read model                               | PostgreSQL              |    td    | <- same (?)               |   td   | (?)                  |   td   |
-| Read model - ORM                         | SQL Alchemy             |    td    | Django ORM                |   td   | (?)                  |   td   |
-| Read model - Schema migrations           | Alembic                 |    td    | Django ORM migrations (?) |   td   | (?)                  |   td   |
 | .                                        |                         |          |                           |        |                      |        |
 | **BACKEND - ASYNC TASKS**                |                         |          |                           |        |                      |        |
 | Framework                                | Celery                  |    td    | (?)                       |   td   | (?)                  |   td   |

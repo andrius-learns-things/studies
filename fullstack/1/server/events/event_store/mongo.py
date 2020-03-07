@@ -17,9 +17,9 @@ class MongoEventStore(BaseEventStore):
 
         event_index = self.mongodb.events.count()
         event = {"index": event_index, "type": type, "payload": payload}
-        self.mongodb.hits.insert_one(event)
+        self.mongodb.events.insert_one(event)
 
     def get_events(self, start_index, end_index):
-        return self.mongodb.persons.find(
+        return self.mongodb.events.find(
             {"index": {"$gte": start_index, "$lte": end_index}}
         ).sort(ASCENDING)

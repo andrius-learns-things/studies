@@ -20,5 +20,11 @@ services:
       - mongo
     stdin_open: true
     tty: true
+  mongo-express:
+    image: mongo-express
+    ports:
+      - "8102:8081"
+    depends_on:
+      - mongo
   mongo:
     image: mongo

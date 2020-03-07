@@ -1,5 +1,6 @@
 from flask import Flask, jsonify
-from .events.event_store.mongo import MongoEventStore
+from events.event_store.mongo import MongoEventStore
+from events.event_types import ADD_NEW_ITEM
 
 app = Flask(__name__)
 
@@ -21,6 +22,9 @@ def get_items():
 
 @app.route("/api/items", methods=["POST"])
 def add_item():
+
+    event_store.register_new_event(ADD_NEW_ITEM, {})
+
     items.append({"name": "New"})
     return jsonify(items)
 
