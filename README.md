@@ -110,6 +110,9 @@ DONE (BACKEND):
 TODO (BACKEND):
 
 - SQL Alchemy + Postgres as ReadModel
+- Refactor alchemy session
+- Refactor reuse of model for json
+- Refactor readmodel to base, event store subscriptions...
 
 TODO (FRONTEND):
 

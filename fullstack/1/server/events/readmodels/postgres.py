@@ -1,6 +1,7 @@
 from sqlalchemy import Column, String, Integer, create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
+from ..event_types import ADD_NEW_ITEM
 
 
 TABLE_NAME_ITEMS = "items"
@@ -34,9 +35,17 @@ class PostgresReadModel:
     # Read model methods
 
     def get_items(self):
-        self._ensure_updated()
+        engine = self._get_engine()
+        self._ensure_updated(engine)
 
-        return []
+        Session = sessionmaker(bind=engine)
+        session = Session()
+
+        rows = session.query(Items).all()
+
+        items = [{"name": r.name} for r in rows]
+
+        return items
 
     # Helper methods
 
@@ -79,8 +88,30 @@ class PostgresReadModel:
 
         return indexes[0].index if indexes else 0
 
-    def _ensure_updated(self):
+    def _ensure_updated(self, engine):
 
-        engine = self._get_engine()
         self._ensure_db_created(engine)
-        self._get_index(engine)
+        index = self._get_index(engine)
+
+        new_events = self._event_store.get_events(index)
+
+        event_handlers = self._get_event_handlers()
+
+        for event in new_events:
+
+            handler = event_handlers.get(event.type)
+
+            if handler:
+                handler(engine, event)
+
+    def _get_event_handlers(self):
+        return {ADD_NEW_ITEM: self._handle_add_new_item}
+
+    def _handle_add_new_item(self, engine, event):
+        Session = sessionmaker(bind=engine)
+        session = Session()
+
+        new_item = Items(name="New one")
+
+        session.add(new_item)
+        session.commit()

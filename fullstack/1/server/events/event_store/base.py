@@ -7,5 +7,5 @@ class BaseEventStore(ABC):
         pass
 
     @abstractmethod
-    def get_events(self, start_index, end_index):
+    def get_events(self, start_index, end_index=None):
         pass

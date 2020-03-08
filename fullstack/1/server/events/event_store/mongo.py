@@ -14,12 +14,12 @@ class MongoEventStore(BaseEventStore):
     # Event store methods
 
     def register_new_event(self, type, payload=None):
-
         event_index = self.mongodb.events.count()
         event = {"index": event_index, "type": type, "payload": payload}
         self.mongodb.events.insert_one(event)
 
-    def get_events(self, start_index, end_index):
-        return self.mongodb.events.find(
-            {"index": {"$gte": start_index, "$lte": end_index}}
-        ).sort(ASCENDING)
+    def get_events(self, start_index, end_index=None):
+        index_query = {"$gte": start_index}
+        if end_index:
+            index_query["$lte"] = end_index
+        return self.mongodb.events.find({"index": index_query}).sort(ASCENDING)
