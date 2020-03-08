@@ -33,11 +33,10 @@ class PostgresReadModel:
 
     # Read model methods
 
-    def update(self):
+    def get_items(self):
+        self._ensure_updated()
 
-        engine = self._get_engine()
-        self._ensure_db_created(engine)
-        self._get_index(engine)
+        return []
 
     # Helper methods
 
@@ -79,3 +78,9 @@ class PostgresReadModel:
         indexes = session.query(Index).all()
 
         return indexes[0].index if indexes else 0
+
+    def _ensure_updated(self):
+
+        engine = self._get_engine()
+        self._ensure_db_created(engine)
+        self._get_index(engine)

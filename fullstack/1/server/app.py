@@ -9,9 +9,6 @@ event_store = MongoEventStore()
 read_model = PostgresReadModel(event_store)
 
 
-items = [{"name": "A"}, {"name": "B"}]
-
-
 @app.route("/")
 def overview():
     return "Hello world from Flask backend endpoint"
@@ -19,18 +16,14 @@ def overview():
 
 @app.route("/api/items", methods=["GET"])
 def get_items():
-
-    read_model.update()
+    items = read_model.get_items()
     return jsonify(items)
 
 
 @app.route("/api/items", methods=["POST"])
 def add_item():
-
     event_store.register_new_event(ADD_NEW_ITEM, {})
-    read_model.update()
-
-    items.append({"name": "New"})
+    items = read_model.get_items()
     return jsonify(items)
 
 
