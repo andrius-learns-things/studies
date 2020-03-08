@@ -1,13 +1,11 @@
 from flask import Flask, jsonify
 from events.event_store.mongo import MongoEventStore
 from events.event_types import ADD_NEW_ITEM
-from readmodel.model import setup_db
+from readmodel.model import ensure_read_model_is_up_to_date
 
 app = Flask(__name__)
 
 event_store = MongoEventStore()
-
-setup_db()
 
 
 items = [{"name": "A"}, {"name": "B"}]
@@ -20,6 +18,8 @@ def overview():
 
 @app.route("/api/items", methods=["GET"])
 def get_items():
+
+    ensure_read_model_is_up_to_date()
     return jsonify(items)
 
 
@@ -27,6 +27,7 @@ def get_items():
 def add_item():
 
     event_store.register_new_event(ADD_NEW_ITEM, {})
+    ensure_read_model_is_up_to_date()
 
     items.append({"name": "New"})
     return jsonify(items)
