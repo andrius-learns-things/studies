@@ -1,10 +1,13 @@
 from flask import Flask, jsonify
 from events.event_store.mongo import MongoEventStore
 from events.event_types import ADD_NEW_ITEM
+from readmodel.model import setup_db
 
 app = Flask(__name__)
 
 event_store = MongoEventStore()
+
+setup_db()
 
 
 items = [{"name": "A"}, {"name": "B"}]
