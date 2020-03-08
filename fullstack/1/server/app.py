@@ -1,7 +1,7 @@
 from flask import Flask, jsonify
 from events.event_store.mongo import MongoEventStore
 from events.event_types import ADD_NEW_ITEM
-from readmodel.model import ensure_read_model_is_up_to_date
+from events.readmodel.model import ensure_read_model_is_up_to_date
 
 app = Flask(__name__)
 

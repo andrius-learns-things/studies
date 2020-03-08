@@ -1,5 +1,6 @@
 from sqlalchemy import Column, String, Integer, create_engine
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker
 
 
 TABLE_NAME_ITEMS = "items"
@@ -23,7 +24,7 @@ class Index(Base):
     index = Column(Integer)
 
 
-def _get_engine():
+def get_engine():
 
     db_params = {
         "host": "postgres",
@@ -44,9 +45,7 @@ def _get_engine():
     return create_engine(db_link, echo=True)
 
 
-def _ensure_db_created():
-
-    engine = _get_engine()
+def ensure_db_created(engine):
 
     has_tables = [
         engine.dialect.has_table(engine, TABLE_NAME_ITEMS),
@@ -57,6 +56,20 @@ def _ensure_db_created():
         Base.metadata.create_all(engine)
 
 
+def get_index(engine):
+
+    Session = sessionmaker(bind=engine)
+    session = Session()
+
+    indexes = session.query(Index).all()
+
+    return indexes[0].index if indexes else 0
+
+
 def ensure_read_model_is_up_to_date():
 
-    _ensure_db_created()
+    engine = get_engine()
+    ensure_db_created(engine)
+    index = get_index(engine)
+
+    return index
