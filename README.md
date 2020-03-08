@@ -106,10 +106,11 @@ DONE (FRONTEND):
 DONE (BACKEND):
 
 - Mongo as Event store
+- SQL Alchemy + Postgres as ReadModel
 
 TODO (BACKEND):
 
-- SQL Alchemy + Postgres as ReadModel
+- Solve duplication problem
 - Refactor alchemy session
 - Refactor reuse of model for json
 - Refactor readmodel to base, event store subscriptions...
@@ -121,6 +122,11 @@ TODO (FRONTEND):
 - Localizations. Localization tools
 - Console errors (due to hot reload or smth like that)
 - NPM install warnings (a few things depretiated)
+
+TODO (BOTH):
+
+- Item name
+- Delete item
 
 ## Overview of full stack apps
 

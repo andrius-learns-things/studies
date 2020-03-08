@@ -99,7 +99,7 @@ class PostgresReadModel:
 
         for event in new_events:
 
-            handler = event_handlers.get(event.type)
+            handler = event_handlers.get(event.get("type"))
 
             if handler:
                 handler(engine, event)

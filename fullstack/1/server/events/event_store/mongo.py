@@ -22,4 +22,6 @@ class MongoEventStore(BaseEventStore):
         index_query = {"$gte": start_index}
         if end_index:
             index_query["$lte"] = end_index
-        return self.mongodb.events.find({"index": index_query}).sort(ASCENDING)
+        return self.mongodb.events.find({"index": index_query}).sort(
+            [("index", ASCENDING)]
+        )
