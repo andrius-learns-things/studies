@@ -107,13 +107,15 @@ DONE (BACKEND):
 
 - Mongo as Event store
 - SQL Alchemy + Postgres as ReadModel
-
-TODO (BACKEND):
-
 - Solve duplication problem
+
+**TODO (BACKEND):**
+
+- Refactor readmodel to base, event store subscriptions...
+- Refactor complexity
+- Tests...
 - Refactor alchemy session
 - Refactor reuse of model for json
-- Refactor readmodel to base, event store subscriptions...
 
 TODO (FRONTEND):
 
