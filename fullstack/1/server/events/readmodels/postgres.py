@@ -88,21 +88,42 @@ class PostgresReadModel:
 
         return indexes[0].index if indexes else 0
 
+    def _set_index(self, engine, index):
+
+        Session = sessionmaker(bind=engine)
+        session = Session()
+
+        indexes = session.query(Index).all()
+
+        if indexes:
+            indexes[0].index = index
+        else:
+            new_item = Index(index=index)
+            session.add(new_item)
+
+        session.commit()
+
     def _ensure_updated(self, engine):
 
         self._ensure_db_created(engine)
         index = self._get_index(engine)
 
-        new_events = self._event_store.get_events(index)
+        new_events = self._event_store.get_events(index + 1)
 
         event_handlers = self._get_event_handlers()
 
-        for event in new_events:
+        if new_events:
 
-            handler = event_handlers.get(event.get("type"))
+            last_index = new_events[-1].get("index")
 
-            if handler:
-                handler(engine, event)
+            for event in new_events:
+
+                handler = event_handlers.get(event.get("type"))
+
+                if handler:
+                    handler(engine, event)
+
+            self._set_index(engine, last_index)
 
     def _get_event_handlers(self):
         return {ADD_NEW_ITEM: self._handle_add_new_item}
