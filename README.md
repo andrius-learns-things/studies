@@ -182,7 +182,7 @@ TODO (BOTH):
 | Event store - Admin UI                   | MongoDB Express         | **DONE** | (?)                       |   td   | (?)                  |   td   |
 | Read model                               | PostgreSQL              |    td    | <- same (?)               |   td   | (?)                  |   td   |
 | Read model - Admin UI                    | PgAdmin                 | **DONE** | <- same (?)               |   td   | (?)                  |   td   |
-| Read model - ORM                         | SQL Alchemy             |    td    | Django ORM                |   td   | (?)                  |   td   |
+| Read model - ORM                         | SQL Alchemy             | **DONE** | Django ORM                |   td   | (?)                  |   td   |
 | Read model - Schema migrations           | Alembic                 |    td    | Django ORM migrations (?) |   td   | (?)                  |   td   |
 | Solution for GDPR vs immutability        | Custom (?)              |    td    | (?)                       |   td   | (?)                  |   td   |
 | .                                        |                         |          |                           |        |                      |        |
