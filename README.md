@@ -182,7 +182,7 @@ TODO (BOTH):
 | **BACKEND - ES&CQRS BASED STORAGE**      |                         |          |                           |        |                      |        |
 | Event store                              | MongoDB                 | **DONE** | (?)                       |   td   | (?)                  |   td   |
 | Event store - Admin UI                   | MongoDB Express         | **DONE** | (?)                       |   td   | (?)                  |   td   |
-| Read model                               | PostgreSQL              |    td    | <- same (?)               |   td   | (?)                  |   td   |
+| Read model                               | PostgreSQL              | **DONE** | <- same (?)               |   td   | (?)                  |   td   |
 | Read model - Admin UI                    | PgAdmin                 | **DONE** | <- same (?)               |   td   | (?)                  |   td   |
 | Read model - ORM                         | SQL Alchemy             | **DONE** | Django ORM                |   td   | (?)                  |   td   |
 | Read model - Schema migrations           | Alembic                 |    td    | Django ORM migrations (?) |   td   | (?)                  |   td   |
@@ -195,7 +195,7 @@ TODO (BOTH):
 | .                                        |                         |          |                           |        |                      |        |
 | **BACKEND - APP STORAGE CONTEXTS**       |                         |          |                           |        |                      |        |
 | Session context                          | Redis                   |    td    | (?)                       |   td   | (?)                  |   td   |
-| Cashe context                            | Redis                   |    td    | (?)                       |   td   | (?)                  |   td   |
+| Cashe context                            | Redis                   | **DONE** | (?)                       |   td   | (?)                  |   td   |
 | App context                              | Custom                  |    td    | (?)                       |   td   | (?)                  |   td   |
 | Request context                          | Custom                  |    td    | (?)                       |   td   | (?)                  |   td   |
 | Cookie context                           | Custom                  |    td    | (?)                       |   td   | (?)                  |   td   |

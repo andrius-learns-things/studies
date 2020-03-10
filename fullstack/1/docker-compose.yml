@@ -17,7 +17,9 @@ services:
     ports:
       - "8101:5000"
     depends_on:
+      - postgres
       - mongo
+      - redis
     stdin_open: true
     tty: true
   mongo-express:
@@ -47,3 +49,5 @@ services:
     image: postgres
     environment:
       POSTGRES_PASSWORD: notverysecret
+  redis:
+    image: redis
