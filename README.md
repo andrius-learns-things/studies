@@ -27,7 +27,7 @@ TODO (APP LOGIC):
 - Item name
 - Delete item
 
-## Overview of full stack appz
+## Overview of full stack apps
 
 | Component                                | Stack #1 (React-Python)  |  status  | Stack #2 (Vue-Django)     | status | Stack #3 (.Net Core) | status |
 | :--------------------------------------- | :----------------------- | :------: | :------------------------ | :----: | :------------------- | :----: |
