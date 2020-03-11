@@ -36,7 +36,7 @@ TODO (APP LOGIC):
 | One-command setup                        | Docker compose           | **DONE** | <- same (?)               |   td   | <- same (?)          |   td   |
 | One-command check and run                | Bash                     | **DONE** | <- same (?)               |   td   | <- same (?)          |   td   |
 | On-save checks                           | VS Code plugins          | **DONE** | <- same (?)               |   td   | <- same (?)          |   td   |
-| Pre-commit checks                        | Pre-commit hooks         |  PARTLY  | <- same (?)               |   td   | <- same (?)          |   td   |
+| Pre-commit checks                        | Pre-commit hooks         | **DONE** | <- same (?)               |   td   | <- same (?)          |   td   |
 | Selenium tests                           | Robot tests              |    td    | (?)                       |   td   | (?)                  |   td   |
 | .                                        |                          |          |                           |        |                      |        |
 | **FRONTEND - TECH STACK**                |                          |          |                           |        |                      |        |
@@ -132,22 +132,6 @@ TODO (APP LOGIC):
 # CheatSheet
 
 [Link](/notes/cheatsheet.md)
-
-# Tools
-
-## 1. Pre-commit setup
-
-Done:
-
-- Pre-commits with black & flake8
-- Flake8 complexity enforcement?
-
-Ideas:
-
-- run.sh script, solved docker sudo problems
-- Full test coverage enforcement?
-
-[Link](/tools/pre-commits)
 
 # Experiments:
 
