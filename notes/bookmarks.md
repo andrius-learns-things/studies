@@ -47,3 +47,5 @@ https://www.valentinog.com/blog/babel/ **Nice React, Webpack, Babel tutorial**
 https://medium.com/@vladbezden/webpack-configuration-for-using-bootstrap-in-react-a6ef2dfa1d95 **Nice bootstrap for react & webpack tutorial**
 
 https://react-bootstrap.github.io/layout/grid/ **React-bootstrap**
+
+https://github.com/git/git/blob/master/templates/hooks--pre-commit.sample **Git-hook for pre-commit**

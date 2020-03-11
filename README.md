@@ -117,9 +117,13 @@ TODO (APP LOGIC):
 | Logging aggregation (a, p)               | Graylog (?)              |    td    | ES & Kibana (?)           |   td   | (?)                  |   td   |
 | Infra metrics - prod                     | NewRelic (?)             |    td    | Graphite & Graphana (?)   |   td   | (?)                  |   td   |
 | User metrics - prod                      | Google analytics (?)     |    td    | (?)                       |   td   | (?)                  |   td   |
-| Exotic ideas - memory leak checks        | (?)                      |    td    | (?)                       |   td   | (?)                  |   td   |
-| Exotic ideas - Performance tests         | (?)                      |    td    | (?)                       |   td   | (?)                  |   td   |
-| Exotic ideas - Clean error log enforced  | (?)                      |    td    | (?)                       |   td   | (?)                  |   td   |
+| .                                        |                          |          |                           |        |                      |        |
+| **A FEW EXOTIC IDEAS**                   |                          |          |                           |        |                      |        |
+| Memory leak checks                       | (?)                      |    td    | (?)                       |   td   | (?)                  |   td   |
+| Performance tests                        | (?)                      |    td    | (?)                       |   td   | (?)                  |   td   |
+| Clean error log enforced                 | (?)                      |    td    | (?)                       |   td   | (?)                  |   td   |
+| Selenium tests coverage                  | (?)                      |    td    | (?)                       |   td   | (?)                  |   td   |
+| Selenium tests screenshots               | (?)                      |    td    | (?)                       |   td   | (?)                  |   td   |
 
 # Buzzword index
 
