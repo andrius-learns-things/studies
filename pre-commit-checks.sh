@@ -6,7 +6,7 @@ cd fullstack/1
 
 if [ $? -ne 0 ]
 then
-  echo "FAILED: fullstack/1/check.sh" >&2
+  echo "FAILED: fullstack/1/check.sh"
   exit 1
 fi
 
