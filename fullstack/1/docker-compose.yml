@@ -22,6 +22,11 @@ services:
       - redis
     stdin_open: true
     tty: true
+  server_checks:
+    build:
+      context: ./server_checks
+    volumes:
+      - ./server:/code
   mongo-express:
     image: mongo-express
     ports:

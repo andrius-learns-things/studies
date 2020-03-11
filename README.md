@@ -8,7 +8,7 @@ Repo for keeping notes, experiments and other studies related stuff.
 
 TODO (PROJECT SETUP):
 
-- Make commands run in docker, not in local machine
+- More pre-commit commands
 
 TODO (BACKEND):
 
@@ -38,7 +38,7 @@ TODO (APP LOGIC):
 | .                                        |                          |          |                           |        |                      |        |
 | **PROJECT SETUP**                        |                          |          |                           |        |                      |        |
 | One-command setup                        | Docker compose           | **DONE** | <- same (?)               |   td   | <- same (?)          |   td   |
-| Minimal dependencies                     | Docker compose           |    td    | <- same (?)               |   td   | <- same (?)          |   td   |
+| Minimal dependencies                     | Docker compose           | **DONE** | <- same (?)               |   td   | <- same (?)          |   td   |
 | One-command local run                    | Bash                     | **DONE** | <- same (?)               |   td   | <- same (?)          |   td   |
 | On-save checks                           | VS Code plugins          | **DONE** | <- same (?)               |   td   | <- same (?)          |   td   |
 | Pre-commit checks                        | Pre-commit hooks         | **DONE** | <- same (?)               |   td   | <- same (?)          |   td   |

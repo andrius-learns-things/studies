@@ -1,7 +1,7 @@
 #!/bin/bash
 
-black .
 
+black .
 
 if [ $? -ne 0 ]
 then
@@ -10,7 +10,6 @@ fi
 
 
 flake8 --config .flake8
-
 
 if [ $? -ne 0 ]
 then
