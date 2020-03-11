@@ -1,3 +1,5 @@
 #!/bin/bash
 
-server/check.sh
+cd fullstack/1
+check.sh
+cd ..
