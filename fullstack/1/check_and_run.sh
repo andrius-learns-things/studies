@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd server
-check.sh
+./check.sh
 cd ..
 
 docker-compose up -d
