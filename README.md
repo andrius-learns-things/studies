@@ -33,7 +33,6 @@ TODO (APP LOGIC):
 | :--------------------------------------- | :---------------------- | :------: | :------------------------ | :----: | :------------------- | :----: |
 | .                                        |                         |          |                           |        |                      |        |
 | **PROJECT SETUP**                        |                         |          |                           |        |                      |        |
-| Readme                                   | Markdown                | **DONE** | <- same (?)               |   td   | <- same (?)          |   td   |
 | One-command setup                        | Docker compose          | **DONE** | <- same (?)               |   td   | <- same (?)          |   td   |
 | .                                        |                         |          |                           |        |                      |        |
 | **FRONTEND TECH STACK**                  |                         |          |                           |        |                      |        |
