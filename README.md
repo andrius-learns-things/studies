@@ -27,7 +27,7 @@ TODO (APP LOGIC):
 - Item name
 - Delete item
 
-## Overview of full stack apps
+## Overview of full stack appz
 
 | Component                                | Stack #1 (React-Python)  |  status  | Stack #2 (Vue-Django)     | status | Stack #3 (.Net Core) | status |
 | :--------------------------------------- | :----------------------- | :------: | :------------------------ | :----: | :------------------- | :----: |
@@ -120,7 +120,6 @@ TODO (APP LOGIC):
 | Exotic ideas - memory leak checks        | (?)                      |    td    | (?)                       |   td   | (?)                  |   td   |
 | Exotic ideas - Performance tests         | (?)                      |    td    | (?)                       |   td   | (?)                  |   td   |
 | Exotic ideas - Clean error log enforced  | (?)                      |    td    | (?)                       |   td   | (?)                  |   td   |
-
 
 # Buzzword index
 
