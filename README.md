@@ -6,6 +6,10 @@ Repo for keeping notes, experiments and other studies related stuff.
 
 ## Stack #1 (React-Python)
 
+TODO (PROJECT SETUP):
+
+- Make commands run in docker, not in local machine
+
 TODO (BACKEND):
 
 - Refactor readmodel to base, event store subscriptions...
@@ -34,7 +38,8 @@ TODO (APP LOGIC):
 | .                                        |                          |          |                           |        |                      |        |
 | **PROJECT SETUP**                        |                          |          |                           |        |                      |        |
 | One-command setup                        | Docker compose           | **DONE** | <- same (?)               |   td   | <- same (?)          |   td   |
-| One-command check and run                | Bash                     | **DONE** | <- same (?)               |   td   | <- same (?)          |   td   |
+| Minimal dependencies                     | Docker compose           |    td    | <- same (?)               |   td   | <- same (?)          |   td   |
+| One-command local run                    | Bash                     | **DONE** | <- same (?)               |   td   | <- same (?)          |   td   |
 | On-save checks                           | VS Code plugins          | **DONE** | <- same (?)               |   td   | <- same (?)          |   td   |
 | Pre-commit checks                        | Pre-commit hooks         | **DONE** | <- same (?)               |   td   | <- same (?)          |   td   |
 | Selenium tests                           | Robot tests              |    td    | (?)                       |   td   | (?)                  |   td   |
