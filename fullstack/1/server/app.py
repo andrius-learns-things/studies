@@ -3,7 +3,7 @@ from events.event_store.mongo import MongoEventStore
 from events.event_types import ADD_NEW_ITEM
 from events.readmodels.postgres import PostgresReadModel
 from cache.redis import RedisCacheProvider
-from q.rabbitmq import RabbitMQProvider
+from mq.rabbitmq import RabbitMQProvider
 
 
 # App objects
