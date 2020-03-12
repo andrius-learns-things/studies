@@ -20,6 +20,7 @@ services:
       - postgres
       - mongo
       - redis
+      - rabbitmq
     stdin_open: true
     tty: true
   server_checks:

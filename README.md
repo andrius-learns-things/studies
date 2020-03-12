@@ -13,6 +13,7 @@ TODO (PROJECT SETUP):
 TODO (BACKEND):
 
 - RabbitMQ + pika lib
+- Have name from input, propagate everywhere
 - Celery
 - Tests...
 - Refactor readmodel to base, event store subscriptions...

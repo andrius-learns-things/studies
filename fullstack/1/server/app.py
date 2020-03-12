@@ -3,6 +3,7 @@ from events.event_store.mongo import MongoEventStore
 from events.event_types import ADD_NEW_ITEM
 from events.readmodels.postgres import PostgresReadModel
 from cache.redis import RedisCacheProvider
+from q.rabbitmq import RabbitMQProvider
 
 
 # App objects
@@ -11,6 +12,7 @@ app = Flask(__name__)
 event_store = MongoEventStore()
 read_model = PostgresReadModel(event_store)
 cache = RedisCacheProvider()
+queue = RabbitMQProvider()
 
 
 # API endpoints
@@ -36,6 +38,7 @@ def add_item():
 
 @app.route("/api/queued-items", methods=["POST"])
 def add_item_to_queue():
+    queue.post("Item in the queue")
     return jsonify(None)
 
 
