@@ -49,6 +49,11 @@ function RouterComponent() {
                 <Nav.Link>About</Nav.Link>
               </LinkContainer>
             </Nav.Item>
+            <Nav.Item as="li">
+              <Nav.Link href="api/items-from-cache" target="_blank">
+                API - Items from cache
+              </Nav.Link>
+            </Nav.Item>
           </Nav>
         </Row>
         <Row className="mt-5">

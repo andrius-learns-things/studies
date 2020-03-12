@@ -56,3 +56,11 @@ services:
       POSTGRES_PASSWORD: notverysecret
   redis:
     image: redis
+  redis-admin:
+    image: marian/rebrow
+    ports:
+      - "8104:5001"
+    depends_on:
+      - redis
+  rabbitmq:
+    image: rabbitmq

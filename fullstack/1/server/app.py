@@ -34,7 +34,7 @@ def add_item():
     return jsonify(items)
 
 
-@app.route("/api/items_from_cache", methods=["GET"])
+@app.route("/api/items-from-cache", methods=["GET"])
 def get_items_from_cache():
 
     # Constants

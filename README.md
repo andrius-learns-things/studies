@@ -12,9 +12,8 @@ TODO (PROJECT SETUP):
 
 TODO (BACKEND):
 
-- Refactor readmodel to base, event store subscriptions...
-- Refactor complexity
 - Tests...
+- Refactor readmodel to base, event store subscriptions...
 - Refactor alchemy session
 - Refactor reuse of model for json
 
@@ -87,12 +86,15 @@ TODO (APP LOGIC):
 | Session storage                          | Redis                    |    td    | (?)                       |   td   | (?)                  |   td   |
 | Cashe storage                            | Redis                    | **DONE** | (?)                       |   td   | (?)                  |   td   |
 | Async tasks framework                    | Celery + RabbitMQ        |    td    | (?)                       |   td   | (?)                  |   td   |
+| Queue                                    | RabbitMQ + pika lib      |    td    | (?)                       |   td   | (?)                  |   td   |
 | Full-text search                         | Elastic search           |    td    | (?)                       |   td   | (?)                  |   td   |
 | .                                        |                          |          |                           |        |                      |        |
 | **BACKEND - LIBS & TOOLS**               |                          |          |                           |        |                      |        |
 | Debugger                                 | Pdb                      | **DONE** | (?)                       |   td   | (?)                  |   td   |
 | Event store - Admin UI                   | MongoDB Express          | **DONE** | (?)                       |   td   | (?)                  |   td   |
-| Read model - Admin UI                    | PgAdmin                  | **DONE** | <- same (?)               |   td   | (?)                  |   td   |
+| Read model - Admin UI                    | PgAdmin                  | **DONE** | (?)                       |   td   | (?)                  |   td   |
+| Redis - Admin UI                         | (?)                      |    td    | (?)                       |   td   | (?)                  |   td   |
+| Rabbit MQ - Admin UI                     | (?)                      |    td    | (?)                       |   td   | (?)                  |   td   |
 | .                                        |                          |          |                           |        |                      |        |
 | **BACKEND - AUTOMATED CHECKS**           |                          |          |                           |        |                      |        |
 | Code formatter                           | Black                    | **DONE** | (?)                       |   td   | (?)                  |   td   |
