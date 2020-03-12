@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Table } from "react-bootstrap";
+import { Button, ButtonGroup, Table } from "react-bootstrap";
 import StoreComponent from "./base/StoreComponent.jsx";
 import addItemBtnClicked from "../actions/actionCreators/AddItemBtnClicked.js";
 import addItemToTheQueueBtnClicked from "../actions/actionCreators/AddItemToTheQueueBtnClicked.js";
@@ -30,17 +30,21 @@ class Home extends StoreComponent {
   render() {
     return (
       <div>
-        <p>
+        <ButtonGroup className="mr-2">
           <Button variant="success" onClick={addItemBtnClicked}>
             Add item
           </Button>
+        </ButtonGroup>
+        <ButtonGroup className="mr-2">
           <Button onClick={addItemToTheQueueBtnClicked}>
             Add item to the queue
           </Button>
+        </ButtonGroup>
+        <ButtonGroup className="mr-2">
           <Button onClick={addItemsFromQueueBtnClicked}>
             Add items from queue
           </Button>
-        </p>
+        </ButtonGroup>
         {this.renderItems(this.state.items)}
       </div>
     );

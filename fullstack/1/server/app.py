@@ -36,12 +36,13 @@ def add_item():
 
 @app.route("/api/queued-items", methods=["POST"])
 def add_item_to_queue():
-    pass
+    return jsonify(None)
 
 
-@app.route("/api/add-tems-from-queue", methods=["POST"])
+@app.route("/api/add-items-from-queue", methods=["POST"])
 def add_item_from_quque():
-    pass
+    items = read_model.get_items()
+    return jsonify(items)
 
 
 @app.route("/api/items-from-cache", methods=["GET"])

@@ -3,6 +3,8 @@ import dispatcher from "./Dispatcher.js";
 import ActionTypes from "./actions/ActionTypes.js";
 import getItems from "./actions/actionCreators/GetItems.js";
 import addItem from "./actions/actionCreators/AddItem.js";
+import addItemToTheQueue from "./actions/actionCreators/AddItemToTheQueue.js";
+import addItemsFromQueue from "./actions/actionCreators/AddItemsFromQueue.js";
 
 class SharedStore extends ReduceStore {
   getInitialState() {
@@ -38,6 +40,18 @@ class SharedStore extends ReduceStore {
   }
 
   [ActionTypes.ADD_ITEM_SUCCESS](state, action) {
+    state.items = action.result;
+  }
+
+  [ActionTypes.ADD_ITEM_TO_THE_QUEUE_BTN_CLICKED]() {
+    addItemToTheQueue({});
+  }
+
+  [ActionTypes.ADD_ITEMS_FROM_QUEUE_BTN_CLICKED]() {
+    addItemsFromQueue({});
+  }
+
+  [ActionTypes.ADD_ITEMS_FROM_QUEUE_SUCCESS](state, action) {
     state.items = action.result;
   }
 }
