@@ -63,4 +63,9 @@ services:
     depends_on:
       - redis
   rabbitmq:
-    image: rabbitmq
+    image: rabbitmq:management
+    ports:
+      - "8105:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: password
