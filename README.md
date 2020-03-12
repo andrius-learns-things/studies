@@ -12,6 +12,8 @@ TODO (PROJECT SETUP):
 
 TODO (BACKEND):
 
+- RabbitMQ + pika lib
+- Celery
 - Tests...
 - Refactor readmodel to base, event store subscriptions...
 - Refactor alchemy session
@@ -19,6 +21,7 @@ TODO (BACKEND):
 
 TODO (FRONTEND):
 
+- Simplify FLUX
 - Stylize a bot more (esp navbar)
 - Bootstrap theme
 - Localizations. Localization tools
@@ -93,8 +96,8 @@ TODO (APP LOGIC):
 | Debugger                                 | Pdb                      | **DONE** | (?)                       |   td   | (?)                  |   td   |
 | Event store - Admin UI                   | MongoDB Express          | **DONE** | (?)                       |   td   | (?)                  |   td   |
 | Read model - Admin UI                    | PgAdmin                  | **DONE** | (?)                       |   td   | (?)                  |   td   |
-| Redis - Admin UI                         | (?)                      |    td    | (?)                       |   td   | (?)                  |   td   |
-| Rabbit MQ - Admin UI                     | (?)                      |    td    | (?)                       |   td   | (?)                  |   td   |
+| Redis - Admin UI                         | (?)                      | **DONE** | (?)                       |   td   | (?)                  |   td   |
+| Rabbit MQ - Admin UI                     | (?)                      | **DONE** | (?)                       |   td   | (?)                  |   td   |
 | .                                        |                          |          |                           |        |                      |        |
 | **BACKEND - AUTOMATED CHECKS**           |                          |          |                           |        |                      |        |
 | Code formatter                           | Black                    | **DONE** | (?)                       |   td   | (?)                  |   td   |
