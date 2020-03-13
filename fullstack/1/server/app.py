@@ -43,7 +43,13 @@ def add_item_to_queue():
 
 
 @app.route("/api/add-items-from-queue", methods=["POST"])
-def add_item_from_quque():
+def add_items_from_quque():
+
+    items_in_queue = queue.get_all()
+
+    for item in items_in_queue:
+        event_store.register_new_event(ADD_NEW_ITEM, {})
+
     items = read_model.get_items()
     return jsonify(items)
 

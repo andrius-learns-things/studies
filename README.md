@@ -8,15 +8,14 @@ Repo for keeping notes, experiments and other studies related stuff.
 
 TODO (PROJECT SETUP):
 
-- More pre-commit commands
+- More pre-commit commands, esp. frontend
 
 TODO (BACKEND):
 
-- RabbitMQ + pika lib
 - Have name from input, propagate everywhere
 - Celery
 - Tests...
-- Refactor readmodel to base, event store subscriptions...
+- Refactor readmodel to base, event store subscriptions, queue...
 - Refactor alchemy session
 - Refactor reuse of model for json
 
@@ -90,7 +89,7 @@ TODO (APP LOGIC):
 | Session storage                          | Redis                    |    td    | (?)                       |   td   | (?)                  |   td   |
 | Cashe storage                            | Redis                    | **DONE** | (?)                       |   td   | (?)                  |   td   |
 | Async tasks framework                    | Celery + RabbitMQ        |    td    | (?)                       |   td   | (?)                  |   td   |
-| Queue                                    | RabbitMQ + pika lib      |    td    | (?)                       |   td   | (?)                  |   td   |
+| Queue                                    | RabbitMQ + pika lib      | **DONE** | (?)                       |   td   | (?)                  |   td   |
 | Full-text search                         | Elastic search           |    td    | (?)                       |   td   | (?)                  |   td   |
 | .                                        |                          |          |                           |        |                      |        |
 | **BACKEND - LIBS & TOOLS**               |                          |          |                           |        |                      |        |
