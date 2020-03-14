@@ -20,7 +20,6 @@ TODO (BACKEND):
 
 TODO (FRONTEND):
 
-- Refactor: Simplify FLUX
 - Stylize a bit more (esp navbar)
 - Bootstrap theme
 - Localizations. Localization tools
@@ -63,7 +62,7 @@ TODO (APP LOGIC):
 | Localization framework                   | React-Intl               |    td    | (?)                       |   td   | (?)                  |   td   |
 | .                                        |                          |          |                           |        |                      |        |
 | **FRONTEND - AUTOMATED CHECKS**          |                          |          |                           |        |                      |        |
-| Code formatter                           | VS Code prettier         |    td    | (?)                       |   td   | (?)                  |   td   |
+| Code formatter                           | VS Code prettier         |  PARTLY  | (?)                       |   td   | (?)                  |   td   |
 | Code quality checks                      | ESlint (?)               |    td    | (?)                       |   td   | (?)                  |   td   |
 | Code complexity checks                   | ESlint (?)               |    td    | (?)                       |   td   | (?)                  |   td   |
 | Static security checks                   | NPM audit (?)            |    td    | (?)                       |   td   | (?)                  |   td   |

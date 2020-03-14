@@ -1,10 +1,7 @@
 import React from "react";
 import { Button, ButtonGroup, Table } from "react-bootstrap";
 import StoreComponent from "./base/StoreComponent.jsx";
-import addItemBtnClicked from "../actions/actionCreators/AddItemBtnClicked.js";
-import addItemToTheQueueBtnClicked from "../actions/actionCreators/AddItemToTheQueueBtnClicked.js";
-import addItemsFromQueueBtnClicked from "../actions/actionCreators/AddItemsFromQueueBtnClicked.js";
-import addItemAfterDelayBtnClicked from "../actions/actionCreators/AddItemAfterDelayBtnClicked.js";
+import getBtnClickedHandler from "../actions/actionCreators/BtnClicked.js";
 
 class Home extends StoreComponent {
   renderItems(items) {
@@ -32,22 +29,22 @@ class Home extends StoreComponent {
     return (
       <div>
         <ButtonGroup className="mr-2">
-          <Button variant="success" onClick={addItemBtnClicked}>
+          <Button variant="success" onClick={getBtnClickedHandler("addItem")}>
             Add item
           </Button>
         </ButtonGroup>
         <ButtonGroup className="mr-2">
-          <Button onClick={addItemToTheQueueBtnClicked}>
+          <Button onClick={getBtnClickedHandler("addItemToTheQueue")}>
             Add item to the queue
           </Button>
         </ButtonGroup>
         <ButtonGroup className="mr-2">
-          <Button onClick={addItemsFromQueueBtnClicked}>
+          <Button onClick={getBtnClickedHandler("addItemsFromQueue")}>
             Add items from queue
           </Button>
         </ButtonGroup>
         <ButtonGroup className="mr-2">
-          <Button onClick={addItemAfterDelayBtnClicked}>
+          <Button onClick={getBtnClickedHandler("addItemAfterDelay")}>
             Add item after delay
           </Button>
         </ButtonGroup>

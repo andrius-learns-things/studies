@@ -1,11 +1,10 @@
 import { ReduceStore } from "flux/utils";
 import dispatcher from "./Dispatcher.js";
 import ActionTypes from "./actions/ActionTypes.js";
-import getItems from "./actions/actionCreators/GetItems.js";
-import addItem from "./actions/actionCreators/AddItem.js";
-import addItemToTheQueue from "./actions/actionCreators/AddItemToTheQueue.js";
-import addItemsFromQueue from "./actions/actionCreators/AddItemsFromQueue.js";
-import addItemAfterDelay from "./actions/actionCreators/AddItemAfterDelay.js";
+import {
+  getFromBackend,
+  postToBackend
+} from "./actions/actionCreators/CallBackend.js";
 
 class SharedStore extends ReduceStore {
   getInitialState() {
@@ -29,35 +28,40 @@ class SharedStore extends ReduceStore {
 
   [ActionTypes.ROUTE_ENTERED](state) {
     state.timesNavigated = state.timesNavigated + 1;
-    getItems();
+    getFromBackend("/items", ActionTypes.GET_ITEMS_SUCCESS);
+  }
+
+  [ActionTypes.BTN_CLICKED](state, action) {
+    switch (action.btn) {
+      case "addItem":
+        postToBackend("/items", {}, ActionTypes.ADD_ITEM_SUCCESS);
+        break;
+      case "addItemToTheQueue":
+        postToBackend("/queued-items", {});
+        break;
+      case "addItemsFromQueue":
+        postToBackend(
+          "/add-items-from-queue",
+          {},
+          ActionTypes.ADD_ITEMS_FROM_QUEUE_SUCCESS
+        );
+        break;
+      case "addItemAfterDelay":
+        postToBackend("/add-item-after-delay", {});
+        break;
+    }
   }
 
   [ActionTypes.GET_ITEMS_SUCCESS](state, action) {
     state.items = action.result;
   }
 
-  [ActionTypes.ADD_ITEM_BTN_CLICKED]() {
-    addItem({});
-  }
-
   [ActionTypes.ADD_ITEM_SUCCESS](state, action) {
     state.items = action.result;
   }
 
-  [ActionTypes.ADD_ITEM_TO_THE_QUEUE_BTN_CLICKED]() {
-    addItemToTheQueue({});
-  }
-
-  [ActionTypes.ADD_ITEMS_FROM_QUEUE_BTN_CLICKED]() {
-    addItemsFromQueue({});
-  }
-
   [ActionTypes.ADD_ITEMS_FROM_QUEUE_SUCCESS](state, action) {
     state.items = action.result;
-  }
-
-  [ActionTypes.ADD_ITEM_AFTER_DELAY_BTN_CLICKED]() {
-    addItemAfterDelay({});
   }
 }
 

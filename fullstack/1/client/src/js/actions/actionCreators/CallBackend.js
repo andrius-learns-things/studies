@@ -1,6 +1,6 @@
 import request from "superagent";
 
-import dispatcher from "../../../Dispatcher.js";
+import dispatcher from "../../Dispatcher.js";
 
 let prepareAbsoluteUrl = function(url) {
   return "/api" + url;
@@ -37,7 +37,7 @@ export function getFromBackend(url, successActionType, errorActionType) {
   req.end(getEndFunction(successActionType, errorActionType));
 }
 
-export function postToBackend(url, successActionType, errorActionType, data) {
+export function postToBackend(url, data, successActionType, errorActionType) {
   let req = request.post(prepareAbsoluteUrl(url));
   req.send(data).end(getEndFunction(successActionType, errorActionType));
 }
