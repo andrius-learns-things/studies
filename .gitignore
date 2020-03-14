@@ -1,1 +1,3 @@
 __pycache__
+fullstack/1/server/celerybeat-schedule
+fullstack/1/server/celerybeat.pid

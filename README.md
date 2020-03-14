@@ -103,7 +103,7 @@ TODO (APP LOGIC):
 | Code formatter                           | Black                    | **DONE** | (?)                       |   td   | (?)                  |   td   |
 | Code quality checks                      | Flake8                   | **DONE** | (?)                       |   td   | (?)                  |   td   |
 | Code complexity checks                   | Flake8                   | **DONE** | (?)                       |   td   | (?)                  |   td   |
-| Static security checks                   | Bandit (?)               |    td    | (?)                       |   td   | (?)                  |   td   |
+| Static security checks                   | Bandit (?)               | **DONE** | (?)                       |   td   | (?)                  |   td   |
 | Tests                                    | Pytest                   |    td    | (?)                       |   td   | (?)                  |   td   |
 | Test coverage checks                     | Pytest coverage          |    td    | (?)                       |   td   | (?)                  |   td   |
 | .                                        |                          |          |                           |        |                      |        |
