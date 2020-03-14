@@ -132,7 +132,9 @@ class PostgresReadModel:
         Session = sessionmaker(bind=engine)
         session = Session()
 
-        new_item = Items(name="New one")
+        payload = event.get("payload")
+        name = payload.get("name") if payload else None
+        new_item = Items(name=name)
 
         session.add(new_item)
         session.commit()

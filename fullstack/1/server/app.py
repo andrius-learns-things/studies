@@ -31,7 +31,7 @@ def get_items():
 
 @app.route("/api/items", methods=["POST"])
 def add_item():
-    event_store.register_new_event(ADD_NEW_ITEM, {})
+    event_store.register_new_event(ADD_NEW_ITEM, {"name": "Item"})
     items = read_model.get_items()
     return jsonify(items)
 
@@ -48,7 +48,7 @@ def add_items_from_quque():
     items_in_queue = queue.get_all()
 
     for item in items_in_queue:
-        event_store.register_new_event(ADD_NEW_ITEM, {})
+        event_store.register_new_event(ADD_NEW_ITEM, {"name": "Item added from queue"})
 
     items = read_model.get_items()
     return jsonify(items)
