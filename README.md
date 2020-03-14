@@ -6,23 +6,22 @@ Repo for keeping notes, experiments and other studies related stuff.
 
 ## Stack #1 (React-Python)
 
-TODO (PROJECT SETUP):
+TODO (ALL):
 
 - More pre-commit commands, esp. frontend
+- Have name from input, propagate everywhere
+- Tests...
 
 TODO (BACKEND):
 
-- Have name from input, propagate everywhere
-- Celery
-- Tests...
 - Refactor readmodel to base, event store subscriptions, queue...
 - Refactor alchemy session
 - Refactor reuse of model for json
 
 TODO (FRONTEND):
 
-- Simplify FLUX
-- Stylize a bot more (esp navbar)
+- Refactor: Simplify FLUX
+- Stylize a bit more (esp navbar)
 - Bootstrap theme
 - Localizations. Localization tools
 - Console errors (due to hot reload or smth like that)
@@ -88,7 +87,7 @@ TODO (APP LOGIC):
 | Read model - Schema migrations           | Alembic                  |    td    | Django ORM migrations (?) |   td   | (?)                  |   td   |
 | Session storage                          | Redis                    |    td    | (?)                       |   td   | (?)                  |   td   |
 | Cashe storage                            | Redis                    | **DONE** | (?)                       |   td   | (?)                  |   td   |
-| Async tasks framework                    | Celery + RabbitMQ        |    td    | (?)                       |   td   | (?)                  |   td   |
+| Async tasks framework                    | Celery + RabbitMQ        | **DONE** | (?)                       |   td   | (?)                  |   td   |
 | Queue                                    | RabbitMQ + pika lib      | **DONE** | (?)                       |   td   | (?)                  |   td   |
 | Full-text search                         | Elastic search           |    td    | (?)                       |   td   | (?)                  |   td   |
 | Object storage (?)                       | Minio (?)                |    td    | (?)                       |   td   | (?)                  |   td   |

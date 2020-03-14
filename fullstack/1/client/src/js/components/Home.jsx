@@ -4,6 +4,7 @@ import StoreComponent from "./base/StoreComponent.jsx";
 import addItemBtnClicked from "../actions/actionCreators/AddItemBtnClicked.js";
 import addItemToTheQueueBtnClicked from "../actions/actionCreators/AddItemToTheQueueBtnClicked.js";
 import addItemsFromQueueBtnClicked from "../actions/actionCreators/AddItemsFromQueueBtnClicked.js";
+import addItemAfterDelayBtnClicked from "../actions/actionCreators/AddItemAfterDelayBtnClicked.js";
 
 class Home extends StoreComponent {
   renderItems(items) {
@@ -16,9 +17,9 @@ class Home extends StoreComponent {
           </tr>
         </thead>
         <tbody>
-          {items.map((item, index) => (
+          {items.reverse().map((item, index) => (
             <tr key={index}>
-              <td>{index + 1}</td>
+              <td>{items.length - index}</td>
               <td>{item.name}</td>
             </tr>
           ))}
@@ -43,6 +44,11 @@ class Home extends StoreComponent {
         <ButtonGroup className="mr-2">
           <Button onClick={addItemsFromQueueBtnClicked}>
             Add items from queue
+          </Button>
+        </ButtonGroup>
+        <ButtonGroup className="mr-2">
+          <Button onClick={addItemAfterDelayBtnClicked}>
+            Add item after delay
           </Button>
         </ButtonGroup>
         {this.renderItems(this.state.items)}

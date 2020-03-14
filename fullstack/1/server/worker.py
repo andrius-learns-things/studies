@@ -9,7 +9,13 @@ app.conf.beat_schedule = {
 }
 
 
-@app.task(bind=True, name="add_item_periodically")
+@app.task(bind=True, name="add_item_async")
 def add_item_async(self):
+    event_store = MongoEventStore()
+    event_store.register_new_event(ADD_NEW_ITEM, {"name": "Item added after delay"})
+
+
+@app.task(bind=True, name="add_item_periodically")
+def add_item_periodically(self):
     event_store = MongoEventStore()
     event_store.register_new_event(ADD_NEW_ITEM, {"name": "Periodically added item"})

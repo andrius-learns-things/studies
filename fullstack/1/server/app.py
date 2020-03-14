@@ -4,6 +4,7 @@ from events.event_types import ADD_NEW_ITEM
 from events.readmodels.postgres import PostgresReadModel
 from cache.redis import RedisCacheProvider
 from mq.rabbitmq import RabbitMQProvider
+from worker import add_item_async
 
 
 # App objects
@@ -43,7 +44,7 @@ def add_item_to_queue():
 
 
 @app.route("/api/add-items-from-queue", methods=["POST"])
-def add_items_from_quque():
+def add_items_from_queue():
 
     items_in_queue = queue.get_all()
 
@@ -66,6 +67,12 @@ def get_items_from_cache():
         items = read_model.get_items()
         cache.set(ITEM_CACHE_KEY, items, ITEM_CACHE_DURATION_IN_SEC)
     return jsonify(items)
+
+
+@app.route("/api/add-item-after-delay", methods=["POST"])
+def add_item_after_delay():
+    add_item_async.apply_async(countdown=10)
+    return jsonify(None)
 
 
 # Entrypoint
