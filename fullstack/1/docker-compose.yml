@@ -76,14 +76,7 @@ services:
       dockerfile: Dockerfile-async
     image: &img worker
     command:
-      [
-        celery,
-        worker,
-        --app=worker.app,
-        --pool=gevent,
-        --concurrency=2,
-        --loglevel=INFO,
-      ]
+      [celery, worker, --app=worker.app, --concurrency=2, --loglevel=INFO]
     depends_on:
       - async-scheduler
       - rabbitmq
