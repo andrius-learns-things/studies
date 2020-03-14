@@ -72,8 +72,9 @@ services:
       RABBITMQ_DEFAULT_PASS: password
   async-worker:
     build:
-      context: .
-      dockerfile: server/async/Dockerfile
+      context: ./server
+      dockerfile: Dockerfile-async
+    image: &img worker
     command:
       [
         celery,
@@ -91,8 +92,9 @@ services:
       - ./server:/code
   async-scheduler:
     build:
-      context: .
-      dockerfile: server/async/Dockerfile
+      context: ./server
+      dockerfile: Dockerfile-async
+    image: *img
     command: [celery, beat, --app=worker.app, --loglevel=INFO]
     depends_on:
       - rabbitmq

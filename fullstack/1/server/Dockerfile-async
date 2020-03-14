@@ -1,0 +1,7 @@
+FROM python:3.8-alpine
+
+# Python app dependencies:
+COPY ./requirements-async.txt /requirements-async.txt
+RUN pip install --no-cache-dir -r /requirements-async.txt
+
+WORKDIR /code
