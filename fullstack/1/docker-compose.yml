@@ -70,3 +70,32 @@ services:
     environment:
       RABBITMQ_DEFAULT_USER: admin
       RABBITMQ_DEFAULT_PASS: password
+  async-worker:
+    build:
+      context: .
+      dockerfile: server/async/Dockerfile
+    command:
+      [
+        celery,
+        worker,
+        --app=worker.app,
+        --pool=gevent,
+        --concurrency=2,
+        --loglevel=INFO,
+      ]
+    depends_on:
+      - async-scheduler
+      - rabbitmq
+    restart: "no"
+    volumes:
+      - ./server:/code
+  async-scheduler:
+    build:
+      context: .
+      dockerfile: server/async/Dockerfile
+    command: [celery, beat, --app=worker.app, --loglevel=INFO]
+    depends_on:
+      - rabbitmq
+    restart: "no"
+    volumes:
+      - ./server:/code

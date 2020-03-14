@@ -49,3 +49,5 @@ https://medium.com/@vladbezden/webpack-configuration-for-using-bootstrap-in-reac
 https://react-bootstrap.github.io/layout/grid/ **React-bootstrap**
 
 https://github.com/git/git/blob/master/templates/hooks--pre-commit.sample **Git-hook for pre-commit**
+
+https://www.distributedpython.com/2018/11/15/celery-docker/ **Nice celery-docker-compose tutorial**

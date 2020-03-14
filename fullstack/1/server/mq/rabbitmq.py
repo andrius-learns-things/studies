@@ -30,4 +30,3 @@ class RabbitMQProvider:
         channel = connection.channel()
         channel.queue_declare(queue="items", passive=passive)
         return connection, channel
-

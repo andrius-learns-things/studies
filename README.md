@@ -91,6 +91,7 @@ TODO (APP LOGIC):
 | Async tasks framework                    | Celery + RabbitMQ        |    td    | (?)                       |   td   | (?)                  |   td   |
 | Queue                                    | RabbitMQ + pika lib      | **DONE** | (?)                       |   td   | (?)                  |   td   |
 | Full-text search                         | Elastic search           |    td    | (?)                       |   td   | (?)                  |   td   |
+| Object storage (?)                       | Minio (?)                |    td    | (?)                       |   td   | (?)                  |   td   |
 | .                                        |                          |          |                           |        |                      |        |
 | **BACKEND - LIBS & TOOLS**               |                          |          |                           |        |                      |        |
 | Debugger                                 | Pdb                      | **DONE** | (?)                       |   td   | (?)                  |   td   |
