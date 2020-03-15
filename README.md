@@ -4,7 +4,7 @@ Repo for keeping notes, experiments and other studies related stuff.
 
 # Full-stack apps
 
-## Stack #1 (React-Python)
+## Stack #1 (React-Flask)
 
 TODO (ALL):
 
@@ -31,9 +31,13 @@ TODO (APP LOGIC):
 - Item name
 - Delete item
 
+## Stack #2 (Vue-Django)
+
+TODO: Consume https://www.youtube.com/watch?v=HtyAJ1ohQPA&list=PLnzr8Oa9Vyla0s7oGaFeC_GU1XRL3war6&index=3
+
 ## Overview of full stack apps
 
-| Component                                | Stack #1 (React-Python)  |  status  | Stack #2 (Vue-Django)     | status | Stack #3 (.Net Core) | status |
+| Component                                | Stack #1 (React-Flask)   |  status  | Stack #2 (Vue-Django)     | status | Stack #3 (.Net Core) | status |
 | :--------------------------------------- | :----------------------- | :------: | :------------------------ | :----: | :------------------- | :----: |
 | .                                        |                          |          |                           |        |                      |        |
 | **PROJECT SETUP**                        |                          |          |                           |        |                      |        |

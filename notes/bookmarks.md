@@ -51,3 +51,5 @@ https://react-bootstrap.github.io/layout/grid/ **React-bootstrap**
 https://github.com/git/git/blob/master/templates/hooks--pre-commit.sample **Git-hook for pre-commit**
 
 https://www.distributedpython.com/2018/11/15/celery-docker/ **Nice celery-docker-compose tutorial**
+
+https://www.youtube.com/watch?v=Cfqi0565rPc&list=PLnzr8Oa9Vyla0s7oGaFeC_GU1XRL3war6 **Tutorial for Vue & Django REST**
