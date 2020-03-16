@@ -33,7 +33,10 @@ TODO (APP LOGIC):
 
 ## Stack #2 (Vue-Django)
 
-TODO: Consume https://www.youtube.com/watch?v=HtyAJ1ohQPA&list=PLnzr8Oa9Vyla0s7oGaFeC_GU1XRL3war6&index=3
+TODO: Consume:
+
+1. https://www.youtube.com/watch?v=blRRPNYwdUo&list=PLnzr8Oa9Vyla0s7oGaFeC_GU1XRL3war6&index=6
+2. https://www.django-rest-framework.org/tutorial/1-serialization/#using-modelserializers
 
 ## Overview of full stack apps
 
