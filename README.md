@@ -33,10 +33,12 @@ TODO (APP LOGIC):
 
 ## Stack #2 (Vue-Django)
 
-TODO: Consume:
+TODO:
 
-1. https://www.youtube.com/watch?v=blRRPNYwdUo&list=PLnzr8Oa9Vyla0s7oGaFeC_GU1XRL3war6&index=6
-2. https://www.django-rest-framework.org/tutorial/1-serialization/#using-modelserializers
+1. Consume and start building: https://runnable.com/docker/python/docker-compose-with-django-apps
+2. Add swagger https://marcgibbons.com/django-rest-swagger/
+3. Add GraphQL http://docs.graphene-python.org/projects/django/en/latest/
+4. Learn about VueJS. Maybe continue with https://www.youtube.com/watch?v=blRRPNYwdUo&list=PLnzr8Oa9Vyla0s7oGaFeC_GU1XRL3war6&index=6
 
 ## Overview of full stack apps
 
