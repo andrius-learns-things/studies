@@ -1,4 +1,4 @@
-# Full stack app # 1
+# Full stack app # 2
 
 Prerequisites:
 
@@ -9,4 +9,4 @@ Prerequisites:
 To run locally:
 
 1. `./run.sh`
-2. Open http://localhost:8100
+2. Open http://localhost:8200
