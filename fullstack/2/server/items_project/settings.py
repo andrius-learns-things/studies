@@ -30,7 +30,10 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = []
+INSTALLED_APPS = [
+    "rest_framework",
+    "items_app.apps.ItemsAppConfig",
+]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
