@@ -33,13 +33,10 @@ TODO (APP LOGIC):
 
 ## Stack #2 (Vue-Django)
 
-DONE:
-
-1. Consume and start building: https://runnable.com/docker/python/docker-compose-with-django-apps
-
 TODO:
 
-2. Do DjangoRESTFramework MVP
+1. Do DjangoRESTFramework MVP
+2. Pip-compile? https://github.com/jazzband/pip-tools
 3. Add swagger https://marcgibbons.com/django-rest-swagger/
 4. Add GraphQL http://docs.graphene-python.org/projects/django/en/latest/
 5. Learn about VueJS. Maybe continue with https://www.youtube.com/watch?v=blRRPNYwdUo&list=PLnzr8Oa9Vyla0s7oGaFeC_GU1XRL3war6&index=6
@@ -90,6 +87,7 @@ TODO:
 | .                                        |                          |          |                           |          |                      |        |
 | **BACKEND - TECH STACK**                 |                          |          |                           |          |                      |        |
 | Language                                 | Python                   | **DONE** | Python                    | **DONE** | C#                   |   td   |
+| Packager                                 | Pip                      | **DONE** | Pip with pip-tools        |    td    | (?)                  |   td   |
 | Web framework                            | Flask                    | **DONE** | Django                    | **DONE** | ASP.Net Core         |   td   |
 | REST - Swagger & schema validation       | FlaskRest&Schematics (?) |    td    | (?)                       |    td    | (?)                  |   td   |
 | GraphQL Endpoints                        | (?)                      |    td    | (?)                       |    td    | (?)                  |   td   |
