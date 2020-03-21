@@ -8,4 +8,3 @@ class Item(models.Model):
 
     class Meta:
         ordering = ["name"]
-

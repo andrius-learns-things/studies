@@ -35,11 +35,10 @@ TODO (APP LOGIC):
 
 TODO:
 
-1. Do DjangoRESTFramework MVP
+1. Learn about VueJS. Maybe continue with https://www.youtube.com/watch?v=uZ2U4aT4cgk&list=PLnzr8Oa9Vyla0s7oGaFeC_GU1XRL3war6&index=9
 2. Pip-compile? https://github.com/jazzband/pip-tools
 3. Add swagger https://marcgibbons.com/django-rest-swagger/
 4. Add GraphQL http://docs.graphene-python.org/projects/django/en/latest/
-5. Learn about VueJS. Maybe continue with https://www.youtube.com/watch?v=blRRPNYwdUo&list=PLnzr8Oa9Vyla0s7oGaFeC_GU1XRL3war6&index=6
 
 ## Overview of full stack apps
 
