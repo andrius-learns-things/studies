@@ -35,6 +35,7 @@ TODO (APP LOGIC):
 
 TODO:
 
+0. https://hub.docker.com/r/ebiven/vue-cli ???
 1. Learn about VueJS. Maybe continue with https://www.youtube.com/watch?v=uZ2U4aT4cgk&list=PLnzr8Oa9Vyla0s7oGaFeC_GU1XRL3war6&index=9
 2. Pip-compile? https://github.com/jazzband/pip-tools
 3. Add swagger https://marcgibbons.com/django-rest-swagger/
