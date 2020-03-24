@@ -37,9 +37,9 @@ TODO:
 
 0. https://hub.docker.com/r/ebiven/vue-cli ???
 1. Learn about VueJS. Maybe continue with https://www.youtube.com/watch?v=uZ2U4aT4cgk&list=PLnzr8Oa9Vyla0s7oGaFeC_GU1XRL3war6&index=9
-2. Pip-compile? https://github.com/jazzband/pip-tools
-3. Add swagger https://marcgibbons.com/django-rest-swagger/
-4. Add GraphQL http://docs.graphene-python.org/projects/django/en/latest/
+1. Pip-compile? https://github.com/jazzband/pip-tools
+1. Add swagger https://marcgibbons.com/django-rest-swagger/
+1. Add GraphQL http://docs.graphene-python.org/projects/django/en/latest/
 
 ## Overview of full stack apps
 
@@ -214,3 +214,9 @@ DONE.
 ## 5. Graphene lib for GraphQL in python
 
 FAILED. Got stuck at https://github.com/graphql-python/graphene/issues/546
+
+## 5. Fire lib for CLI in python
+
+DONE.
+
+See [Link](/experiments/6/)
