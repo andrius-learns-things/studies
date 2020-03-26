@@ -215,8 +215,18 @@ DONE.
 
 FAILED. Got stuck at https://github.com/graphql-python/graphene/issues/546
 
-## 5. Fire lib for CLI in python
+## 6. Fire lib for CLI in python
 
 DONE.
 
 See [Link](/experiments/6/)
+
+## IDEAS for more experiments:
+
+- Cookie cutter to generate any kind of project: https://cookiecutter.readthedocs.io/en/1.7.0/README.html#features
+- Grafana + influx DB POC: https://github.com/nicolargo/docker-influxdb-grafana
+- Locust load testing: https://github.com/locustio/locust
+- Pysnooper (debugger): https://github.com/cool-RR/PySnooper
+- Progress bar: https://github.com/tqdm/tqdm
+- Alternative command line lib https://pypi.org/project/click/
+- WTF is https://behave.readthedocs.io/en/latest/ (BDD in python)
