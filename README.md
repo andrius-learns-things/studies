@@ -35,11 +35,10 @@ TODO (APP LOGIC):
 
 TODO:
 
-0. https://hub.docker.com/r/ebiven/vue-cli ???
-1. Learn about VueJS. Maybe continue with https://www.youtube.com/watch?v=uZ2U4aT4cgk&list=PLnzr8Oa9Vyla0s7oGaFeC_GU1XRL3war6&index=9
-1. Pip-compile? https://github.com/jazzband/pip-tools
-1. Add swagger https://marcgibbons.com/django-rest-swagger/
-1. Add GraphQL http://docs.graphene-python.org/projects/django/en/latest/
+1. Learn about VueJS. Maybe https://dev.to/abiodunjames/build-a-todo-app-with-node-js-expressjs-mongodb-and-vuejs-part-3-h4m, maybe continue with https://www.youtube.com/watch?v=uZ2U4aT4cgk&list=PLnzr8Oa9Vyla0s7oGaFeC_GU1XRL3war6&index=9
+2. Pip-compile? https://github.com/jazzband/pip-tools
+3. Add swagger https://marcgibbons.com/django-rest-swagger/
+4. Add GraphQL http://docs.graphene-python.org/projects/django/en/latest/
 
 ## Overview of full stack apps
 
@@ -55,9 +54,9 @@ TODO:
 | Selenium tests                           | Robot tests              |    td    | (?)                       |    td    | (?)                  |   td   |
 | .                                        |                          |          |                           |          |                      |        |
 | **FRONTEND - TECH STACK**                |                          |          |                           |          |                      |        |
-| Css framework                            | Bootstrap                | **DONE** | CSS grid                  |    td    | Pure (?)             |   td   |
-| Web framework                            | React                    | **DONE** | Vue (?)                   |    td    | Vue (?)              |   td   |
-| App framework                            | Flux                     | **DONE** | Vue (?)                   |    td    | Vue (?)              |   td   |
+| Css framework                            | Bootstrap                | **DONE** | CSS grid                  |    td    | Material (?)         |   td   |
+| Web framework                            | React                    | **DONE** | Vue (?)                   |    td    | React (?)            |   td   |
+| App framework                            | Flux                     | **DONE** | Vue (?)                   |    td    | Redux (?)            |   td   |
 | Language                                 | ES6                      | **DONE** | <- same (?)               |    td    | Typescript           |   td   |
 | Bundler                                  | Webpack                  | **DONE** | <- same (?)               |    td    | (?)                  |   td   |
 | Packager                                 | NPM                      | **DONE** | <- same (?)               |    td    | Yarn                 |   td   |
@@ -223,6 +222,8 @@ See [Link](/experiments/6/)
 
 ## IDEAS for more experiments:
 
+- Charts.JS https://www.chartjs.org/docs/latest/getting-started/installation.html
+- Memory leaks?
 - Cookie cutter to generate any kind of project: https://cookiecutter.readthedocs.io/en/1.7.0/README.html#features
 - Grafana + influx DB POC: https://github.com/nicolargo/docker-influxdb-grafana
 - Locust load testing: https://github.com/locustio/locust
