@@ -35,10 +35,11 @@ TODO (APP LOGIC):
 
 TODO:
 
-1. Learn about VueJS. Maybe https://dev.to/abiodunjames/build-a-todo-app-with-node-js-expressjs-mongodb-and-vuejs-part-3-h4m, maybe continue with https://www.youtube.com/watch?v=uZ2U4aT4cgk&list=PLnzr8Oa9Vyla0s7oGaFeC_GU1XRL3war6&index=9
-2. Pip-compile? https://github.com/jazzband/pip-tools
-3. Add swagger https://marcgibbons.com/django-rest-swagger/
-4. Add GraphQL http://docs.graphene-python.org/projects/django/en/latest/
+1. Try out yarn?
+2. Learn about VueJS. Maybe just docs, maybe continue with https://www.youtube.com/watch?v=uZ2U4aT4cgk&list=PLnzr8Oa9Vyla0s7oGaFeC_GU1XRL3war6&index=9
+3. Pip-compile? https://github.com/jazzband/pip-tools
+4. Add swagger https://marcgibbons.com/django-rest-swagger/
+5. Add GraphQL http://docs.graphene-python.org/projects/django/en/latest/
 
 ## Overview of full stack apps
 
@@ -54,19 +55,19 @@ TODO:
 | Selenium tests                           | Robot tests              |    td    | (?)                       |    td    | (?)                  |   td   |
 | .                                        |                          |          |                           |          |                      |        |
 | **FRONTEND - TECH STACK**                |                          |          |                           |          |                      |        |
-| Css framework                            | Bootstrap                | **DONE** | CSS grid                  |    td    | Material (?)         |   td   |
-| Web framework                            | React                    | **DONE** | Vue (?)                   |    td    | React (?)            |   td   |
+| Css framework                            | Bootstrap                | **DONE** | Material (?)              |    td    | CSS grid(?)          |   td   |
+| Web framework                            | React                    | **DONE** | Vue                       | **DONE** | React (?)            |   td   |
 | App framework                            | Flux                     | **DONE** | Vue (?)                   |    td    | Redux (?)            |   td   |
-| Language                                 | ES6                      | **DONE** | <- same (?)               |    td    | Typescript           |   td   |
-| Bundler                                  | Webpack                  | **DONE** | <- same (?)               |    td    | (?)                  |   td   |
-| Packager                                 | NPM                      | **DONE** | <- same (?)               |    td    | Yarn                 |   td   |
+| Language                                 | ES6                      | **DONE** | ES6                       | **DONE** | Typescript (?)       |   td   |
+| Bundler                                  | Webpack                  | **DONE** | Webpack                   | **DONE** | (?)                  |   td   |
+| Packager                                 | NPM                      | **DONE** | NPM                       |    td    | Yarn                 |   td   |
 | .                                        |                          |          |                           |          |                      |        |
 | **FRONTEND - LIBS & TOOLS**              |                          |          |                           |          |                      |        |
 | Routing                                  | React router             | **DONE** | React router              |    td    | Custom (?)           |   td   |
 | Ajax requests                            | Superagent               | **DONE** | (?)                       |    td    | (?)                  |   td   |
-| Transpiler                               | Babel                    | **DONE** |                           |    td    |                      |   td   |
-| Integrations                             | React-Bootstrap          | **DONE** |                           |    td    |                      |   td   |
-| Integrations                             | React-Router-Bootstrap   | **DONE** |                           |    td    |                      |   td   |
+| Transpiler                               | Babel                    | **DONE** | Babel                     | **DONE** | Typescript (?)       |   td   |
+| Integrations                             | React-Bootstrap          | **DONE** | (?)                       |    td    |                      |   td   |
+| Integrations                             | React-Router-Bootstrap   | **DONE** | (?)                       |    td    |                      |   td   |
 | Debugger                                 | (?)                      |    td    | (?)                       |    td    | (?)                  |   td   |
 | Localization framework                   | React-Intl               |    td    | (?)                       |    td    | (?)                  |   td   |
 | .                                        |                          |          |                           |          |                      |        |
