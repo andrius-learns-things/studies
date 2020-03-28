@@ -7,6 +7,4 @@ COPY . /code
 
 WORKDIR /code/items-app-frontend
 
-RUN npm install
-
-CMD npm run serve
+CMD ["/bin/sh", "/code/run.sh"]
