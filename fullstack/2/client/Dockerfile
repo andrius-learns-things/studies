@@ -5,4 +5,8 @@ RUN npm install --quiet --global @vue/cli
 RUN mkdir /code
 COPY . /code
 
-WORKDIR /code
+WORKDIR /code/items-app-frontend
+
+RUN npm install
+
+CMD npm run serve
