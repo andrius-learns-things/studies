@@ -1,11 +1,20 @@
 version: "2"
 services:
+  generator:
+    build:
+      context: ./generator
+    volumes:
+      - ./generator/code:/code
+    stdin_open: true
+    tty: true
+    depends_on:
+      - influxdb
   influxdb:
     image: influxdb:latest
-    ports:
-      - "8086:8086"
     volumes:
       - influxdb-storage:/var/lib/influxdb
+    ports:
+      - "8086:8086"
     environment:
       - INFLUXDB_DB=db0
       - INFLUXDB_ADMIN_USER=admin
@@ -13,7 +22,7 @@ services:
   chronograf:
     image: chronograf:latest
     ports:
-      - "127.0.0.1:8888:8888"
+      - "8058:8888"
     volumes:
       - chronograf-storage:/var/lib/chronograf
     depends_on:
@@ -25,7 +34,7 @@ services:
   grafana:
     image: grafana/grafana:latest
     ports:
-      - "3000:3000"
+      - "8057:3000"
     volumes:
       - grafana-storage:/var/lib/grafana
       - ./grafana-provisioning/:/etc/grafana/provisioning

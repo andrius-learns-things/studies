@@ -220,17 +220,13 @@ FAILED. Got stuck at https://github.com/graphql-python/graphene/issues/546
 
 DONE.
 
+See [Link](/experiments/6/)
+
 ## 7. InfluxDB and Grafana
 
-DONE:
+DONE.
 
-- Follow: https://github.com/jkehres/docker-compose-influxdb-grafana
-
-TODO:
-
-- Add https://influxdb-python.readthedocs.io/en/latest/include-readme.html#examples
-
-See [Link](/experiments/6/)
+See [Link](/experiments/7/Readme.md)
 
 ## IDEAS for more experiments:
 
