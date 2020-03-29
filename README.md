@@ -35,11 +35,12 @@ TODO (APP LOGIC):
 
 TODO:
 
-1. Try out yarn?
-2. Learn about VueJS. Maybe just docs, maybe continue with https://www.youtube.com/watch?v=uZ2U4aT4cgk&list=PLnzr8Oa9Vyla0s7oGaFeC_GU1XRL3war6&index=9
-3. Pip-compile? https://github.com/jazzband/pip-tools
-4. Add swagger https://marcgibbons.com/django-rest-swagger/
-5. Add GraphQL http://docs.graphene-python.org/projects/django/en/latest/
+1. VueX? https://vuex.vuejs.org/
+2. Continue with items app development. Maybe continue with https://www.youtube.com/watch?v=uZ2U4aT4cgk&list=PLnzr8Oa9Vyla0s7oGaFeC_GU1XRL3war6&index=9
+3. Try out yarn?
+4. Pip-compile? https://github.com/jazzband/pip-tools
+5. Add swagger https://marcgibbons.com/django-rest-swagger/
+6. Add GraphQL http://docs.graphene-python.org/projects/django/en/latest/
 
 ## Overview of full stack apps
 
@@ -57,13 +58,13 @@ TODO:
 | **FRONTEND - TECH STACK**                |                          |          |                           |          |                      |        |
 | Css framework                            | Bootstrap                | **DONE** | Material (?)              |    td    | CSS grid(?)          |   td   |
 | Web framework                            | React                    | **DONE** | Vue                       | **DONE** | React (?)            |   td   |
-| App framework                            | Flux                     | **DONE** | Vue (?)                   |    td    | Redux (?)            |   td   |
+| App framework                            | Flux                     | **DONE** | VueX (?)                  |    td    | Redux (?)            |   td   |
 | Language                                 | ES6                      | **DONE** | ES6                       | **DONE** | Typescript (?)       |   td   |
 | Bundler                                  | Webpack                  | **DONE** | Webpack                   | **DONE** | (?)                  |   td   |
-| Packager                                 | NPM                      | **DONE** | NPM                       |    td    | Yarn                 |   td   |
+| Packager                                 | NPM                      | **DONE** | NPM                       | **DONE** | Yarn                 |   td   |
 | .                                        |                          |          |                           |          |                      |        |
 | **FRONTEND - LIBS & TOOLS**              |                          |          |                           |          |                      |        |
-| Routing                                  | React router             | **DONE** | React router              |    td    | Custom (?)           |   td   |
+| Routing                                  | React router             | **DONE** | Vue router                |    td    | Custom (?)           |   td   |
 | Ajax requests                            | Superagent               | **DONE** | (?)                       |    td    | (?)                  |   td   |
 | Transpiler                               | Babel                    | **DONE** | Babel                     | **DONE** | Typescript (?)       |   td   |
 | Integrations                             | React-Bootstrap          | **DONE** | (?)                       |    td    |                      |   td   |
