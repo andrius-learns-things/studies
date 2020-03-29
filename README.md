@@ -220,6 +220,16 @@ FAILED. Got stuck at https://github.com/graphql-python/graphene/issues/546
 
 DONE.
 
+## 7. InfluxDB and Grafana
+
+DONE:
+
+- Follow: https://github.com/jkehres/docker-compose-influxdb-grafana
+
+TODO:
+
+- Add https://influxdb-python.readthedocs.io/en/latest/include-readme.html#examples
+
 See [Link](/experiments/6/)
 
 ## IDEAS for more experiments:
@@ -227,7 +237,6 @@ See [Link](/experiments/6/)
 - Charts.JS https://www.chartjs.org/docs/latest/getting-started/installation.html
 - Memory leaks?
 - Cookie cutter to generate any kind of project: https://cookiecutter.readthedocs.io/en/1.7.0/README.html#features
-- Grafana + influx DB POC: https://github.com/nicolargo/docker-influxdb-grafana
 - Locust load testing: https://github.com/locustio/locust
 - Pysnooper (debugger): https://github.com/cool-RR/PySnooper
 - Progress bar: https://github.com/tqdm/tqdm
