@@ -228,11 +228,16 @@ DONE.
 
 See [Link](/experiments/7/Readme.md)
 
+## 8. Memory leaks experiment with flask, uwsgi & nginx
+
+TODO:
+
+- Setup empty minimal project.
+
 ## IDEAS for more experiments:
 
-- Charts.JS https://www.chartjs.org/docs/latest/getting-started/installation.html
-- Memory leaks?
 - Cookie cutter to generate any kind of project: https://cookiecutter.readthedocs.io/en/1.7.0/README.html#features
+- Charts.JS https://www.chartjs.org/docs/latest/getting-started/installation.html
 - Locust load testing: https://github.com/locustio/locust
 - Pysnooper (debugger): https://github.com/cool-RR/PySnooper
 - Progress bar: https://github.com/tqdm/tqdm
