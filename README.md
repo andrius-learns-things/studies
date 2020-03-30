@@ -42,6 +42,11 @@ TODO:
 5. Add swagger https://marcgibbons.com/django-rest-swagger/
 6. Add GraphQL http://docs.graphene-python.org/projects/django/en/latest/
 
+
+## Stack #3 (.NET Core)
+
+1. Follow https://kimsereyblog.blogspot.com/2018/10/docker-compose-asp-net-core-application.html to set up MVP
+
 ## Overview of full stack apps
 
 | Component                                | Stack #1 (React-Flask)   |  status  | Stack #2 (Vue-Django)     |  status  | Stack #3 (.Net Core) | status |
@@ -88,7 +93,7 @@ TODO:
 | .                                        |                          |          |                           |          |                      |        |
 | **BACKEND - TECH STACK**                 |                          |          |                           |          |                      |        |
 | Language                                 | Python                   | **DONE** | Python                    | **DONE** | C#                   |   td   |
-| Packager                                 | Pip                      | **DONE** | Pip with pip-tools        |    td    | (?)                  |   td   |
+| Packager                                 | Pip                      | **DONE** | Pip with pip-tools        |    td    | nuGet                |   td   |
 | Web framework                            | Flask                    | **DONE** | Django                    | **DONE** | ASP.Net Core         |   td   |
 | REST - Swagger & schema validation       | FlaskRest&Schematics (?) |    td    | (?)                       |    td    | (?)                  |   td   |
 | GraphQL Endpoints                        | (?)                      |    td    | (?)                       |    td    | (?)                  |   td   |
@@ -128,8 +133,8 @@ TODO:
 | Repeat pre-commit checks                 | Custom                   |    td    | (?)                       |    td    | (?)                  |   td   |
 | Hosting (for runners, alpha, prod)       | DigitalOcean (?)         |    td    | (?)                       |    td    | (?)                  |   td   |
 | Infra as a code                          | Minikube (?)             |    td    | (?)                       |    td    | (?)                  |   td   |
-| Web server                               | Nginx                    |    td    | (?)                       |    td    | (?)                  |   td   |
-| Web application server                   | uWSGI                    |    td    | (?)                       |    td    | (?)                  |   td   |
+| Web server                               | Nginx                    |    td    | (?)                       |    td    | Nginx                |   td   |
+| Web application server                   | uWSGI                    |    td    | (?)                       |    td    | Kestrel              |   td   |
 | Deploy to alpha & prod                   | Custom                   |    td    | (?)                       |    td    | (?)                  |   td   |
 | Version endpoint and after-deploy checks | Custom                   |    td    | (?)                       |    td    | (?)                  |   td   |
 | Liveness & readyness endpoints           | Custom                   |    td    | (?)                       |    td    | (?)                  |   td   |
@@ -243,3 +248,10 @@ TODO:
 - Progress bar: https://github.com/tqdm/tqdm
 - Alternative command line lib https://pypi.org/project/click/
 - WTF is https://behave.readthedocs.io/en/latest/ (BDD in python)
+
+
+# Tools
+
+## Tool #1 Bash script to stop and remove all docker containers in the machine
+
+See [Link](/tools/remove-all-docker-containers)
