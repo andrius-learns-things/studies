@@ -42,7 +42,6 @@ TODO:
 5. Add swagger https://marcgibbons.com/django-rest-swagger/
 6. Add GraphQL http://docs.graphene-python.org/projects/django/en/latest/
 
-
 ## Stack #3 (.NET Core)
 
 DONE:
@@ -50,7 +49,6 @@ DONE:
 1. Make sure SQL server container works (did "1. Setup SQL Server container on its own" from https://kimsereyblog.blogspot.com/2018/10/docker-compose-asp-net-core-application.html)
 
 TODO:
-
 
 2. Add admin UI https://hub.docker.com/_/adminer/
 3. Follow https://github.com/rodrigostrj/PostCommentService/blob/master/README.md OR https://kimsereyblog.blogspot.com/2018/10/docker-compose-asp-net-core-application.html to set up MVP
@@ -249,6 +247,7 @@ TODO:
 
 ## IDEAS for more experiments:
 
+- Travis CI
 - Cookie cutter to generate any kind of project: https://cookiecutter.readthedocs.io/en/1.7.0/README.html#features
 - Charts.JS https://www.chartjs.org/docs/latest/getting-started/installation.html
 - Locust load testing: https://github.com/locustio/locust
@@ -256,7 +255,6 @@ TODO:
 - Progress bar: https://github.com/tqdm/tqdm
 - Alternative command line lib https://pypi.org/project/click/
 - WTF is https://behave.readthedocs.io/en/latest/ (BDD in python)
-
 
 # Tools
 
