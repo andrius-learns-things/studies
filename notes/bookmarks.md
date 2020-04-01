@@ -53,3 +53,5 @@ https://github.com/git/git/blob/master/templates/hooks--pre-commit.sample **Git-
 https://www.distributedpython.com/2018/11/15/celery-docker/ **Nice celery-docker-compose tutorial**
 
 https://www.youtube.com/watch?v=Cfqi0565rPc&list=PLnzr8Oa9Vyla0s7oGaFeC_GU1XRL3war6 **Tutorial for Vue & Django REST**
+
+https://www.rockyourcode.com/docker-compose-postgres-and-travis-ci/ **Docker compose on Travis CI**
