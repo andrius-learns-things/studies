@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo "--- Checking black"
 
 black .
 
@@ -8,6 +9,7 @@ then
   exit 1
 fi
 
+echo "--- Checking flake8"
 
 flake8 --config .flake8
 
@@ -16,6 +18,7 @@ then
   exit 1
 fi
 
+echo "--- Checking bandit"
 
 bandit .
 

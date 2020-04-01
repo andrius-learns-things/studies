@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "-- Checking server"
+
 docker-compose run server_checks /bin/sh /code/check.sh
 
 if [ $? -ne 0 ]

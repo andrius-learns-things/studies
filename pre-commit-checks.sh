@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# Fullstack/1 checks need to pass
+echo "- Checking fullstack/1"
+
 cd fullstack/1
 ./check.sh
 
