@@ -23,10 +23,17 @@ services:
   #     - postgres
   #   stdin_open: true
   #   tty: true
-  mssql:
+  db:
     image: mcr.microsoft.com/mssql/server
     ports:
       - "1433:1433"
     environment:
       SA_PASSWORD: "MyPassword001"
       ACCEPT_EULA: "Y"
+  adminer:
+    build:
+      context: ./db_admin
+    ports:
+      - "8302:8080"
+    depends_on:
+      - db
