@@ -48,11 +48,19 @@ TODO:
 DONE:
 
 1. Make sure SQL server container works (did "1. Setup SQL Server container on its own" from https://kimsereyblog.blogspot.com/2018/10/docker-compose-asp-net-core-application.html)
+2. Add admin UI https://hub.docker.com/_/adminer/
+
+FAILED:
+
+- https://code.visualstudio.com/docs/remote/containers
 
 TODO:
 
-2. Add admin UI https://hub.docker.com/_/adminer/
-3. Follow https://github.com/rodrigostrj/PostCommentService/blob/master/README.md OR https://kimsereyblog.blogspot.com/2018/10/docker-compose-asp-net-core-application.html to set up MVP
+To set up ASP.NET Core with docker, try:
+
+- https://code.visualstudio.com/docs/containers/debug-netcore
+- Maybe https://github.com/rodrigostrj/PostCommentService/blob/master/README.md
+- Maybe https://kimsereyblog.blogspot.com/2018/10/docker-compose-asp-net-core-application.html
 
 ## Overview of full stack apps
 
