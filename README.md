@@ -49,6 +49,7 @@ DONE:
 
 1. Make sure SQL server container works (did "1. Setup SQL Server container on its own" from https://kimsereyblog.blogspot.com/2018/10/docker-compose-asp-net-core-application.html)
 2. Add admin UI https://hub.docker.com/_/adminer/
+3. `dotnet` commands now work in server conatiner
 
 FAILED:
 
