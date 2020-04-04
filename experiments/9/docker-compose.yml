@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  jekyll:
+    image: jekyll/jekyll:latest
+
+    # This was used to set up initially...
+    # command: jekyll new simple_website
+
+    command: jekyll serve --watch --force_polling --verbose
+    ports:
+      - 8060:4000
+    volumes:
+      - ./jekyll:/srv/jekyll

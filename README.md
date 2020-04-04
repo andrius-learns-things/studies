@@ -255,6 +255,12 @@ TODO:
 
 - Setup empty minimal project.
 
+## 9. Jekyll.
+
+WIP:
+
+- MVP
+
 ## IDEAS for more experiments:
 
 - Cookie cutter to generate any kind of project: https://cookiecutter.readthedocs.io/en/1.7.0/README.html#features
