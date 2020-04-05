@@ -10,3 +10,7 @@ To run locally:
 
 1. `./run.sh`
 2. Open http://localhost:8200
+
+If `server` logs ask you to apply migrations, run:
+
+`docker-compose run server python manage.py migrate`

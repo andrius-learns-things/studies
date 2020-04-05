@@ -1,15 +1,18 @@
 <template>
   <div id="app">
-    <h1>Items app build by VueJS</h1>
-    <p>
-      ...
-    </p>
+    <h1>Items list app build with VueJS</h1>
+    <ItemsList />
   </div>
 </template>
 
 <script>
+import ItemsList from "./components/ItemsList.vue";
+
 export default {
-  name: "App"
+  name: "App",
+  components: {
+    ItemsList,
+  },
 };
 </script>
 

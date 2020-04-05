@@ -55,3 +55,5 @@ https://www.distributedpython.com/2018/11/15/celery-docker/ **Nice celery-docker
 https://www.youtube.com/watch?v=Cfqi0565rPc&list=PLnzr8Oa9Vyla0s7oGaFeC_GU1XRL3war6 **Tutorial for Vue & Django REST**
 
 https://www.rockyourcode.com/docker-compose-postgres-and-travis-ci/ **Docker compose on Travis CI**
+
+https://medium.com/js-dojo/vuex-and-vue-bread-and-butter-4519a21e95ce **Vue & Vuex beginners tutorial**

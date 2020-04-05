@@ -37,11 +37,12 @@ TODO (APP LOGIC):
 TODO:
 
 1. VueX? https://vuex.vuejs.org/
-2. Continue with items app development. Maybe continue with https://www.youtube.com/watch?v=uZ2U4aT4cgk&list=PLnzr8Oa9Vyla0s7oGaFeC_GU1XRL3war6&index=9
-3. Try out yarn?
-4. Pip-compile? https://github.com/jazzband/pip-tools
-5. Add swagger https://marcgibbons.com/django-rest-swagger/
-6. Add GraphQL http://docs.graphene-python.org/projects/django/en/latest/
+2. Conflicting eslint & prettier ??
+3. Continue with items app development. Maybe continue with https://www.youtube.com/watch?v=uZ2U4aT4cgk&list=PLnzr8Oa9Vyla0s7oGaFeC_GU1XRL3war6&index=9
+4. Try out yarn?
+5. Pip-compile? https://github.com/jazzband/pip-tools
+6. Add swagger https://marcgibbons.com/django-rest-swagger/
+7. Add GraphQL http://docs.graphene-python.org/projects/django/en/latest/
 
 ## Stack #3 (.NET Core)
 
