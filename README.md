@@ -262,9 +262,12 @@ WIP:
 
 - MVP
 
-## 10. Jekyll alternatives (React based maybe?)
+## 11. Next.js
 
-https://www.staticgen.com/
+TODO:
+
+- MVP
+- On docker compose? https://medium.com/better-programming/setup-flask-nextjs-application-with-docker-97e82a897573 ?
 
 ## IDEAS for more experiments:
 

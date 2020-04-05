@@ -1,0 +1,9 @@
+version: "3"
+services:
+  nextjs:
+    build:
+      context: ./nextjs
+    volumes:
+      - ./nextjs:/code
+    ports:
+      - "8061:3000"
