@@ -262,6 +262,10 @@ WIP:
 
 - MVP
 
+## 10. Jekyll alternatives (React based maybe?)
+
+https://www.staticgen.com/
+
 ## IDEAS for more experiments:
 
 - Cookie cutter to generate any kind of project: https://cookiecutter.readthedocs.io/en/1.7.0/README.html#features
