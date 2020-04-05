@@ -264,13 +264,13 @@ WIP:
 
 ## 11. Next.js
 
-TODO:
+DONE.
 
-- MVP
-- On docker compose? https://medium.com/better-programming/setup-flask-nextjs-application-with-docker-97e82a897573 ?
+See [Link](/experiments/10/Readme.md)
 
 ## IDEAS for more experiments:
 
+- Nice free onepager designs?
 - Cookie cutter to generate any kind of project: https://cookiecutter.readthedocs.io/en/1.7.0/README.html#features
 - Charts.JS https://www.chartjs.org/docs/latest/getting-started/installation.html
 - Locust load testing: https://github.com/locustio/locust
