@@ -201,7 +201,7 @@ Done:
 - Scale up
 - Indexes
 
-Todo:
+TODO:
 
 - Another experiment: Two entities and JOINS
   - Provider by provider
@@ -270,6 +270,8 @@ See [Link](/experiments/10/Readme.md)
 
 ## IDEAS for more experiments:
 
+TODO:
+
 - Nice free onepager designs?
 - Cookie cutter to generate any kind of project: https://cookiecutter.readthedocs.io/en/1.7.0/README.html#features
 - Charts.JS https://www.chartjs.org/docs/latest/getting-started/installation.html
@@ -290,3 +292,10 @@ See [Link](/tools/remove-all-docker-containers)
 ## Public website
 
 See [Link](/in-production/public-website/Readme.md)
+
+TODO:
+
+- Take static website template (Exp #11), transform it on Next.js static website generator (Exp #10)
+- Find hosting solution combination, which would support: CDN hosting & Domain & SSL Cert
+- Setup Travis CI to build and deploy
+- Setup usage metrics somehow (Google analytics?)
