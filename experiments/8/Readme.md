@@ -5,8 +5,6 @@ Prerequisites:
 1. Docker
 2. Docker-compose
 
-To run locally:
+To run:
 
-`docker build . -t flask_image`
-
-`docker run --name flask_container -p 80:80 flask_image`
+1.  `./experiment.sh`

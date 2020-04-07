@@ -6,20 +6,22 @@ Repo for keeping notes, experiments and other studies related stuff.
 
 ## Stack #1 (React-Flask)
 
-TODO (ALL):
+TODO Fullstack1
+
+(ALL):
 
 - Deploy somewhere...
 - More pre-commit commands, esp. frontend
 - Have name from input, propagate everywhere
 - Tests...
 
-TODO (BACKEND):
+(BACKEND):
 
 - Refactor readmodel to base, event store subscriptions, queue...
 - Refactor alchemy session
 - Refactor reuse of model for json
 
-TODO (FRONTEND):
+(FRONTEND):
 
 - Stylize a bit more (esp navbar)
 - Bootstrap theme
@@ -27,14 +29,14 @@ TODO (FRONTEND):
 - Console errors (due to hot reload or smth like that)
 - NPM install warnings (a few things depretiated)
 
-TODO (APP LOGIC):
+(APP LOGIC):
 
 - Item name
 - Delete item
 
 ## Stack #2 (Vue-Django)
 
-TODO:
+TODO Fullstack2:
 
 1. VueX? https://vuex.vuejs.org/
 2. Conflicting eslint & prettier ??
@@ -56,7 +58,7 @@ FAILED:
 
 - https://code.visualstudio.com/docs/remote/containers
 
-TODO:
+TODO Fullstack3:
 
 To set up ASP.NET Core with docker, try:
 
@@ -201,17 +203,14 @@ Done:
 - Scale up
 - Indexes
 
-TODO:
+Ideas how to continue:
 
 - Another experiment: Two entities and JOINS
-  - Provider by provider
+- Provider by provider
 - Another provider - SQL Alchemy + migrations
 - Why no perf improvement with postgres index?
 - MySql?
 - Couchbase?
-
-Ideas:
-
 - PostgresAdmin? Other kind of admins?
 
 ## 2. PDB debugging with docker and flask
@@ -252,7 +251,7 @@ See [Link](/experiments/7/Readme.md)
 
 ## 8. Memory leaks experiment with flask, uwsgi & nginx
 
-TODO:
+TODO Exp8 Memory leaks:
 
 - Setup empty minimal project.
 
@@ -270,7 +269,7 @@ See [Link](/experiments/10/Readme.md)
 
 ## IDEAS for more experiments:
 
-TODO:
+TODO More experiments:
 
 - Nice free onepager designs?
 - Cookie cutter to generate any kind of project: https://cookiecutter.readthedocs.io/en/1.7.0/README.html#features
@@ -293,7 +292,7 @@ See [Link](/tools/remove-all-docker-containers)
 
 See [Link](/in-production/public-website/Readme.md)
 
-TODO:
+TODO Public website:
 
 - Take static website template (Exp #11), transform it on Next.js static website generator (Exp #10)
 - Find hosting solution combination, which would support: CDN hosting & Domain & SSL Cert

@@ -1,6 +1,6 @@
 FROM python:3.6-slim
 
-COPY . /code
+COPY ./ /code/
 WORKDIR /code
 
 RUN apt-get clean \
@@ -13,6 +13,6 @@ RUN apt-get -y install nginx \
 RUN pip install -r requirements.txt
 
 COPY nginx.conf /etc/nginx
-RUN chmod +x ./start.sh
-CMD ["/code/start.sh"]
+
+CMD ["/bin/sh", "/code/start.sh"]
 
