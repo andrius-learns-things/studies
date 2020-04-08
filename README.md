@@ -265,7 +265,11 @@ WIP:
 
 DONE.
 
-See [Link](/experiments/10/Readme.md)
+See [Link](/experiments/11/Readme.md)
+
+## 12. .Net Core console application
+
+See [Link](/experiments/12/Readme.md)
 
 ## IDEAS for more experiments:
 
