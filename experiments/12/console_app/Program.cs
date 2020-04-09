@@ -1,18 +1,46 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace console_app
 {
-    class Program
+    class Item
+    {
+        public string Name { get; set; }
+
+        public List<Item> Children { get; set; }
+
+        public string TraverseNames()
+        {
+            var result = this.Name.ToString();
+
+            if (this.Children != null && this.Children.Count > 0)
+            {
+                foreach (var child in this.Children)
+                {
+                    result += child.TraverseNames();
+                }
+            }
+
+            return result;
+        }
+    }
+
+    class MainClass
     {
         static void Main(string[] args)
         {
-            int a = 1;
+            var r = new Item()
+            {
+                Name = "A",
+                Children = new List<Item>() {
+                    new Item() { Name = "B"},
+                    new Item() { Name = "C"},
+                }
+            };
 
-            int b = 2;
+            Console.WriteLine(r.TraverseNames());
 
-            int c = a + b;
-
-            Console.WriteLine("Hello World, hey hey! Result: " + c.ToString());
+            Console.ReadLine();
         }
     }
 }
