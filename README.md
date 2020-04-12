@@ -271,6 +271,10 @@ See [Link](/experiments/11/Readme.md)
 
 See [Link](/experiments/12/Readme.md)
 
+## Experiment #13. Just playing with bootstrap and font awesome
+
+See [Link](/experiments/13/Readme.md)
+
 ## IDEAS for more experiments:
 
 TODO More experiments:
