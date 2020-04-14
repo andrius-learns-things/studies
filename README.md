@@ -288,12 +288,6 @@ TODO More experiments:
 - Alternative command line lib https://pypi.org/project/click/
 - WTF is https://behave.readthedocs.io/en/latest/ (BDD in python)
 
-# Tools
-
-## Tool #1 Bash script to stop and remove all docker containers in the machine
-
-See [Link](/tools/remove-all-docker-containers)
-
 # Things in prod
 
 ## Public website
