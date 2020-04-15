@@ -23,6 +23,14 @@ What process is listening on which port:
 
 `sudo netstat -tulpn`
 
+## Docker
+
 Stop and remove all docker containers:
 
 `docker stop $(docker ps -a -q)` and then `docker rm $(docker ps -a -q)`
+
+## .Net Core on Linux
+
+If you get `The configured user limit (128) on the number of inotify instances has been reached` when trying to run .Net Core project on Linux,
+
+try: https://stackoverflow.com/a/38486048

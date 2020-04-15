@@ -275,6 +275,10 @@ See [Link](/experiments/12/Readme.md)
 
 See [Link](/experiments/13/Readme.md)
 
+## Experiment #14. Trying to launch https://github.com/oskardudycz/EventSourcing.NetCore on Linux
+
+See [Link](/experiments/14/Readme.md)
+
 ## IDEAS for more experiments:
 
 TODO More experiments:
