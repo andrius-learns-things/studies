@@ -279,13 +279,17 @@ See [Link](/experiments/13/Readme.md)
 
 See [Link](/experiments/14/Readme.md)
 
-TODO Continue setup:
+TODO ES.NetCore setup:
 
 - Fix pgadmin servers.json, check what migrations had created
 - Launch app so that it would open in browser
 - Make app work
 - Test debugging in VS code
 - Investigate how app is built, modify
+
+## Experiment #15. Robot tests in CI
+
+TODO - Robots - interesting !!!
 
 ## IDEAS for more experiments:
 
