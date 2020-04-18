@@ -291,6 +291,11 @@ TODO ES.NetCore setup:
 
 TODO - Robots - interesting !!!
 
+Continue:
+
+- https://wonderproxy.com/blog/test-with-robot-and-selenium-part-1/
+- https://github.com/asyrjasalo/rfdocker
+
 ## IDEAS for more experiments:
 
 TODO More experiments:
