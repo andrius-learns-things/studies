@@ -13,4 +13,4 @@ services:
     volumes:
       - ./robots/tests:/home/robot/tests
       - ./robots/results:/home/robot/results
-    command: tests/initial_test_suite.robot
+    command: tests/smoke_tests

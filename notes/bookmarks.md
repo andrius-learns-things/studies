@@ -61,3 +61,5 @@ https://medium.com/js-dojo/vuex-and-vue-bread-and-butter-4519a21e95ce **Vue & Vu
 http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html **Robot framework docs**
 
 https://wonderproxy.com/blog/test-with-robot-and-selenium-part-1/ **Nice article about robot framework on docker**
+
+https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html **Selenium2 lib**
