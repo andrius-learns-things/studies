@@ -7,15 +7,10 @@ services:
       - ./app/code:/code
     ports:
       - "8063:5000"
-  robots-1:
+  robots:
     build:
-      context: ./robots/robot-runner-1-chromium-on-fedora
+      context: ./robots
     volumes:
-      - ./robots/robot-tests:/robot-tests
-    command: /robot-tests/run.sh
-  robots-2:
-    build:
-      context: ./robots/robot-runner-2-official
-    volumes:
-      - ./robots/robot-tests:/robot-tests
-    command: /robot-tests/run.sh
+      - ./robots/tests:/home/robot/tests
+      - ./robots/results:/home/robot/results
+    command: tests/initial_test_suite.robot

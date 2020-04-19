@@ -57,3 +57,7 @@ https://www.youtube.com/watch?v=Cfqi0565rPc&list=PLnzr8Oa9Vyla0s7oGaFeC_GU1XRL3w
 https://www.rockyourcode.com/docker-compose-postgres-and-travis-ci/ **Docker compose on Travis CI**
 
 https://medium.com/js-dojo/vuex-and-vue-bread-and-butter-4519a21e95ce **Vue & Vuex beginners tutorial**
+
+http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html **Robot framework docs**
+
+https://wonderproxy.com/blog/test-with-robot-and-selenium-part-1/ **Nice article about robot framework on docker**
