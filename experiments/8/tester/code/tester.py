@@ -1,9 +1,12 @@
 import fire
+import requests
 
 
 def measure_http_request(url):
 
-    return "Hello %s!" % url
+    r = requests.get(url)
+
+    return "HTTP {} : {}".format(r.status_code, r.text)
 
 
 if __name__ == "__main__":

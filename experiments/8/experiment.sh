@@ -2,8 +2,9 @@
 
 docker-compose up -d
 
-docker-compose run tester python /code/tester.py -url web:8059
+docker-compose run tester python /code/tester.py -url http://web
 
+docker-compose run tester python /code/tester.py -url http://web/use-and-release-1kb
 
 
 # curl localhost:8059

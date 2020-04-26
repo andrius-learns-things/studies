@@ -5,8 +5,6 @@ services:
       context: ./web
     volumes:
       - ./web:/code
-    ports:
-      - "8059:80"
   tester:
     build:
       context: ./tester
