@@ -3,6 +3,8 @@ services:
   web:
     build:
       context: ./web
+    ports:
+      - "8059:1717"
     volumes:
       - ./web:/code
   tester:
