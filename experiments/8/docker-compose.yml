@@ -4,13 +4,13 @@ services:
     build:
       context: ./web
     ports:
-      - "8059:1717"
+      - "8059:80"
     volumes:
       - ./web:/code
-  tester:
-    build:
-      context: ./tester
-    depends_on:
-      - web
+  locust:
+    image: locustio/locust
+    ports:
+      - "8064:8089"
     volumes:
-      - ./tester/code:/code
+      - ./locust:/mnt/locust
+    command: -f /mnt/locust/locustfile.py --standalone -H http://web:80

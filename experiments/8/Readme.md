@@ -1,4 +1,4 @@
-# Experiment #8 - Memory leak experiments in flask, uwsgi, nginx app
+# Experiment #8 - Memory leaks and perf test experiments in flask, uwsgi, nginx app
 
 Prerequisites:
 
