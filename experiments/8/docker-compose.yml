@@ -8,9 +8,10 @@ services:
     volumes:
       - ./web:/code
   locust:
-    image: locustio/locust
+    image: grubykarol/locust
     ports:
       - "8064:8089"
+    environment:
+      ATTACKED_HOST: "http://web:80"
     volumes:
-      - ./locust:/mnt/locust
-    command: -f /mnt/locust/locustfile.py --standalone -H http://web:80
+      - ./locust:/locust
