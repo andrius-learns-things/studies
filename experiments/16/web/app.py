@@ -16,6 +16,7 @@ STRING_LENGTH_IN_MB = len(LONG_STRING) / 1000000
 
 @app.route("/")
 def empty():
+    time.sleep(1)
     return "Empty endpoint"
 
 

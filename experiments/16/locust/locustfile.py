@@ -9,20 +9,20 @@ def logout(l):
     pass
 
 
-def index(l):
+def task_index(l):
     l.client.get("/")
 
 
-def use_and_release(l):
+def task_use_and_release(l):
     l.client.get("/use-and-release")
 
 
-def use_and_leak(l):
+def task_use_and_leak(l):
     l.client.get("/use-and-leak")
 
 
 class UserBehavior(TaskSet):
-    tasks = {index: 2, use_and_release: 1, use_and_leak: 1}
+    tasks = {task_index: 1, task_use_and_release: 1, task_use_and_leak: 1}
 
     def on_start(self):
         login(self)
@@ -33,4 +33,4 @@ class UserBehavior(TaskSet):
 
 class WebsiteUser(HttpLocust):
     task_set = UserBehavior
-    wait_time = between(5.0, 9.0)
+    wait_time = between(1.0, 1.0)
