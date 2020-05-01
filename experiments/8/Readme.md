@@ -1,4 +1,4 @@
-# Experiment #8 - Memory leaks and perf test experiments in flask, uwsgi, nginx app
+# Experiment #8 - Locust perf tester in web mode
 
 Prerequisites:
 
@@ -7,4 +7,6 @@ Prerequisites:
 
 To run:
 
-1.  `./experiment.sh`
+1.  `docker-compose up -d`
+2.  Open `http://localhost:8059` in browser
+3.  Set options and run the test

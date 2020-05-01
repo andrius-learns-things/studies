@@ -13,16 +13,16 @@ def index(l):
     l.client.get("/")
 
 
-def first_endpoint(l):
-    l.client.get("/first-endpoint")
+def use_and_release(l):
+    l.client.get("/use-and-release")
 
 
-def second_endpoint(l):
-    l.client.get("/second-endpoint")
+def use_and_leak(l):
+    l.client.get("/use-and-leak")
 
 
 class UserBehavior(TaskSet):
-    tasks = {index: 1, first_endpoint: 2, second_endpoint: 1}
+    tasks = {index: 2, use_and_release: 1, use_and_leak: 1}
 
     def on_start(self):
         login(self)

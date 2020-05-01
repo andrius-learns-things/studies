@@ -249,16 +249,9 @@ DONE.
 
 See [Link](/experiments/7/Readme.md)
 
-## 8. Memory leaks & perf tests experiments with flask, uwsgi & nginx
+## 8. Locust perf tester in web mode
 
-TODO Exp8 Memory leaks:
-
-- Setup empty minimal project.
-- Add locust.io
-
-https://github.com/locustio/locust/blob/master/examples/docker-compose/docker-compose.yml
-https://hub.docker.com/r/grubykarol/locust
-https://locust.io/
+DONE.
 
 ## 9. Jekyll.
 
@@ -300,6 +293,18 @@ Continue:
 
 - https://wonderproxy.com/blog/test-with-robot-and-selenium-part-1/
 - https://github.com/asyrjasalo/rfdocker
+
+
+## 16. Memory leaks experiments with flask, uwsgi & nginx
+
+TODO Exp8 Memory leaks:
+
+- Setup empty minimal project.
+- Add locust.io
+
+https://github.com/locustio/locust/blob/master/examples/docker-compose/docker-compose.yml
+https://hub.docker.com/r/grubykarol/locust
+https://locust.io/
 
 ## IDEAS for more experiments:
 
