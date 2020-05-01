@@ -7,9 +7,11 @@ services:
       - ./web:/code
   locust:
     image: grubykarol/locust
+    container_name: locust2
     ports:
       - "8064:8089"
     environment:
       ATTACKED_HOST: "http://web:80"
+      LOCUST_OPTS: "--no-web -c 5 -r 1"
     volumes:
       - ./locust:/locust
