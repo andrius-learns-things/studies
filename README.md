@@ -297,14 +297,7 @@ Continue:
 
 ## 16. Memory leaks experiments with flask, uwsgi & nginx
 
-TODO Exp8 Memory leaks:
-
-- Setup empty minimal project.
-- Add locust.io
-
-https://github.com/locustio/locust/blob/master/examples/docker-compose/docker-compose.yml
-https://hub.docker.com/r/grubykarol/locust
-https://locust.io/
+DONE.
 
 ## IDEAS for more experiments:
 
