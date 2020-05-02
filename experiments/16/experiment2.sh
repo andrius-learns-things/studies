@@ -10,6 +10,7 @@ export EXPERIMENT_LOCUST_USER_COUNT="10"
 export EXPERIMENT_WAIT_SECONDS="10"
 export EXPERIMENT_EXPECTED_AVG_RESPONSE_TIME="4200"
 export EXPERIMENT_EXPECTED_MEMORY_USAGE="25"
+export EXPERIMENT_CONCLUSION="Worker bottleneck causes user requests to wait, therefore longer response times"
 
 
 # Run:

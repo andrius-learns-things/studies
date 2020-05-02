@@ -48,3 +48,8 @@ sed -i -e "s#task_index: $EXPERIMENT_LOCUST_WEIGHT_INDEX, task_use_and_release: 
 
 # Return initial values
 sed -i -e "s#-c $EXPERIMENT_LOCUST_USER_COUNT#-c 5#g" docker-compose.yml
+
+# CONCLUSION:
+
+echo "= = = = = = = = = = = = = = = = = = = = = = = = ="
+echo "CONCLUSION: $EXPERIMENT_CONCLUSION"

@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+# Set configuration
+export EXPERIMENT_NAME="MANY WORKERS MANY USERS (20 web workers, 20 locust users)"
+export EXPERIMENT_WEB_WORKERS="20"
+export EXPERIMENT_LOCUST_WEIGHT_INDEX="1"
+export EXPERIMENT_LOCUST_WEIGHT_USE_AND_RELEASE="0"
+export EXPERIMENT_LOCUST_WEIGHT_USE_AND_LEAK="0"
+export EXPERIMENT_LOCUST_USER_COUNT="20"
+export EXPERIMENT_WAIT_SECONDS="10"
+export EXPERIMENT_EXPECTED_AVG_RESPONSE_TIME="1000"
+export EXPERIMENT_EXPECTED_MEMORY_USAGE="60"
+export EXPERIMENT_CONCLUSION="Response times are ok, but memory usage increased."
+
+
+# Run:
+./experiment_template.sh
+

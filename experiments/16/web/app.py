@@ -4,15 +4,6 @@ import time
 
 app = Flask(__name__)
 
-LONG_STRING = (
-    "__________".replace("_", "----------")
-    .replace("-", "__________")
-    .replace("_", "----------")
-    .replace("-", "__________")
-    .replace("_", "----------")
-)
-STRING_LENGTH_IN_MB = len(LONG_STRING) / 1000000
-
 
 @app.route("/")
 def empty():
@@ -22,11 +13,9 @@ def empty():
 
 @app.route("/use-and-release")
 def use_and_release():
-    _get_long_string()
+    long_string, length = _get_long_string()
     time.sleep(1)
-    return "Endpoint, which uses and releases {}MB of memory.".format(
-        STRING_LENGTH_IN_MB
-    )
+    return "Endpoint, which uses and releases {}MB of memory.".format(length)
 
 
 leaked = []
@@ -34,14 +23,21 @@ leaked = []
 
 @app.route("/use-and-leak")
 def use_and_leak():
-    a = _get_long_string()
+    long_string, length = _get_long_string()
     time.sleep(1)
-    leaked.append(a)
+    leaked.append(long_string)
     return (
         "Endpoint, which uses and leaks {}B of memory. Leaked number of times: {}."
-    ).format(STRING_LENGTH_IN_MB, len(leaked))
+    ).format(length, len(leaked))
 
 
 def _get_long_string():
-    a = LONG_STRING + ""
-    return a
+    long_string = (
+        "__________".replace("_", "----------")
+        .replace("-", "__________")
+        .replace("_", "----------")
+        .replace("-", "__________")
+        .replace("_", "----------")
+    )
+    length = len(long_string) / 1000000
+    return long_string, length
