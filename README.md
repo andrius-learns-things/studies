@@ -6,7 +6,7 @@ Repo for keeping notes, experiments and other studies related stuff.
 
 ## Stack #1 (React-Flask) ..
 
-TODO Fullstack1
+TODO Fullstack1_
 
 (ALL):
 
